@@ -1,0 +1,30 @@
+/* DASHBOARD HERO COMPONENT STYLES
+================================*/
+
+#DashHero {
+    background:
+            linear-gradient(
+            rgba(0,0,0,.5),
+            rgba(0,0,0,.5)
+            ),
+            url("/img/dash-hero.jpg");
+    height: 350px;
+    background-size: cover;
+    background-position: center center;
+
+    .how-it-works {
+        text-align: center;
+        color: $white;
+        h3 {
+            color: $white;
+        }
+        hr {
+            background: $white;
+        }
+        p {
+            color: $white;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    }
+}

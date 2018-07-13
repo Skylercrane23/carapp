@@ -1,0 +1,42 @@
+/* BUY HERO COMPONENT STYLES
+==========================*/
+
+#BuyHero {
+    background:
+            linear-gradient(
+                            rgba(255,255,255,.75),
+                            rgba(255,255,255,.75)
+            ),
+            url("/img/buy-hero.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 350px;
+    position: relative;
+
+    .buying-container {
+        text-align: center;
+        color: $dark-grey;
+        h3 {
+            color: $dark-grey;
+        }
+        p {
+            color: $dark-grey;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        i {
+            font-size: 56px;
+        }
+    }
+
+    .btn-container {
+        position: relative;
+        .create-post-btn {
+            position: absolute;
+            bottom: -91px;
+            right: 0;
+            font-size: 56px;
+        }
+    }
+}

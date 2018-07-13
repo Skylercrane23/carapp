@@ -1,0 +1,31 @@
+/* FORM STYLES
+============*/
+
+form {
+    width: 100%;
+    max-width: 500px;
+    label {
+        font-size: 14px;
+        font-weight: $w-light;
+    }
+    .form-control {
+        border: none;
+        border-bottom: 2px solid $blue;
+        border-radius: 0;
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            border-color: $green;
+        }
+        &.is-invalid {
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+    input[type='checkbox'] {
+        border-radius: 0;
+        height: 15px;
+        width: 15px;
+    }
+}

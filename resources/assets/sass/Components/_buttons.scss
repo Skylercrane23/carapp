@@ -1,0 +1,92 @@
+/* BUTTON COMPONENT STYLES
+========================*/
+
+.button, button {
+    height: 38px;
+    max-width: 290px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 0 auto;
+    cursor: pointer;
+    @media(max-width: 540px){
+        width: 100% !important;
+    }
+    &:hover {
+        text-decoration: none;
+        transition: all .3s ease-in-out;
+    }
+
+    // BUTTON WIDTHS
+    &.w-290 {
+        min-width: 290px;
+    }
+
+    // BUTTON SIZES
+    &.small {
+        height: 30px;
+    }
+    &.large {
+        height: 50px;
+    }
+
+    // BUTTON  STYLES
+    &.square {
+        border-radius: 0;
+    }
+    &.circle {
+        border-radius: 100px;
+    }
+
+    //BUTTON COLOR
+    &.blue {
+        background: $blue;
+        color: $white;
+        border: 2px solid $blue;
+        &:hover {
+            background: $white;
+            color: $blue;
+        }
+    }
+    &.white {
+        background: $white;
+        border: 2px solid $blue;
+        color: $dark-grey;
+        &:hover {
+            background: $blue;
+            color: $white;
+        }
+    }
+
+    &.transparent-white {
+        background: transparent;
+        border: 2px solid $white;
+        color: $white;
+        &:hover {
+            background: white;
+            border: 2px solid $white;
+            color: $blue;
+        }
+    }
+
+    &.transparent-blue {
+        background: transparent;
+        border: 2px solid $blue;
+        color: $blue;
+        &:hover {
+            background: $blue;
+            border: 2px solid $blue;
+            color: $white;
+        }
+    }
+}
+
+.btn-link {
+    color: $blue;
+    &.small {
+        font-size: 14px;
+    }
+}

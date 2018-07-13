@@ -1,0 +1,37 @@
+/* MY MESSAGES COMPONENT STYLES
+=============================*/
+
+#MyMessages {
+    //background: red;
+    margin-bottom: 50px;
+
+    .post-heading {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        margin-bottom: 32px;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i {
+                margin-left: 5px;
+            }
+        }
+
+        h4 {
+            margin: 0;
+        }
+    }
+    .coming-soon {
+        min-height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        height: 100%;
+    }
+}

@@ -1,0 +1,80 @@
+/* HELPER CLASS STYLES
+====================*/
+
+/* COLOR HELPER CLASSES
+=====================*/
+.blue {
+    color: $blue;
+}
+
+.green {
+    color: $green;
+}
+
+.white {
+    color: $white;
+}
+
+.light-grey {
+    color: $light-grey;
+}
+
+.dark-grey {
+    color: $dark-grey;
+}
+
+/* BACKGROUND HELPER CLASSES
+==========================*/
+.blue-bg {
+    background: $blue;
+}
+
+.green-bg {
+    background: $green;
+}
+
+.white-bg {
+    background: $white;
+}
+
+.light-grey-bg {
+    background: $light-grey;
+}
+
+.dark-grey-bg {
+    background: $dark-grey;
+}
+
+/* FONT WEIGHT HELPER CLASSES
+===========================*/
+.w-bold {
+    font-weight: $w-bold;
+}
+
+.w-regular {
+    font-weight: $w-regular;
+}
+
+.w-light {
+    font-weight: $w-light;
+}
+
+/* FONT FAMILY HELPER CLASSES
+===========================*/
+.f-lato {
+    font-family: $lato;
+}
+
+.f-open {
+    font-family: $open;
+}
+
+// HR SPECIFIC STYLES
+
+hr.green-underline {
+    height: 2px;
+    width: 200px;
+    border: none;
+    background: $green;
+    margin: 20px auto;
+}

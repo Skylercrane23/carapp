@@ -1,0 +1,193 @@
+/* NAVIGATION COMPONENT STYLES
+============================*/
+
+#Navigation {
+    //height: 75px;
+    transition: 500ms ease;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @media(max-width: 767px){
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background: $blue;
+    }
+
+    &.scrolled {
+        background: rgba(25, 73, 111, .95);
+        box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    }
+    .navbar-brand {
+        margin-left: 15px;
+        &:hover {
+            color: $light-grey !important;
+        }
+        //@media(max-width: 992px){
+        //    color: $dark-grey;
+        //}
+        @media(max-width: 767px){
+            color: $white;
+        }
+    }
+
+    .navbar-toggler {
+        margin-right: 15px;
+        i {
+            @media(max-width: 767px){
+                color: $white !important;
+            }
+        }
+    }
+
+    @media(max-width: 767px){
+        .navbar-collapse {
+            background: $blue;
+            .top-right {
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                align-items: flex-end;
+                @media(max-width: 767px){
+                    padding: 15px;
+                }
+            }
+        }
+    }
+
+    .navbar-nav {
+
+        // DASHBOARD LINKS
+        .dash-links {
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+            &:hover {
+                color: $light-grey;
+            }
+        }
+
+        .dropdown {
+            a {
+                text-transform: capitalize;
+
+                &:hover {
+                    color: $light-grey;
+                }
+                &:after {
+                    content: none;
+                }
+            }
+            .dropdown-menu {
+                //width: 300px;
+                right: 0;
+                padding: 0;
+                left: auto;
+                background: $white;
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+                border-radius: 0;
+                border: none;
+
+                .top {
+                    display: flex;
+                    align-content: center;
+                    align-items: center;
+                    padding: 10px 20px;
+                    .left {
+                        padding-right: 20px;
+                        i {
+                            font-size: 28px;
+                        }
+                    }
+                    .right {
+                        p.name {
+                            font-size: 16px;
+                            text-transform: capitalize;
+                            color: $blue;
+                            font-weight: $w-bold;
+                        }
+                        p.email {
+                            font-size: 12px;
+                            color: $blue;
+                            font-weight: $w-regular;
+                        }
+                    }
+                }
+
+                hr {
+                    margin: 0 20px;
+                }
+
+                a {
+                    color: $blue;
+                    padding: 10px 20px;
+                    &:hover {
+                        background: lighten($light-grey, 5%);
+                        color: $blue;
+                    }
+                }
+            }
+        }
+        .nav-link {
+            @media(max-width: 767px){
+                margin: 0 auto !important;
+                color: $white;
+                text-align: center;
+                padding: 10px 20px;
+                p {
+                    color: $white;
+                }
+                a.button {
+                    background: $white !important;
+                }
+            }
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            align-content: center;
+
+            a {
+
+                &:hover {
+                    text-decoration: none;
+                }
+                @media(max-width: 767px){
+                    color: $white;
+                }
+            }
+            p {
+
+                margin-bottom: 0;
+            }
+        }
+        .top-right {
+            a {
+                padding: 20px;
+                @media(max-width: 767px){
+                    padding: 10px 20px;
+                }
+                &:hover {
+                    text-decoration: none;
+                    color: $light-grey;
+                }
+            }
+            a.nav-button {
+                border: 2px solid $white;
+                border-radius: 50px;
+                padding: 5px 20px;
+                margin-left: 20px;
+                @media(max-width: 767px){
+                    margin-top: 10px;
+                }
+                &:hover {
+                    color: $blue;
+                    background: $white;
+                    transition: all .3s ease-in-out;
+                }
+            }
+        }
+    }
+}
+

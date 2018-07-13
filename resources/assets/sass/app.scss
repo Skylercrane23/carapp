@@ -1,0 +1,36 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:300,400,700');
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// SCSS DEFAULTS
+@import "./Defaults/defaults";
+@import "./Defaults/forms";
+@import "./Defaults/helper_classes";
+
+// SCSS COMPONENT IMPORTS
+@import "./Components/buttons";
+
+@import "./Components/navigation";
+
+// DASHBOARD RELATED COMPONENTS STYLES
+@import "Components/Dashboard/dashboard";
+@import "./Components/Dashboard/DashHero";
+@import "./Components/Dashboard/MyPosts";
+@import "./Components/Dashboard/PotentialBuyers";
+@import "./Components/Dashboard/MyMessages";
+
+// BUY RELATED COMPONENT STYLES
+@import "./Components/Buy/Buy";
+@import "./Components/Buy/BuyHero";
+
+
+// SCSS PAGE IMPORTS
+@import "./Pages/landing";
+@import "./Pages/login";
+@import "./Pages/register";
