@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import axios from "axios";
+import { Redirect } from 'react-router'
+
 
 import BuyHero from './SubComponents/BuyHero';
 import MyBuyPosts from './SubComponents/MyBuyPosts';
@@ -42,7 +44,13 @@ export default class Buy extends Component {
             body: this.state.newPost.body,
             title: this.state.newPost.title
         }).then( (res) => {
-            console.log(res);
+            this.setState({
+                newPost: {
+                    title: '',
+                    body: '',
+                }
+            });
+            window.location.replace("http://carapp.test/dashboard");
         });
     }
 
