@@ -7,6 +7,7 @@ import Messages from './components/Messages/Messages';
 import Buy from './components/Buy/Buy';
 import Sell from './components/Sell/Sell';
 import BrowseAll from './components/BrowseAll/BrowseAll';
+import MyPostDetails from './components/Buy/SubComponents/MyPostDetails';
 
 
 export default (
@@ -16,7 +17,6 @@ export default (
         <Route name="Buy" component={ Buy } path="/home/buy" />
         <Route name="Sell" component={ Sell } path="/home/sell" />
         <Route name="Browse-All" component={ BrowseAll } path="/home/browse-all" />
-
-        {/*<Route component={ ContenderProfile } path="/profile/:id" />*/}
+        <Route name="My-Post-Details" component={ MyPostDetails } path="/home/my-post-details/:id" />
     </Switch>
 )

@@ -11242,6 +11242,13 @@ button.transparent-blue:hover {
   font-size: 56px;
 }
 
+/* MYPOSTS DETAILS COMPONENT STYLES
+=================================*/
+
+#MyPostDetails {
+  margin-top: 70px;
+}
+
 /* LANDING PAGE STYLES
 ====================*/
 

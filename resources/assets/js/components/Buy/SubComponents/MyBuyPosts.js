@@ -10,9 +10,11 @@ export default class MyBuyPosts extends Component {
             return userPosts.map(post => {
                 return (
                     <div className="card mt-3" key={post.id}>
-                        <p>{post.id} </p>
-                        <p>{post.title} </p>
-                        <p>{post.body} </p>
+                        <a href={'/home/my-post-details/' + post.id }>
+                            <p>{post.id} </p>
+                            <p>{post.title} </p>
+                            <p>{post.body} </p>
+                        </a>
                     </div>
                 );
             })
