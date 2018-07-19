@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import ReactDOM from "react-dom";
 import axios from "axios/index";
 import DetailsForm from "./DetailsForm";
 
@@ -45,7 +44,13 @@ export default class MyPostDetails extends Component {
     // UPDATE POST DETAILS
     updatePostDetails(e){
         e.preventDefault();
-        console.log('Updated');
+        axios.put(`/api/posts/` + this.props.match.params.id, {
+            body: this.state.postDetails.body,
+            title: this.state.postDetails.title
+        }).then( (res) => {
+            console.log(res);
+            window.location.replace("http://carapp.test/home/buy");
+        });
     }
 
 
