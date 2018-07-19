@@ -65771,28 +65771,44 @@ var MyPostDetails = function (_Component) {
             postDetails: {
                 title: '',
                 body: ''
-            }
+            },
+            hasError: false
         };
         _this.setPostDetailState = _this.setPostDetailState.bind(_this);
         _this.updatePostDetails = _this.updatePostDetails.bind(_this);
         return _this;
     }
 
-    // GET MY POSTS
+    // ERRORs
 
 
     _createClass(MyPostDetails, [{
+        key: "componentDidCatch",
+        value: function componentDidCatch(error, errorInfo) {
+            this.setState({
+                hasError: true
+            });
+        }
+
+        // GET MY POSTS
+
+    }, {
         key: "componentDidMount",
         value: function componentDidMount() {
             var _this2 = this;
 
-            __WEBPACK_IMPORTED_MODULE_1_axios_index___default.a.get('/api/posts/' + this.props.match.params.id).then(function (res) {
-                var details = res.data;
+            __WEBPACK_IMPORTED_MODULE_1_axios_index___default.a.get('/api/myposts/' + this.props.match.params.id).then(function (response) {
+                var details = response.data;
                 _this2.setState({
                     postDetails: {
                         title: details.title,
                         body: details.body
                     }
+                });
+            }).catch(function (error) {
+                console.log(error.response);
+                _this2.setState({
+                    hasError: true
                 });
             });
         }
@@ -65816,47 +65832,61 @@ var MyPostDetails = function (_Component) {
         key: "updatePostDetails",
         value: function updatePostDetails(e) {
             e.preventDefault();
-            __WEBPACK_IMPORTED_MODULE_1_axios_index___default.a.put("/api/posts/" + this.props.match.params.id, {
+            __WEBPACK_IMPORTED_MODULE_1_axios_index___default.a.put("/api/myposts/" + this.props.match.params.id, {
                 body: this.state.postDetails.body,
                 title: this.state.postDetails.title
             }).then(function (res) {
-                console.log(res);
-                window.location.replace("http://carapp.test/home/buy");
+                //console.log(res);
+                //window.location.replace("http://carapp.test/home/buy");
+            }).catch(function (error) {
+                console.log(error.response);
             });
         }
     }, {
         key: "render",
         value: function render() {
 
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { id: "MyPostDetails" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            if (this.state.hasError) {
+                return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "div",
-                    { className: "container" },
+                    null,
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
-                        { className: "row justify-content-center" },
+                        { className: "alert mt-5 pt-5" },
+                        "Error"
+                    )
+                );
+            } else {
+                return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { id: "MyPostDetails" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "container" },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             "div",
-                            { className: "col-md-12" },
+                            { className: "row justify-content-center" },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 "div",
-                                { className: "card" },
+                                { className: "col-md-12" },
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     "div",
-                                    { className: "card-body" },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__DetailsForm__["a" /* default */], {
-                                        postDetails: this.state.postDetails,
-                                        onChange: this.setPostDetailState,
-                                        onClick: this.updatePostDetails
-                                    })
+                                    { className: "card" },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        "div",
+                                        { className: "card-body" },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__DetailsForm__["a" /* default */], {
+                                            postDetails: this.state.postDetails,
+                                            onChange: this.setPostDetailState,
+                                            onClick: this.updatePostDetails
+                                        })
+                                    )
                                 )
                             )
                         )
                     )
-                )
-            );
+                );
+            }
         }
     }]);
 

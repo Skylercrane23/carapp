@@ -28,6 +28,8 @@ Route::delete('api/posts/{post}', 'PostController@delete')->middleware('auth');
 
 // USER POSTS
 Route::get('api/myposts', 'UserPostsController@allUserPosts')->middleware('auth');
+Route::get('api/myposts/{post}', 'UserPostsController@showUserPost')->middleware('auth');
+Route::put('api/myposts/{post}', 'UserPostsController@updateUserPosts')->middleware('auth');
 
 //AUTH ROUTES
 Auth::routes();

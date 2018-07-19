@@ -66,7 +66,15 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return $post;
+        $user_id = Auth::id();
+        $post_id = $post->user_id;
+
+        if($user_id == $post_id){
+            return $post;
+        } else {
+            return response()->json($post, 400);
+        }
+
     }
 
     /**
