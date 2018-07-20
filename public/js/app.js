@@ -65747,6 +65747,7 @@ var BrowseAll = function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios_index__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_axios_index__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__DetailsForm__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_ErrorPage__ = __webpack_require__(132);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -65754,6 +65755,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 
 
 
@@ -65779,14 +65781,17 @@ var MyPostDetails = function (_Component) {
         return _this;
     }
 
-    // ERRORs
+    // ERRORS HANDLER FOR INVALID RESPONSES
 
 
     _createClass(MyPostDetails, [{
         key: "componentDidCatch",
-        value: function componentDidCatch(error, errorInfo) {
+        value: function componentDidCatch(error, info) {
+            console.log(error);
             this.setState({
-                hasError: true
+                hasError: true,
+                error: error,
+                errorInfo: info
             });
         }
 
@@ -65806,9 +65811,10 @@ var MyPostDetails = function (_Component) {
                     }
                 });
             }).catch(function (error) {
-                console.log(error.response);
                 _this2.setState({
-                    hasError: true
+                    hasError: true,
+                    error: error,
+                    errorInfo: 'Sorry, you are not authorized to access this content.'
                 });
             });
         }
@@ -65831,15 +65837,20 @@ var MyPostDetails = function (_Component) {
     }, {
         key: "updatePostDetails",
         value: function updatePostDetails(e) {
+            var _this3 = this;
+
             e.preventDefault();
             __WEBPACK_IMPORTED_MODULE_1_axios_index___default.a.put("/api/myposts/" + this.props.match.params.id, {
                 body: this.state.postDetails.body,
                 title: this.state.postDetails.title
             }).then(function (res) {
-                //console.log(res);
-                //window.location.replace("http://carapp.test/home/buy");
+                window.location.replace("http://carapp.test/home/buy");
             }).catch(function (error) {
-                console.log(error.response);
+                _this3.setState({
+                    hasError: true,
+                    error: error,
+                    errorInfo: 'Sorry, you are not authorized to update this content.'
+                });
             });
         }
     }, {
@@ -65847,19 +65858,14 @@ var MyPostDetails = function (_Component) {
         value: function render() {
 
             if (this.state.hasError) {
-                return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    null,
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "div",
-                        { className: "alert mt-5 pt-5" },
-                        "Error"
-                    )
-                );
+                return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__common_ErrorPage__["a" /* default */], {
+                    error: this.state.error,
+                    errorInfo: this.state.errorInfo
+                });
             } else {
                 return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "div",
-                    { id: "MyPostDetails" },
+                    { id: "MyPostDetails", className: "animated fadeIn" },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
                         { className: "container" },
@@ -65993,6 +65999,65 @@ var DetailsForm = function (_Component) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 128 */,
+/* 129 */,
+/* 130 */,
+/* 131 */,
+/* 132 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var ErrorPage = function (_Component) {
+    _inherits(ErrorPage, _Component);
+
+    function ErrorPage() {
+        _classCallCheck(this, ErrorPage);
+
+        return _possibleConstructorReturn(this, (ErrorPage.__proto__ || Object.getPrototypeOf(ErrorPage)).apply(this, arguments));
+    }
+
+    _createClass(ErrorPage, [{
+        key: "render",
+        value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                null,
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "alert mt-5 pt-5 animated fadeIn" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "h2",
+                        null,
+                        this.props.errorInfo
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "h2",
+                        null,
+                        this.props.error.toString()
+                    )
+                )
+            );
+        }
+    }]);
+
+    return ErrorPage;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (ErrorPage);
 
 /***/ })
 /******/ ]);

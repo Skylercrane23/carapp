@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from "axios/index";
 import DetailsForm from "./DetailsForm";
+import ErrorPage from "../../common/ErrorPage";
 
 export default class MyPostDetails extends Component {
     constructor(props) {
@@ -16,10 +17,13 @@ export default class MyPostDetails extends Component {
         this.updatePostDetails = this.updatePostDetails.bind(this);
     }
 
-    // ERRORs
-    componentDidCatch(error,errorInfo){
+    // ERRORS HANDLER FOR INVALID RESPONSES
+    componentDidCatch(error, info) {
+        console.log(error);
         this.setState({
-            hasError:true
+            hasError: true,
+            error: error,
+            errorInfo: info
         })
     }
 
@@ -34,17 +38,19 @@ export default class MyPostDetails extends Component {
                         body: details.body,
                     }
                 })
-            }).catch( (error) => {
-            console.log(error.response);
-            this.setState({
-                hasError: true
             })
-        });
+            .catch((error) => {
+                this.setState({
+                    hasError: true,
+                    error: error,
+                    errorInfo: 'Sorry, you are not authorized to access this content.'
+                })
+            });
     }
 
 
     // SET STATE FOR
-    setPostDetailState(e){
+    setPostDetailState(e) {
         var field = e.target.name;
         var value = e.target.value;
         this.state.postDetails[field] = value;
@@ -55,33 +61,36 @@ export default class MyPostDetails extends Component {
 
 
     // UPDATE POST DETAILS
-    updatePostDetails(e){
+    updatePostDetails(e) {
         e.preventDefault();
         axios.put(`/api/myposts/` + this.props.match.params.id, {
             body: this.state.postDetails.body,
             title: this.state.postDetails.title
-        }).then( (res) => {
-            //console.log(res);
-            //window.location.replace("http://carapp.test/home/buy");
-        }).catch( (error) => {
-            console.log(error.response);
-        });
+        })
+            .then((res) => {
+                window.location.replace("http://carapp.test/home/buy");
+            })
+            .catch((error) => {
+                this.setState({
+                    hasError: true,
+                    error: error,
+                    errorInfo: 'Sorry, you are not authorized to update this content.'
+                })
+            });
     }
-
 
     render() {
 
         if (this.state.hasError) {
             return (
-                <div >
-                    <div className="alert mt-5 pt-5">
-                        Error
-                    </div>
-                </div>
+               <ErrorPage
+                   error={this.state.error}
+                   errorInfo={this.state.errorInfo}
+               />
             );
         } else {
             return (
-                <div id="MyPostDetails">
+                <div id="MyPostDetails" className="animated fadeIn">
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-md-12">
