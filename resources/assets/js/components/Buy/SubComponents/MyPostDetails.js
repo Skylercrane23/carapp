@@ -14,11 +14,14 @@ export default class MyPostDetails extends Component {
                 id: ''
             },
             showConfirmUpdate: false,
+            showDelete: false,
             hasError: false,
         };
         this.setPostDetailState = this.setPostDetailState.bind(this);
         this.updatePostDetails = this.updatePostDetails.bind(this);
         this.confirmUpdate = this.confirmUpdate.bind(this);
+        this.deletePost = this.deletePost.bind(this);
+        this.confirmDelete = this.confirmDelete.bind(this);
     }
 
     // ERRORS HANDLER FOR INVALID RESPONSES
@@ -41,7 +44,6 @@ export default class MyPostDetails extends Component {
                     postDetails: {
                         title: details.title,
                         body: details.body,
-                        id: details.id
                     }
                 })
             })
@@ -93,6 +95,26 @@ export default class MyPostDetails extends Component {
             });
     }
 
+
+    confirmDelete(e){
+        e.preventDefault();
+        this.setState({
+            showDelete: true,
+        });
+    }
+
+
+    // Delete Post
+    deletePost() {
+        axios.delete(`/api/myposts/` + this.props.match.params.id)
+            .then((res) => {
+                window.location.replace('/home/buy');
+            })
+            .catch((error) => {
+                console.log('Something Went Wrong!');
+            });
+    }
+
     render() {
 
         if (this.state.hasError) {
@@ -114,7 +136,8 @@ export default class MyPostDetails extends Component {
                                         <DetailsForm
                                             postDetails={this.state.postDetails}
                                             onChange={this.setPostDetailState}
-                                            onClick={this.confirmUpdate}
+                                            update={this.confirmUpdate}
+                                            delete={this.confirmDelete}
                                         />
 
                                     </div>
@@ -133,6 +156,20 @@ export default class MyPostDetails extends Component {
                                         }}
                                     />
 
+                                    <SweetAlert
+                                        show={this.state.showDelete}
+                                        title="Delete Post?"
+                                        type='info'
+                                        text="Do you want to delete this post?"
+                                        reverseButtons={true}
+                                        showCancelButton={true}
+                                        cancelButtonText='Cancel'
+                                        confirmButtonText='Delete'
+                                        onConfirm={ () => {
+                                            this.deletePost();
+                                        }}
+                                    />
+
                                 </div>
                             </div>
                         </div>
@@ -143,6 +180,3 @@ export default class MyPostDetails extends Component {
     }
 }
 
-/*if (document.getElementById('messages')) {
-    ReactDOM.render(<Messages/>, document.getElementById('messages'));
-}*/

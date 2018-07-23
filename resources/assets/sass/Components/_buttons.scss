@@ -44,7 +44,7 @@
     //BUTTON COLOR
     &.blue {
         background: $blue;
-        color: $white;
+        color: $white !important;
         border: 2px solid $blue;
         &:hover {
             background: $white;

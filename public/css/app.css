@@ -10699,7 +10699,7 @@ button.circle {
 .button.blue,
 button.blue {
   background: #19496F;
-  color: #ffffff;
+  color: #ffffff !important;
   border: 2px solid #19496F;
 }
 

@@ -65776,11 +65776,14 @@ var MyPostDetails = function (_Component) {
                 id: ''
             },
             showConfirmUpdate: false,
+            showDelete: false,
             hasError: false
         };
         _this.setPostDetailState = _this.setPostDetailState.bind(_this);
         _this.updatePostDetails = _this.updatePostDetails.bind(_this);
         _this.confirmUpdate = _this.confirmUpdate.bind(_this);
+        _this.deletePost = _this.deletePost.bind(_this);
+        _this.confirmDelete = _this.confirmDelete.bind(_this);
         return _this;
     }
 
@@ -65811,8 +65814,7 @@ var MyPostDetails = function (_Component) {
                 _this2.setState({
                     postDetails: {
                         title: details.title,
-                        body: details.body,
-                        id: details.id
+                        body: details.body
                     }
                 });
             }).catch(function (error) {
@@ -65868,6 +65870,26 @@ var MyPostDetails = function (_Component) {
             });
         }
     }, {
+        key: "confirmDelete",
+        value: function confirmDelete(e) {
+            e.preventDefault();
+            this.setState({
+                showDelete: true
+            });
+        }
+
+        // Delete Post
+
+    }, {
+        key: "deletePost",
+        value: function deletePost() {
+            __WEBPACK_IMPORTED_MODULE_1_axios_index___default.a.delete("/api/myposts/" + this.props.match.params.id).then(function (res) {
+                window.location.replace('/home/buy');
+            }).catch(function (error) {
+                console.log('Something Went Wrong!');
+            });
+        }
+    }, {
         key: "render",
         value: function render() {
             var _this4 = this;
@@ -65899,7 +65921,8 @@ var MyPostDetails = function (_Component) {
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__DetailsForm__["a" /* default */], {
                                             postDetails: this.state.postDetails,
                                             onChange: this.setPostDetailState,
-                                            onClick: this.confirmUpdate
+                                            update: this.confirmUpdate,
+                                            "delete": this.confirmDelete
                                         })
                                     ),
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_sweetalert2_react___default.a, {
@@ -65914,6 +65937,19 @@ var MyPostDetails = function (_Component) {
                                         onConfirm: function onConfirm() {
                                             _this4.updatePostDetails();
                                         }
+                                    }),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_sweetalert2_react___default.a, {
+                                        show: this.state.showDelete,
+                                        title: "Delete Post?",
+                                        type: "info",
+                                        text: "Do you want to delete this post?",
+                                        reverseButtons: true,
+                                        showCancelButton: true,
+                                        cancelButtonText: "Cancel",
+                                        confirmButtonText: "Delete",
+                                        onConfirm: function onConfirm() {
+                                            _this4.deletePost();
+                                        }
                                     })
                                 )
                             )
@@ -65927,11 +65963,6 @@ var MyPostDetails = function (_Component) {
     return MyPostDetails;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
-/*if (document.getElementById('messages')) {
-    ReactDOM.render(<Messages/>, document.getElementById('messages'));
-}*/
-
-
 /* harmony default export */ __webpack_exports__["a"] = (MyPostDetails);
 
 /***/ }),
@@ -65941,8 +65972,6 @@ var MyPostDetails = function (_Component) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios_index__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_axios_index__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -65953,83 +65982,67 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-
 var DetailsForm = function (_Component) {
     _inherits(DetailsForm, _Component);
 
-    function DetailsForm(props) {
+    function DetailsForm() {
         _classCallCheck(this, DetailsForm);
 
-        var _this = _possibleConstructorReturn(this, (DetailsForm.__proto__ || Object.getPrototypeOf(DetailsForm)).call(this, props));
-
-        _this.deletePost = _this.deletePost.bind(_this);
-        return _this;
+        return _possibleConstructorReturn(this, (DetailsForm.__proto__ || Object.getPrototypeOf(DetailsForm)).apply(this, arguments));
     }
 
     _createClass(DetailsForm, [{
-        key: 'deletePost',
-        value: function deletePost(id) {
-            __WEBPACK_IMPORTED_MODULE_1_axios_index___default.a.delete('/api/myposts/' + id).then(function (res) {
-                window.location.replace('/home/buy');
-            }).catch(function (error) {
-                console.log('Something Went Wrong!');
-            });
-        }
-    }, {
-        key: 'render',
+        key: "render",
         value: function render() {
-            var _this2 = this;
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: 'details-form' },
+                "div",
+                { className: "details-form" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'form',
-                    { action: '' },
+                    "form",
+                    { action: "" },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: 'form-group' },
+                        "div",
+                        { className: "form-group" },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'label',
-                            { htmlFor: 'title' },
-                            'Title: '
+                            "label",
+                            { htmlFor: "title" },
+                            "Title: "
                         ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', {
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
                             onChange: this.props.onChange,
                             value: this.props.postDetails.title,
-                            name: 'title',
-                            ref: 'title',
-                            type: 'text',
-                            className: 'form-control' })
+                            name: "title",
+                            ref: "title",
+                            type: "text",
+                            className: "form-control" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: 'form-group' },
+                        "div",
+                        { className: "form-group" },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'label',
-                            { htmlFor: 'body' },
-                            'Body:'
+                            "label",
+                            { htmlFor: "body" },
+                            "Body:"
                         ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', {
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
                             onChange: this.props.onChange,
                             value: this.props.postDetails.body,
-                            name: 'body',
-                            ref: 'body',
-                            type: 'text',
-                            className: 'form-control' })
+                            name: "body",
+                            ref: "body",
+                            type: "text",
+                            className: "form-control" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'button',
-                        { onClick: this.props.onClick, className: 'btn blue' },
-                        'Update'
+                        "a",
+                        { onClick: this.props.update, className: "button blue w-290 square" },
+                        "Update"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { onClick: this.props.delete, className: "button white w-290 square" },
+                        "Delete"
                     )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'a',
-                    { onClick: function onClick() {
-                            _this2.deletePost(_this2.props.postDetails.id);
-                        }, className: 'btn blue' },
-                    'Delete'
                 )
             );
         }
