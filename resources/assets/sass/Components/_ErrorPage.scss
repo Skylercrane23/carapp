@@ -1,0 +1,16 @@
+/* BUTTON COMPONENT STYLES
+========================*/
+
+#ErrorPage {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        rgba(255,255,255, .9),
+        rgba(255,255,255, .9)
+    ),
+    url('/img/errorpage.jpg');
+    background-size: cover;
+    background-position: center center;
+}

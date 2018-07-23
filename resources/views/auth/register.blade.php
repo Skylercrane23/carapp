@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div id="register">
+    <div id="register" class="animated fadeIn">
         <div class="container-fluid">
             <div class="row" id="row-container">
                 <div class="col-lg-4 col-md-4 blue-bg d-none d-md-block sidebar">

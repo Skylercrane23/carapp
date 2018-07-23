@@ -50,4 +50,20 @@ class UserPostsController extends Controller
     }
 
 
+    // DELETE USER POST
+    public function delete(Post $post)
+    {
+        $user_id = Auth::id();
+        $post_id = $post->user_id;
+
+        if ($user_id == $post_id) {
+            $post->delete();
+           // return response()->json($post, 200);
+        } else {
+            return response('something went wrong', 401);
+        }
+
+    }
+
+
 }

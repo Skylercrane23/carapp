@@ -1,6 +1,21 @@
 import React, {Component} from 'react';
+import axios from "axios/index";
 
 export default class DetailsForm extends Component {
+    constructor(props) {
+        super(props);
+        this.deletePost = this.deletePost.bind(this);
+    }
+
+    deletePost(id) {
+        axios.delete(`/api/myposts/` + id)
+            .then((res) => {
+                window.location.replace('/home/buy');
+            })
+            .catch((error) => {
+                console.log('Something Went Wrong!');
+            });
+    }
 
     render() {
 
@@ -27,13 +42,13 @@ export default class DetailsForm extends Component {
                             type="text"
                             className="form-control"/>
                     </div>
-                    <button onClick={this.props.onClick} type="submit" className="btn btn blue">Update</button>
+                    <button onClick={this.props.onClick} className="btn blue">Update</button>
                 </form>
+                <a onClick={() => {
+                    this.deletePost(this.props.postDetails.id)
+                }} className="btn blue">Delete</a>
             </div>
         );
     }
 }
 
-/*if (document.getElementById('messages')) {
-    ReactDOM.render(<Messages/>, document.getElementById('messages'));
-}*/

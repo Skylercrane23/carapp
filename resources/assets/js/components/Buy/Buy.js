@@ -49,7 +49,7 @@ export default class Buy extends Component {
                     body: '',
                 }
             });
-            window.location.replace("http://carapp.test/dashboard");
+            this.props.history.push('/home/buy');
         });
     }
 
@@ -61,7 +61,9 @@ export default class Buy extends Component {
                 <BuyHero/>
 
                 <div className="container">
-                    <MyBuyPosts myPosts={this.state.myPosts}/>
+                    <MyBuyPosts
+                        myPosts={this.state.myPosts}
+                    />
                 </div>
 
                 <div className="container">

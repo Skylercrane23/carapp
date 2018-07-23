@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div id="login">
+    <div id="login" class="animated fadeIn">
         <div class="container-fluid">
             <div class="row" id="row-container">
                 <div class="col-lg-4 col-md-4 blue-bg d-none d-md-block sidebar">
@@ -68,10 +68,10 @@
                                             {{ __('Sign In') }}
                                         </button>
 
-                                        <a class="btn btn-link text-center d-block small"
+                                      {{--  <a class="btn btn-link text-center d-block small"
                                            href="{{ route('password.request') }}">
                                             {{ __('Forgot Your Password?') }}
-                                        </a>
+                                        </a>--}}
                                     </div>
                                 </div>
                             </form>

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from "axios/index";
 import DetailsForm from "./DetailsForm";
 import ErrorPage from "../../common/ErrorPage";
+import SweetAlert from 'sweetalert2-react';
 
 export default class MyPostDetails extends Component {
     constructor(props) {
@@ -9,12 +10,15 @@ export default class MyPostDetails extends Component {
         this.state = {
             postDetails: {
                 title: '',
-                body: ''
+                body: '',
+                id: ''
             },
+            showConfirmUpdate: false,
             hasError: false,
         };
         this.setPostDetailState = this.setPostDetailState.bind(this);
         this.updatePostDetails = this.updatePostDetails.bind(this);
+        this.confirmUpdate = this.confirmUpdate.bind(this);
     }
 
     // ERRORS HANDLER FOR INVALID RESPONSES
@@ -32,10 +36,12 @@ export default class MyPostDetails extends Component {
         axios.get('/api/myposts/' + this.props.match.params.id)
             .then(response => {
                 const details = response.data;
+                //console.log(details);
                 this.setState({
                     postDetails: {
                         title: details.title,
                         body: details.body,
+                        id: details.id
                     }
                 })
             })
@@ -43,7 +49,7 @@ export default class MyPostDetails extends Component {
                 this.setState({
                     hasError: true,
                     error: error,
-                    errorInfo: 'Sorry, you are not authorized to access this content.'
+                    errorInfo: 'You are not authorized to view this content.'
                 })
             });
     }
@@ -59,22 +65,30 @@ export default class MyPostDetails extends Component {
         })
     }
 
+    confirmUpdate(e){
+        e.preventDefault();
+        this.setState({
+            showConfirmUpdate: true,
+        });
+    }
+
 
     // UPDATE POST DETAILS
-    updatePostDetails(e) {
-        e.preventDefault();
+    updatePostDetails() {
+        //e.preventDefault();
         axios.put(`/api/myposts/` + this.props.match.params.id, {
             body: this.state.postDetails.body,
             title: this.state.postDetails.title
         })
             .then((res) => {
-                window.location.replace("http://carapp.test/home/buy");
+                this.setState({ showConfirmUpdate: false });
+                this.props.history.push('/home/buy');
             })
             .catch((error) => {
                 this.setState({
                     hasError: true,
                     error: error,
-                    errorInfo: 'Sorry, you are not authorized to update this content.'
+                    errorInfo: 'You are not authorized to update this content.'
                 })
             });
     }
@@ -100,11 +114,25 @@ export default class MyPostDetails extends Component {
                                         <DetailsForm
                                             postDetails={this.state.postDetails}
                                             onChange={this.setPostDetailState}
-                                            onClick={this.updatePostDetails}
+                                            onClick={this.confirmUpdate}
                                         />
 
                                     </div>
-                                    {/*<a href="/home/buy">Back</a>*/}
+
+                                    <SweetAlert
+                                        show={this.state.showConfirmUpdate}
+                                        title="Confirm Update"
+                                        type='info'
+                                        text="Do you want to confirm this update?"
+                                        reverseButtons={true}
+                                        showCancelButton={true}
+                                        cancelButtonText='Cancel'
+                                        confirmButtonText='Update'
+                                        onConfirm={ () => {
+                                            this.updatePostDetails();
+                                        }}
+                                    />
+
                                 </div>
                             </div>
                         </div>

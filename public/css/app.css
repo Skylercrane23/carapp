@@ -10758,6 +10758,26 @@ button.transparent-blue:hover {
   font-size: 14px;
 }
 
+/* BUTTON COMPONENT STYLES
+========================*/
+
+#ErrorPage {
+  min-height: calc(100vh - 70px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.9))), url("/img/errorpage.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("/img/errorpage.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
 /* NAVIGATION COMPONENT STYLES
 ============================*/
 

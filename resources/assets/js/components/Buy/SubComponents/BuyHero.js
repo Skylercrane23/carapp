@@ -62,7 +62,3 @@ export default class BuyHero extends Component {
         );
     }
 }
-
-/*if (document.getElementById('messages')) {
-    ReactDOM.render(<Messages/>, document.getElementById('messages'));
-}*/
