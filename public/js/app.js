@@ -59873,10 +59873,6 @@ var BuyHero = function (_Component) {
         _classCallCheck(this, BuyHero);
 
         return _possibleConstructorReturn(this, (BuyHero.__proto__ || Object.getPrototypeOf(BuyHero)).call(this, props));
-        // this.state = {
-        //     show: false
-        // };
-        // this.showAlert = this.showAlert.bind(this);
     }
 
     _createClass(BuyHero, [{
@@ -59885,7 +59881,7 @@ var BuyHero = function (_Component) {
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                { className: 'jumbotron jumbotron-fluid', id: 'BuyHero' },
+                { className: 'jumbotron jumbotron-fluid animated fadeIn', id: 'BuyHero' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
                     { className: 'container' },
@@ -65400,27 +65396,85 @@ var MyBuyPosts = function (_Component) {
                         { className: "col-md-6 col-sm-12 buypost animated fadeIn", key: post.id },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             "div",
-                            { className: "card" },
+                            null,
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 "a",
-                                { href: '/home/my-post-details/' + post.id },
+                                { className: "card", href: '/home/my-post-details/' + post.id },
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "p",
-                                    null,
-                                    post.id,
-                                    " "
+                                    "div",
+                                    { className: "img" },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "img-fluid", src: "/img/about-us.jpg", alt: "" })
                                 ),
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "p",
-                                    null,
-                                    post.title,
-                                    " "
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "p",
-                                    null,
-                                    post.body,
-                                    " "
+                                    "div",
+                                    { className: "right" },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        "div",
+                                        { className: "header" },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            "h6",
+                                            null,
+                                            post.title,
+                                            " "
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            "p",
+                                            null,
+                                            post.body,
+                                            " "
+                                        )
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        "div",
+                                        { className: "overview" },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            "small",
+                                            { className: "w-bold" },
+                                            "overview"
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            "div",
+                                            { className: "left-overview" },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                "div",
+                                                { className: "budget" },
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    "p",
+                                                    null,
+                                                    "Budget: ",
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        "span",
+                                                        null,
+                                                        "$38,000"
+                                                    )
+                                                )
+                                            ),
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                "div",
+                                                { className: "location" },
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    "p",
+                                                    null,
+                                                    "Location: ",
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        "span",
+                                                        null,
+                                                        "$38,000"
+                                                    )
+                                                )
+                                            )
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "right-overview" })
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        "div",
+                                        { className: "btn-container" },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            "div",
+                                            { className: "button blue small", href: '/home/my-post-details/' + post.id },
+                                            "View/Edit"
+                                        )
+                                    )
                                 )
                             )
                         )

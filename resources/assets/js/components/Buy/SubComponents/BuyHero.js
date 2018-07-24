@@ -4,17 +4,13 @@ import SweetAlert from 'sweetalert2-react';
 export default class BuyHero extends Component {
     constructor(props) {
         super(props);
-        // this.state = {
-        //     show: false
-        // };
-        // this.showAlert = this.showAlert.bind(this);
     }
 
 
     render() {
 
         return (
-            <div className="jumbotron jumbotron-fluid" id="BuyHero">
+            <div className="jumbotron jumbotron-fluid animated fadeIn" id="BuyHero">
                 <div className="container">
                     <div className="buying-container">
                         <h3 className="text-center">Buying</h3>

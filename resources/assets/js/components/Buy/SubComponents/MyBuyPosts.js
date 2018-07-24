@@ -10,11 +10,34 @@ export default class MyBuyPosts extends Component {
             return userPosts.map(post => {
                 return (
                     <div className="col-md-6 col-sm-12 buypost animated fadeIn" key={post.id}>
-                        <div className="card">
-                            <a href={'/home/my-post-details/' + post.id}>
-                                <p>{post.id} </p>
-                                <p>{post.title} </p>
-                                <p>{post.body} </p>
+                        <div>
+                            <a className="card" href={'/home/my-post-details/' + post.id}>
+                                <div className="img">
+                                    <img className="img-fluid" src="/img/about-us.jpg" alt=""/>
+                                </div>
+                                <div className="right">
+                                    <div className="header">
+                                        <h6>{post.title} </h6>
+                                        <p>{post.body} </p>
+                                    </div>
+                                    <div className="overview">
+                                        <small className="w-bold">overview</small>
+                                        <div className="left-overview">
+                                            <div className="budget">
+                                                <p>Budget: <span>$38,000</span></p>
+                                            </div>
+                                            <div className="location">
+                                                <p>Location: <span>$38,000</span></p>
+                                            </div>
+                                        </div>
+                                        <div className="right-overview">
+
+                                        </div>
+                                    </div>
+                                    <div className="btn-container">
+                                        <div className="button blue small" href={'/home/my-post-details/' + post.id}>View/Edit</div>
+                                    </div>
+                                </div>
                             </a>
                         </div>
                     </div>
