@@ -8,6 +8,7 @@ import Buy from './components/Buy/Buy';
 import Sell from './components/Sell/Sell';
 import BrowseAll from './components/BrowseAll/BrowseAll';
 import MyPostDetails from './components/Buy/SubComponents/MyPostDetails';
+import PostDetails from './components/BrowseAll/PostDetails';
 import CreatePost from './components/Buy/SubComponents/CreatePost';
 
 
@@ -19,6 +20,7 @@ export default (
         <Route name="Create-Post" component={ CreatePost } path="/home/create-post" />
         <Route name="Sell" component={ Sell } path="/home/sell" />
         <Route name="Browse-All" component={ BrowseAll } path="/home/browse-all" />
+        <Route name="Post-Details" component={ PostDetails } path="/home/post-details/:id" />
         <Route name="My-Post-Details" component={ MyPostDetails } path="/home/my-post-details/:id" />
     </Switch>
 )

@@ -1,4 +1,4 @@
-/*  BUYE COMPONENT STYLES
+/*  BUY COMPONENT STYLES
 =======================*/
 
 .buypost-container {
@@ -30,8 +30,7 @@
             transition: all .3s ease;
             &:hover {
                 text-decoration: none;
-                box-shadow: 0px 0px 30px rgba(0, 0, 0, .25);
-
+                box-shadow: 0px 0px 30px rgba(0, 0, 0, .5);
             }
         }
 
@@ -43,7 +42,7 @@
                 border-bottom: 1px solid $light-grey;
                 padding-bottom: 5px;
             }
-            h6 {
+            h5 {
                 margin-bottom: 0px;
                 @include ellipsis(1.25, 1);
             }
@@ -55,14 +54,42 @@
 
             .overview {
                 padding-top: 5px;
+                padding-bottom: 10px;
+
+                .overview-container {
+                    display: flex;
+                    flex-direction: row;
+
+                }
                 p {
                     font-size: 12px;
                 }
-                .left-overview {
 
+                .left-overview {
+                    margin-right: 20px;
                 }
                 .right-overview {
 
+                }
+            }
+            .btn-container {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                .button {
+                    margin: 0 !important;
+                    max-width: 100%;
+                    width: 100px;
+                   margin-left: 15px !important;
+                    //&:hover {
+                    //    background: $blue;
+                    //    color: $white;
+                    //}
+                    &:first-child {
+                        margin-left: 0;
+                    }
                 }
             }
         }

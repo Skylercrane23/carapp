@@ -10,18 +10,18 @@ export default class MyBuyPosts extends Component {
             return userPosts.map(post => {
                 return (
                     <div className="col-md-6 col-sm-12 buypost animated fadeIn" key={post.id}>
-                        <div>
-                            <a className="card" href={'/home/my-post-details/' + post.id}>
-                                <div className="img">
-                                    <img className="img-fluid" src="/img/about-us.jpg" alt=""/>
+                        <div className="card">
+                            <div className="img">
+                                <img className="img-fluid" src="/img/about-us.jpg" alt=""/>
+                            </div>
+                            <div className="right">
+                                <div className="header">
+                                    <h5>{post.title} </h5>
+                                    <p>{post.body} </p>
                                 </div>
-                                <div className="right">
-                                    <div className="header">
-                                        <h6>{post.title} </h6>
-                                        <p>{post.body} </p>
-                                    </div>
-                                    <div className="overview">
-                                        <small className="w-bold">overview</small>
+                                <div className="overview">
+                                    <small className="w-bold">overview</small>
+                                    <div className="overview-container">
                                         <div className="left-overview">
                                             <div className="budget">
                                                 <p>Budget: <span>$38,000</span></p>
@@ -31,14 +31,24 @@ export default class MyBuyPosts extends Component {
                                             </div>
                                         </div>
                                         <div className="right-overview">
-
+                                            <div className="budget">
+                                                <p>Mileage: <span>Under 50,000</span></p>
+                                            </div>
+                                            <div className="location">
+                                                <p>Timetable: <span>1 Month</span></p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="btn-container">
-                                        <div className="button blue small" href={'/home/my-post-details/' + post.id}>View/Edit</div>
-                                    </div>
                                 </div>
-                            </a>
+                                <div className="btn-container">
+                                    <a className="button circle blue small"
+                                       href={'/home/post-details/' + post.id}>View
+                                    </a>
+                                    <a className="button circle white small"
+                                       href={'/home/my-post-details/' + post.id}>Edit
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 );

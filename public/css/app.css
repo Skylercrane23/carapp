@@ -11089,15 +11089,6 @@ button.transparent-blue:hover {
   margin: 0;
 }
 
-#MyPosts .card {
-  border: none;
-  border-radius: 0;
-  padding: 15px;
-  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
-  margin-bottom: 15px;
-}
-
 /* POTENTIAL BUYERS COMPONENT STYLES
 ==================================*/
 
@@ -11270,7 +11261,7 @@ button.transparent-blue:hover {
   margin-top: 70px;
 }
 
-/*  BUYE COMPONENT STYLES
+/*  BUY COMPONENT STYLES
 =======================*/
 
 .buypost-container {
@@ -11321,8 +11312,8 @@ button.transparent-blue:hover {
 
 .buypost-container .buypost .card:hover {
   text-decoration: none;
-  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
 }
 
 .buypost-container .buypost .right {
@@ -11335,7 +11326,7 @@ button.transparent-blue:hover {
   padding-bottom: 5px;
 }
 
-.buypost-container .buypost .right h6 {
+.buypost-container .buypost .right h5 {
   margin-bottom: 0px;
   overflow: hidden;
   max-height: 1.25;
@@ -11358,10 +11349,53 @@ button.transparent-blue:hover {
 
 .buypost-container .buypost .right .overview {
   padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.buypost-container .buypost .right .overview .overview-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .buypost-container .buypost .right .overview p {
   font-size: 12px;
+}
+
+.buypost-container .buypost .right .overview .left-overview {
+  margin-right: 20px;
+}
+
+.buypost-container .buypost .right .btn-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.buypost-container .buypost .right .btn-container .button {
+  margin: 0 !important;
+  max-width: 100%;
+  width: 100px;
+  margin-left: 15px !important;
+}
+
+.buypost-container .buypost .right .btn-container .button:first-child {
+  margin-left: 0;
 }
 
 /* LANDING PAGE STYLES

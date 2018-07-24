@@ -10,10 +10,47 @@ export default class MyPosts extends Component {
         if (firstThree.length > 0) {
             return firstThree.map(post => {
                 return (
-                    <div className="card" key={post.id}>
-                        <p>{post.id} </p>
-                        <p>{post.title} </p>
-                        <p>{post.body} </p>
+                    <div className="col-md-12 col-sm-12 buypost animated fadeIn" key={post.id}>
+                        <div className="card">
+                                <div className="img">
+                                    <img className="img-fluid" src="/img/about-us.jpg" alt=""/>
+                                </div>
+                                <div className="right">
+                                    <div className="header">
+                                        <h5>{post.title} </h5>
+                                        <p>{post.body} </p>
+                                    </div>
+                                    <div className="overview">
+                                        <small className="w-bold">overview</small>
+                                        <div className="overview-container">
+                                            <div className="left-overview">
+                                                <div className="budget">
+                                                    <p>Budget: <span>$38,000</span></p>
+                                                </div>
+                                                <div className="location">
+                                                    <p>Location: <span>$38,000</span></p>
+                                                </div>
+                                            </div>
+                                            <div className="right-overview">
+                                                <div className="budget">
+                                                    <p>Mileage: <span>Under 50,000</span></p>
+                                                </div>
+                                                <div className="location">
+                                                    <p>Timetable: <span>1 Month</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="btn-container">
+                                        <a className="button circle blue small"
+                                             href={'/home/post-details/' + post.id}>View
+                                        </a>
+                                        <a className="button circle white small"
+                                             href={'/home/my-post-details/' + post.id}>Edit
+                                        </a>
+                                    </div>
+                                </div>
+                        </div>
                     </div>
                 );
             })
@@ -34,7 +71,7 @@ export default class MyPosts extends Component {
                    <h4>My Posts</h4>
                    <a href="/home/buy" className="blue">View All My Posts <i className="fas fa-chevron-right"></i></a>
                </div>
-                <div className="">
+                <div className="row buypost-container">
                     {this.renderMyPosts()}
                 </div>
             </div>
