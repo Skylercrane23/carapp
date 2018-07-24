@@ -56688,10 +56688,12 @@ var App = function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Sell_Sell__ = __webpack_require__(123);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_BrowseAll_BrowseAll__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Buy_SubComponents_MyPostDetails__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_Buy_SubComponents_CreatePost__ = __webpack_require__(133);
 
 
 
 // COMPONENT IMPORTS FOR ROUTING
+
 
 
 
@@ -56704,6 +56706,7 @@ var App = function (_Component) {
     null,
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { name: 'Messages', component: __WEBPACK_IMPORTED_MODULE_3__components_Messages_Messages__["a" /* default */], path: '/home/messages' }),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { name: 'Buy', component: __WEBPACK_IMPORTED_MODULE_4__components_Buy_Buy__["a" /* default */], path: '/home/buy' }),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { name: 'Create-Post', component: __WEBPACK_IMPORTED_MODULE_8__components_Buy_SubComponents_CreatePost__["a" /* default */], path: '/home/create-post' }),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { name: 'Sell', component: __WEBPACK_IMPORTED_MODULE_5__components_Sell_Sell__["a" /* default */], path: '/home/sell' }),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { name: 'Browse-All', component: __WEBPACK_IMPORTED_MODULE_6__components_BrowseAll_BrowseAll__["a" /* default */], path: '/home/browse-all' }),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { name: 'My-Post-Details', component: __WEBPACK_IMPORTED_MODULE_7__components_Buy_SubComponents_MyPostDetails__["a" /* default */], path: '/home/my-post-details/:id' })
@@ -59769,6 +59772,7 @@ var Messages = function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_axios__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__SubComponents_BuyHero__ = __webpack_require__(115);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__SubComponents_MyBuyPosts__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__SubComponents_CreatePost__ = __webpack_require__(133);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -59776,6 +59780,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 
 
 
@@ -59792,14 +59797,8 @@ var Buy = function (_Component) {
         var _this = _possibleConstructorReturn(this, (Buy.__proto__ || Object.getPrototypeOf(Buy)).call(this, props));
 
         _this.state = {
-            myPosts: [],
-            newPost: {
-                title: '',
-                body: ''
-            }
+            myPosts: []
         };
-        _this.createPost = _this.createPost.bind(_this);
-        _this.handleInput = _this.handleInput.bind(_this);
         return _this;
     }
 
@@ -59819,36 +59818,8 @@ var Buy = function (_Component) {
             });
         }
     }, {
-        key: 'handleInput',
-        value: function handleInput(key, e) {
-            /*Duplicating and updating the state */
-            var state = Object.assign({}, this.state.newPost);
-            state[key] = e.target.value;
-            this.setState({ newPost: state });
-        }
-    }, {
-        key: 'createPost',
-        value: function createPost(e) {
-            var _this3 = this;
-
-            e.preventDefault();
-            __WEBPACK_IMPORTED_MODULE_1_axios___default.a.post('/api/posts', {
-                body: this.state.newPost.body,
-                title: this.state.newPost.title
-            }).then(function (res) {
-                _this3.setState({
-                    newPost: {
-                        title: '',
-                        body: ''
-                    }
-                });
-                _this3.props.history.push('/home/buy');
-            });
-        }
-    }, {
         key: 'render',
         value: function render() {
-            var _this4 = this;
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
@@ -59860,49 +59831,6 @@ var Buy = function (_Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__SubComponents_MyBuyPosts__["a" /* default */], {
                         myPosts: this.state.myPosts
                     })
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'container' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'form',
-                        null,
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'form-group' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'label',
-                                { htmlFor: 'title' },
-                                'Title'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
-                                    return _this4.handleInput('title', e);
-                                }, type: 'text', className: 'form-control',
-                                id: 'title',
-                                'aria-describedby': 'emailHelp', placeholder: 'Enter Title',
-                                value: this.state.newPost.title })
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'form-group' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'label',
-                                { htmlFor: 'body' },
-                                'Body'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
-                                    return _this4.handleInput('body', e);
-                                }, type: 'text', className: 'form-control',
-                                id: 'body',
-                                placeholder: 'Body',
-                                value: this.state.newPost.body })
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'button',
-                            { onClick: this.createPost, type: 'submit', className: 'btn btn-primary' },
-                            'Submit'
-                        )
-                    )
                 )
             );
         }
@@ -59944,26 +59872,16 @@ var BuyHero = function (_Component) {
     function BuyHero(props) {
         _classCallCheck(this, BuyHero);
 
-        var _this = _possibleConstructorReturn(this, (BuyHero.__proto__ || Object.getPrototypeOf(BuyHero)).call(this, props));
-
-        _this.state = {
-            show: false
-        };
-        _this.showAlert = _this.showAlert.bind(_this);
-        return _this;
+        return _possibleConstructorReturn(this, (BuyHero.__proto__ || Object.getPrototypeOf(BuyHero)).call(this, props));
+        // this.state = {
+        //     show: false
+        // };
+        // this.showAlert = this.showAlert.bind(this);
     }
 
     _createClass(BuyHero, [{
-        key: 'showAlert',
-        value: function showAlert() {
-            this.setState({
-                show: true
-            });
-        }
-    }, {
         key: 'render',
         value: function render() {
-            var _this2 = this;
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
@@ -60039,19 +59957,11 @@ var BuyHero = function (_Component) {
                         { className: 'btn-container' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'a',
-                            { onClick: this.showAlert, className: 'create-post-btn', href: '#' },
+                            { className: 'create-post-btn', href: '/home/create-post' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-plus-circle' })
                         )
                     )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_sweetalert2_react___default.a, {
-                    show: this.state.show,
-                    title: 'Demo',
-                    text: 'SweetAlert in React',
-                    onConfirm: function onConfirm() {
-                        return _this2.setState({ show: false });
-                    }
-                })
+                )
             );
         }
     }]);
@@ -65478,7 +65388,7 @@ var MyBuyPosts = function (_Component) {
     }
 
     _createClass(MyBuyPosts, [{
-        key: 'renderMyPosts',
+        key: "renderMyPosts",
         value: function renderMyPosts() {
             var data = this.props.myPosts;
             var userPosts = Object.values(data);
@@ -65486,59 +65396,63 @@ var MyBuyPosts = function (_Component) {
             if (userPosts.length > 0) {
                 return userPosts.map(function (post) {
                     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: 'card mt-3', key: post.id },
+                        "div",
+                        { className: "col-md-6 col-sm-12 buypost animated fadeIn", key: post.id },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'a',
-                            { href: '/home/my-post-details/' + post.id },
+                            "div",
+                            { className: "card" },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'p',
-                                null,
-                                post.id,
-                                ' '
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'p',
-                                null,
-                                post.title,
-                                ' '
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'p',
-                                null,
-                                post.body,
-                                ' '
+                                "a",
+                                { href: '/home/my-post-details/' + post.id },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "p",
+                                    null,
+                                    post.id,
+                                    " "
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "p",
+                                    null,
+                                    post.title,
+                                    " "
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "p",
+                                    null,
+                                    post.body,
+                                    " "
+                                )
                             )
                         )
                     );
                 });
             } else {
                 return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
+                    "div",
                     null,
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'h6',
+                        "h6",
                         null,
-                        'Sorry, No Posts'
+                        "Sorry, No Posts"
                     )
                 );
             }
         }
     }, {
-        key: 'render',
+        key: "render",
         value: function render() {
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { id: 'MyBuyPosts' },
+                "div",
+                { id: "MyBuyPosts" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'h4',
+                    "h4",
                     null,
-                    'My Posts'
+                    "My Posts"
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'my-posts-container' },
+                    "div",
+                    { className: "row buypost-container" },
                     this.renderMyPosts()
                 )
             );
@@ -66113,6 +66027,148 @@ var ErrorPage = function (_Component) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 129 */,
+/* 130 */,
+/* 131 */,
+/* 132 */,
+/* 133 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios_index__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_axios_index__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var CreatePost = function (_Component) {
+    _inherits(CreatePost, _Component);
+
+    function CreatePost(props) {
+        _classCallCheck(this, CreatePost);
+
+        var _this = _possibleConstructorReturn(this, (CreatePost.__proto__ || Object.getPrototypeOf(CreatePost)).call(this, props));
+
+        _this.state = {
+            newPost: {
+                title: '',
+                body: ''
+            }
+        };
+        _this.createPost = _this.createPost.bind(_this);
+        _this.handleInput = _this.handleInput.bind(_this);
+        _this.cancel = _this.cancel.bind(_this);
+        return _this;
+    }
+
+    _createClass(CreatePost, [{
+        key: 'handleInput',
+        value: function handleInput(key, e) {
+            /*Duplicating and updating the state */
+            var state = Object.assign({}, this.state.newPost);
+            state[key] = e.target.value;
+            this.setState({ newPost: state });
+        }
+    }, {
+        key: 'createPost',
+        value: function createPost(e) {
+            var _this2 = this;
+
+            e.preventDefault();
+            __WEBPACK_IMPORTED_MODULE_1_axios_index___default.a.post('/api/posts', {
+                body: this.state.newPost.body,
+                title: this.state.newPost.title
+            }).then(function (res) {
+                _this2.setState({
+                    newPost: {
+                        title: '',
+                        body: ''
+                    }
+                });
+                _this2.props.history.push('/home/buy');
+            });
+        }
+    }, {
+        key: 'cancel',
+        value: function cancel() {
+            this.props.history.push('/home/buy');
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this3 = this;
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { id: 'CreatePost' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'container', style: { marginTop: 100 } },
+                    'Create Post',
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'form',
+                        null,
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'form-group' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'label',
+                                { htmlFor: 'title' },
+                                'Title'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
+                                    return _this3.handleInput('title', e);
+                                }, type: 'text', className: 'form-control',
+                                id: 'title',
+                                'aria-describedby': 'emailHelp', placeholder: 'Enter Title',
+                                value: this.state.newPost.title })
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'form-group' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'label',
+                                { htmlFor: 'body' },
+                                'Body'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
+                                    return _this3.handleInput('body', e);
+                                }, type: 'text', className: 'form-control',
+                                id: 'body',
+                                placeholder: 'Body',
+                                value: this.state.newPost.body })
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'button',
+                            { onClick: this.createPost, type: 'submit', className: 'button blue square' },
+                            'Submit'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'a',
+                            { className: 'button transparent-blue', onClick: this.cancel },
+                            'Cancel'
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return CreatePost;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (CreatePost);
 
 /***/ })
 /******/ ]);

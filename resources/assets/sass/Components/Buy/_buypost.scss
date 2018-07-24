@@ -1,0 +1,15 @@
+/*  BUYE COMPONENT STYLES
+=======================*/
+
+.buypost-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    .buypost {
+        padding: 15px;
+        width: 300px
+    }
+}

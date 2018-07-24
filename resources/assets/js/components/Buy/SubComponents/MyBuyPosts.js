@@ -9,12 +9,14 @@ export default class MyBuyPosts extends Component {
         if (userPosts.length > 0) {
             return userPosts.map(post => {
                 return (
-                    <div className="card mt-3" key={post.id}>
-                        <a href={'/home/my-post-details/' + post.id }>
-                            <p>{post.id} </p>
-                            <p>{post.title} </p>
-                            <p>{post.body} </p>
-                        </a>
+                    <div className="col-md-6 col-sm-12 buypost animated fadeIn" key={post.id}>
+                        <div className="card">
+                            <a href={'/home/my-post-details/' + post.id}>
+                                <p>{post.id} </p>
+                                <p>{post.title} </p>
+                                <p>{post.body} </p>
+                            </a>
+                        </div>
                     </div>
                 );
             })
@@ -32,7 +34,7 @@ export default class MyBuyPosts extends Component {
         return (
             <div id="MyBuyPosts">
                 <h4>My Posts</h4>
-                <div className="my-posts-container">
+                <div className="row buypost-container">
                     {this.renderMyPosts()}
                 </div>
             </div>

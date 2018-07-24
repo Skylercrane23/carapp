@@ -10699,7 +10699,7 @@ button.circle {
 .button.blue,
 button.blue {
   background: #19496F;
-  color: #ffffff !important;
+  color: #ffffff;
   border: 2px solid #19496F;
 }
 
@@ -11213,11 +11213,12 @@ button.transparent-blue:hover {
   height: 100%;
 }
 
-/*  BUYE COMPONENT STYLES
-=======================*/
+/*  BUY COMPONENT STYLES
+======================*/
 
 #Buy {
-  margin-top: 70px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 /* BUY HERO COMPONENT STYLES
@@ -11267,6 +11268,29 @@ button.transparent-blue:hover {
 
 #MyPostDetails {
   margin-top: 70px;
+}
+
+/*  BUYE COMPONENT STYLES
+=======================*/
+
+.buypost-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.buypost-container .buypost {
+  padding: 15px;
+  width: 300px;
 }
 
 /* LANDING PAGE STYLES

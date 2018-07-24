@@ -4,17 +4,12 @@ import SweetAlert from 'sweetalert2-react';
 export default class BuyHero extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            show: false
-        };
-        this.showAlert = this.showAlert.bind(this);
+        // this.state = {
+        //     show: false
+        // };
+        // this.showAlert = this.showAlert.bind(this);
     }
 
-    showAlert(){
-        this.setState({
-            show: true,
-        })
-    }
 
     render() {
 
@@ -46,17 +41,9 @@ export default class BuyHero extends Component {
                 </div>
                 <div className="container ">
                     <div className="btn-container">
-                        <a onClick={this.showAlert} className="create-post-btn" href="#"><i className="fas fa-plus-circle"></i></a>
+                        <a className="create-post-btn" href="/home/create-post"><i className="fas fa-plus-circle"></i></a>
                     </div>
                 </div>
-
-                <SweetAlert
-                    show={this.state.show}
-                    title="Demo"
-                    text="SweetAlert in React"
-                    onConfirm={() => this.setState({ show: false })}
-                />
-
 
             </div>
         );
