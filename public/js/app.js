@@ -59573,7 +59573,7 @@ var MyPosts = function (_Component) {
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                         "p",
                                         null,
-                                        post.body,
+                                        post.description,
                                         " "
                                     )
                                 ),
@@ -59601,7 +59601,8 @@ var MyPosts = function (_Component) {
                                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                         "span",
                                                         null,
-                                                        "$38,000"
+                                                        "$",
+                                                        post.budget
                                                     )
                                                 )
                                             ),
@@ -59615,7 +59616,7 @@ var MyPosts = function (_Component) {
                                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                         "span",
                                                         null,
-                                                        "$38,000"
+                                                        post.location
                                                     )
                                                 )
                                             )
@@ -59633,7 +59634,7 @@ var MyPosts = function (_Component) {
                                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                         "span",
                                                         null,
-                                                        "Under 50,000"
+                                                        post.mileage
                                                     )
                                                 )
                                             ),
@@ -59643,11 +59644,11 @@ var MyPosts = function (_Component) {
                                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                     "p",
                                                     null,
-                                                    "Timetable: ",
+                                                    "Timeframe: ",
                                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                         "span",
                                                         null,
-                                                        "1 Month"
+                                                        post.timeframe
                                                     )
                                                 )
                                             )
@@ -65952,7 +65953,7 @@ var BrowseAll = function (_Component) {
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'p',
                                     null,
-                                    post.body,
+                                    post.description,
                                     ' '
                                 )
                             ),
@@ -65980,7 +65981,8 @@ var BrowseAll = function (_Component) {
                                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                     'span',
                                                     null,
-                                                    '$38,000'
+                                                    '$',
+                                                    post.budget
                                                 )
                                             )
                                         ),
@@ -65994,7 +65996,7 @@ var BrowseAll = function (_Component) {
                                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                     'span',
                                                     null,
-                                                    '$38,000'
+                                                    post.location
                                                 )
                                             )
                                         )
@@ -66012,7 +66014,7 @@ var BrowseAll = function (_Component) {
                                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                     'span',
                                                     null,
-                                                    'Under 50,000'
+                                                    post.mileage
                                                 )
                                             )
                                         ),
@@ -66022,11 +66024,11 @@ var BrowseAll = function (_Component) {
                                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                 'p',
                                                 null,
-                                                'Timetable: ',
+                                                'Timeframe: ',
                                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                     'span',
                                                     null,
-                                                    '1 Month'
+                                                    post.timeframe
                                                 )
                                             )
                                         )
@@ -66532,7 +66534,17 @@ var PostDetails = function (_Component) {
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
                                 this.state.posts.title,
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
-                                this.state.posts.body
+                                this.state.posts.description,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                "$",
+                                this.state.posts.budget,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                this.state.posts.mileage,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                this.state.posts.location,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                this.state.posts.timeframe,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null)
                             )
                         )
                     )

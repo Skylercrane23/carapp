@@ -49,9 +49,13 @@ class PostController extends Controller
         $user_id = Auth::id();
 
         $post = Post::create([
-            'body' => $request['body'],
-            'title' => $request['title'],
             'user_id' => $user_id,
+            'title' => $request['title'],
+            'description' => $request['description'],
+            'budget' => $request['budget'],
+            'mileage' => $request['mileage'],
+            'location' => $request['location'],
+            'timeframe' => $request['timeframe'],
         ]);
 
         $post->save();

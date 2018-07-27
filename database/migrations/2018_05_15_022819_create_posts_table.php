@@ -22,7 +22,11 @@ class CreatePostsTable extends Migration
                 ->on('users')
                 ->onDelete('cascade');
             $table->string('title')->nullable();
-            $table->text('body')->nullable();
+            $table->text('description')->nullable();
+            $table->integer('budget')->nullable();
+            $table->integer('mileage')->nullable();
+            $table->string('location')->nullable();
+            $table->string('timeframe')->nullable();
         });
     }
 

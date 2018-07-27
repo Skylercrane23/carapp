@@ -18,25 +18,25 @@ export default class MyPosts extends Component {
                                 <div className="right">
                                     <div className="header">
                                         <h5>{post.title} </h5>
-                                        <p>{post.body} </p>
+                                        <p>{post.description} </p>
                                     </div>
                                     <div className="overview">
                                         <small className="w-bold">overview</small>
                                         <div className="overview-container">
                                             <div className="left-overview">
                                                 <div className="budget">
-                                                    <p>Budget: <span>$38,000</span></p>
+                                                    <p>Budget: <span>${post.budget}</span></p>
                                                 </div>
                                                 <div className="location">
-                                                    <p>Location: <span>$38,000</span></p>
+                                                    <p>Location: <span>{post.location}</span></p>
                                                 </div>
                                             </div>
                                             <div className="right-overview">
                                                 <div className="budget">
-                                                    <p>Mileage: <span>Under 50,000</span></p>
+                                                    <p>Mileage: <span>{post.mileage}</span></p>
                                                 </div>
                                                 <div className="location">
-                                                    <p>Timetable: <span>1 Month</span></p>
+                                                    <p>Timeframe: <span>{post.timeframe}</span></p>
                                                 </div>
                                             </div>
                                         </div>

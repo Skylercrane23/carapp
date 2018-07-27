@@ -19,12 +19,18 @@ class PostsTableSeeder extends Seeder
 
         for ($i = 0; $i < 15; $i++) {
 
+            $timeFrameArray = ['Within 1 Week', 'Within 1 Month', '1 - 3 Months', '3 - 6 Months', '6 Months or More' ];
             $user_id = $faker->randomElement($users);
+            $timeframe= $faker->randomElement($timeFrameArray);
 
             Post::create([
                 'user_id' => $user_id,
                 'title' => $faker->words($nb = 3, $asText = true),
-                'body' => $faker->sentence($nbWords = 6, $variableNbWords = true),
+                'description' => $faker->sentence($nbWords = 6, $variableNbWords = true),
+                'budget' => $faker->numberBetween(0,50000),
+                'mileage' => $faker->numberBetween(10000,100000),
+                'location' => $faker->city,
+                'timeframe' => $timeframe,
             ]);
         }
     }

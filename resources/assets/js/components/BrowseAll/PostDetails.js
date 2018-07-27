@@ -38,7 +38,11 @@ export default class PostDetails extends Component {
                             <div className="card-body">
                                 {this.state.posts.id}<br/>
                                 {this.state.posts.title}<br/>
-                                {this.state.posts.body}
+                                {this.state.posts.description}<br/>
+                                ${this.state.posts.budget}<br/>
+                                {this.state.posts.mileage}<br/>
+                                {this.state.posts.location}<br/>
+                                {this.state.posts.timeframe}<br/>
                             </div>
                         </div>
                     </div>
