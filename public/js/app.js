@@ -59487,13 +59487,13 @@ var Dashboard = function (_Component) {
                         { className: 'row' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'div',
-                            { className: 'col-md-8' },
+                            { className: 'col-md-7' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__SubComponents_MyPosts__["a" /* default */], { myPosts: this.state.myPosts }),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__SubComponents_PotentialBuyers__["a" /* default */], null)
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'div',
-                            { className: 'col-md-4' },
+                            { className: 'col-md-5' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__SubComponents_MyMessages__["a" /* default */], null)
                         )
                     )

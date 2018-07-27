@@ -38,11 +38,11 @@ export default class Dashboard extends Component {
 
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-8">
+                        <div className="col-md-7">
                             <MyPosts myPosts={this.state.myPosts}/>
                             <PotentialBuyers/>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-5">
                             <MyMessages/>
                         </div>
 

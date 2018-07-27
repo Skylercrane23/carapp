@@ -11410,8 +11410,8 @@ button.transparent-blue:hover {
 =============================*/
 
 #BrowseAllHero {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.75)), to(rgba(255, 255, 255, 0.75))), url("/img/browse-all-hero.jpg");
-  background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("/img/browse-all-hero.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("/img/browse-all-hero.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/browse-all-hero.jpg");
   background-size: cover;
   background-position: center center;
   height: 350px;
@@ -11446,6 +11446,11 @@ button.transparent-blue:hover {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+}
+
+#BrowseAllHero .buying-container h3,
+#BrowseAllHero .buying-container h5 {
+  color: #ffffff;
 }
 
 /* LANDING PAGE STYLES
