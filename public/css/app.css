@@ -11398,6 +11398,56 @@ button.transparent-blue:hover {
   margin-left: 0;
 }
 
+/* BROWSE ALL COMPONENT STYLES
+============================*/
+
+#BrowseAll {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* BROWSE HERO COMPONENT STYLES
+=============================*/
+
+#BrowseAllHero {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.75)), to(rgba(255, 255, 255, 0.75))), url("/img/browse-all-hero.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("/img/browse-all-hero.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 350px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#BrowseAllHero .buying-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
 /* LANDING PAGE STYLES
 ====================*/
 

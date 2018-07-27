@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ReactDOM from "react-dom";
+import BrowseAllHero from './BrowseAllHero';
 import axios from 'axios';
 
 export default class BrowseAll extends Component {
@@ -68,12 +68,11 @@ export default class BrowseAll extends Component {
 
     render() {
 
-        var styles = {
-            marginTop: '100px',
-        };
-
         return (
-            <div id="BrowseAll" style={styles}>
+            <div id="BrowseAll">
+
+                <BrowseAllHero/>
+
                 <div className="container">
                     <div className="row buypost-container">
                         {this.renderPosts()}

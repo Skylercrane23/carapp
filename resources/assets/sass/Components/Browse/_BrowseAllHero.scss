@@ -1,0 +1,28 @@
+/* BROWSE HERO COMPONENT STYLES
+=============================*/
+
+#BrowseAllHero {
+    background:
+            linear-gradient(
+                            rgba(255,255,255,.75),
+                            rgba(255,255,255,.75)
+            ),
+            url("/img/browse-all-hero.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 350px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .buying-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+    }
+}

@@ -51,16 +51,6 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group row mb-4">
-                                    <div class=" col-sm-12">
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox"
-                                                       name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Remember Me') }}
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
 
                                 <div class="form-group row">
                                     <div class=" col-sm-12">
