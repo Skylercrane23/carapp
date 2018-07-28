@@ -15724,9 +15724,13 @@ if (typeof window === 'undefined') {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios_index__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_axios_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__CreatePostSteps_BasicInfo__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__CreatePostSteps_VehicleInfo__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__CreatePostSteps_Features__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_sweetalert2_react__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_sweetalert2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_sweetalert2_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__CreatePostSteps_BasicInfo__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__CreatePostSteps_VehicleInfo__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__CreatePostSteps_Features__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__CreatePostSteps_Image__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__CreatePostSteps_PaymentInfo__ = __webpack_require__(140);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -15734,6 +15738,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
 
 
 
@@ -15752,6 +15759,7 @@ var CreatePost = function (_Component) {
 
         _this.state = {
             step: 1,
+            showCancel: false,
             newPost: {
                 title: '',
                 description: '',
@@ -15760,11 +15768,22 @@ var CreatePost = function (_Component) {
                 location: '',
                 timeframe: '',
                 // VEHICLE INFO
+                vehicle_overview: '',
                 vehicle_type: '',
                 vehicle_make: '',
                 vehicle_model: '',
                 vehicle_year: '',
-                vehicle_title_type: ''
+                vehicle_title_type: '',
+                // FEATURES
+                features: '',
+                //IMAGES
+                image_url: '',
+                // PAYMENT OPTIONS
+                payment_type: '',
+                seller_preference: '',
+                loan_payment_method: '',
+                dealer_door_price: '',
+                other_notes: ''
             }
         };
         _this.createPost = _this.createPost.bind(_this);
@@ -15776,21 +15795,21 @@ var CreatePost = function (_Component) {
     }
 
     _createClass(CreatePost, [{
-        key: "nextStep",
+        key: 'nextStep',
         value: function nextStep() {
             this.setState({
                 step: this.state.step + 1
             });
         }
     }, {
-        key: "previousStep",
+        key: 'previousStep',
         value: function previousStep() {
             this.setState({
                 step: this.state.step - 1
             });
         }
     }, {
-        key: "handleInput",
+        key: 'handleInput',
         value: function handleInput(key, e) {
             /*Duplicating and updating the state */
             var state = Object.assign({}, this.state.newPost);
@@ -15798,7 +15817,7 @@ var CreatePost = function (_Component) {
             this.setState({ newPost: state });
         }
     }, {
-        key: "createPost",
+        key: 'createPost',
         value: function createPost(e) {
             var _this2 = this;
 
@@ -15808,29 +15827,45 @@ var CreatePost = function (_Component) {
             });
         }
     }, {
-        key: "cancel",
+        key: 'cancel',
         value: function cancel() {
-            this.props.history.push('/home/buy');
+            this.setState({
+                showCancel: true
+            });
         }
     }, {
-        key: "showStep",
+        key: 'showStep',
         value: function showStep() {
             switch (this.state.step) {
                 case 1:
-                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__CreatePostSteps_BasicInfo__["a" /* default */], {
+                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__CreatePostSteps_BasicInfo__["a" /* default */], {
                         newPost: this.state.newPost,
                         onChange: this.handleInput,
                         nextStep: this.nextStep
                     });
                 case 2:
-                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__CreatePostSteps_VehicleInfo__["a" /* default */], {
+                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__CreatePostSteps_VehicleInfo__["a" /* default */], {
                         newPost: this.state.newPost,
                         onChange: this.handleInput,
                         nextStep: this.nextStep,
                         previousStep: this.previousStep
                     });
                 case 3:
-                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__CreatePostSteps_Features__["a" /* default */], {
+                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__CreatePostSteps_Features__["a" /* default */], {
+                        newPost: this.state.newPost,
+                        onChange: this.handleInput,
+                        nextStep: this.nextStep,
+                        previousStep: this.previousStep
+                    });
+                case 4:
+                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__CreatePostSteps_Image__["a" /* default */], {
+                        newPost: this.state.newPost,
+                        onChange: this.handleInput,
+                        nextStep: this.nextStep,
+                        previousStep: this.previousStep
+                    });
+                case 5:
+                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__CreatePostSteps_PaymentInfo__["a" /* default */], {
                         newPost: this.state.newPost,
                         onChange: this.handleInput,
                         nextStep: this.nextStep,
@@ -15839,32 +15874,48 @@ var CreatePost = function (_Component) {
             }
         }
     }, {
-        key: "render",
+        key: 'render',
         value: function render() {
+            var _this3 = this;
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { id: "CreatePost" },
+                'div',
+                { id: 'CreatePost' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "container", style: { marginTop: 100 } },
-                    "Create Post",
+                    'div',
+                    { className: 'container', style: { marginTop: 100 } },
+                    'Create Post',
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "form",
+                        'form',
                         null,
                         this.showStep(),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "button",
-                            { onClick: this.createPost, type: "submit", className: "button blue square" },
-                            "Submit"
+                            'button',
+                            { onClick: this.createPost, type: 'submit', className: 'button blue square' },
+                            'Submit'
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "a",
-                            { className: "button transparent-blue", onClick: this.cancel },
-                            "Cancel"
+                            'a',
+                            { className: 'button transparent-blue', onClick: this.cancel },
+                            'Cancel'
                         )
                     )
-                )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_sweetalert2_react___default.a, {
+                    show: this.state.showCancel,
+                    title: 'Cancel Post',
+                    type: 'info',
+                    text: 'Are you sure you want to cancel creating this post? You will lose all data.',
+                    animation: false,
+                    customClass: 'animated fadeIn',
+                    reverseButtons: true,
+                    showCancelButton: true,
+                    cancelButtonText: 'Cancel',
+                    confirmButtonText: 'Ok',
+                    onConfirm: function onConfirm() {
+                        _this3.props.history.push('/home/buy');
+                    }
+                })
             );
         }
     }]);
@@ -15879,7 +15930,7 @@ var CreatePost = function (_Component) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(41);
-module.exports = __webpack_require__(131);
+module.exports = __webpack_require__(134);
 
 
 /***/ }),
@@ -56844,10 +56895,10 @@ var App = function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Dashboard_Dashboard__ = __webpack_require__(109);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Messages_Messages__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Buy_Buy__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Sell_Sell__ = __webpack_require__(124);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_BrowseAll_BrowseAll__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Buy_SubComponents_MyPostDetails__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_BrowseAll_PostDetails__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Sell_Sell__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_BrowseAll_BrowseAll__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Buy_SubComponents_MyPostDetails__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_BrowseAll_PostDetails__ = __webpack_require__(133);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_Buy_SubComponents_CreatePost__ = __webpack_require__(39);
 
 
@@ -59565,7 +59616,6 @@ var MyPosts = function (_Component) {
             var data = this.props.myPosts;
             var userPosts = Object.values(data);
             var firstThree = userPosts.slice(0, 2);
-            //console.log(userPosts.length);
             if (firstThree.length > 0) {
                 return firstThree.map(function (post) {
                     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -59577,7 +59627,7 @@ var MyPosts = function (_Component) {
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 "div",
                                 { className: "img" },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "img-fluid", src: "/img/about-us.jpg", alt: "" })
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "img-fluid", src: post.image_url !== null ? post.image_url : '/img/default-image.jpg', alt: "" })
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 "div",
@@ -65667,7 +65717,7 @@ var MyBuyPosts = function (_Component) {
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 "div",
                                 { className: "img" },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "img-fluid", src: "/img/about-us.jpg", alt: "" })
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "img-fluid", src: post.image_url !== null ? post.image_url : '/img/default-image.jpg', alt: "" })
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 "div",
@@ -65844,6 +65894,417 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
+var BasicInfo = function (_Component) {
+    _inherits(BasicInfo, _Component);
+
+    function BasicInfo() {
+        _classCallCheck(this, BasicInfo);
+
+        return _possibleConstructorReturn(this, (BasicInfo.__proto__ || Object.getPrototypeOf(BasicInfo)).apply(this, arguments));
+    }
+
+    _createClass(BasicInfo, [{
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            var styles = {
+                marginTop: '100px'
+            };
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'container' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'form-group' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'label',
+                        { htmlFor: 'title' },
+                        'Title'
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
+                            return _this2.props.onChange('title', e);
+                        }, type: 'text', className: 'form-control',
+                        id: 'title',
+                        'aria-describedby': 'emailHelp', placeholder: 'Enter Title',
+                        value: this.props.newPost.title })
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'form-group' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'label',
+                        { htmlFor: 'description' },
+                        'Description'
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('textarea', { onChange: function onChange(e) {
+                            return _this2.props.onChange('description', e);
+                        }, rows: '5', type: 'text', className: 'form-control',
+                        id: 'description',
+                        placeholder: 'Description',
+                        value: this.props.newPost.description })
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'form-group' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'label',
+                        { htmlFor: 'mileage' },
+                        'Mileage'
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
+                            return _this2.props.onChange('mileage', e);
+                        }, type: 'number', className: 'form-control',
+                        id: 'mileage',
+                        placeholder: 'Mileage',
+                        value: this.props.newPost.mileage })
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'form-group' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'label',
+                        { htmlFor: 'budget' },
+                        'Budget'
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
+                            return _this2.props.onChange('budget', e);
+                        }, type: 'number', className: 'form-control',
+                        id: 'budget',
+                        placeholder: 'Budget',
+                        value: this.props.newPost.budget })
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'form-group' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'label',
+                        { htmlFor: 'location' },
+                        'Location'
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
+                            return _this2.props.onChange('location', e);
+                        }, type: 'text', className: 'form-control',
+                        id: 'location',
+                        placeholder: 'Location',
+                        value: this.props.newPost.location })
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'form-group' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'label',
+                        { htmlFor: 'timeframe' },
+                        'Timeframe'
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'select',
+                        { onChange: function onChange(e) {
+                                return _this2.props.onChange('timeframe', e);
+                            }, type: 'text', className: 'form-control',
+                            id: 'timeframe',
+                            placeholder: 'Timeframe',
+                            value: this.props.newPost.timeframe },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'option',
+                            { value: '1 Week' },
+                            '1 Week'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'option',
+                            { value: '2-3 Weeks' },
+                            '2-3 Weeks'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'option',
+                            { value: '1 Month' },
+                            '1 Month'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'option',
+                            { value: '2-3 Months' },
+                            '2-3 Months'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'option',
+                            { value: '3 Months or More' },
+                            '3 Months or More'
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'next-step' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'a',
+                        { className: 'btn btn-blue', onClick: this.props.nextStep },
+                        'Next Step'
+                    )
+                )
+            );
+        }
+    }]);
+
+    return BasicInfo;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (BasicInfo);
+
+/***/ }),
+/* 125 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var VehicleInfo = function (_Component) {
+    _inherits(VehicleInfo, _Component);
+
+    function VehicleInfo() {
+        _classCallCheck(this, VehicleInfo);
+
+        return _possibleConstructorReturn(this, (VehicleInfo.__proto__ || Object.getPrototypeOf(VehicleInfo)).apply(this, arguments));
+    }
+
+    _createClass(VehicleInfo, [{
+        key: "render",
+        value: function render() {
+            var _this2 = this;
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "container" },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-group" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "label",
+                        { htmlFor: "vehicle_overview" },
+                        "Vehicle Overview"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", { onChange: function onChange(e) {
+                            return _this2.props.onChange('vehicle_overview', e);
+                        }, rows: "5", type: "text", className: "form-control",
+                        id: "vehicle_overview",
+                        "aria-describedby": "emailHelp", placeholder: "Vehicle Overview",
+                        value: this.props.newPost.vehicle_overview })
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-group" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "label",
+                        { htmlFor: "vehicle_type" },
+                        "Vehicle Type"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
+                            return _this2.props.onChange('vehicle_type', e);
+                        }, type: "text", className: "form-control",
+                        id: "vehicle_type",
+                        "aria-describedby": "emailHelp", placeholder: "Vehicle Type",
+                        value: this.props.newPost.vehicle_type })
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-group" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "label",
+                        { htmlFor: "vehicle_make" },
+                        "Vehicle Make"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
+                            return _this2.props.onChange('vehicle_make', e);
+                        }, type: "text", className: "form-control",
+                        id: "vehicle_make",
+                        placeholder: "Vehicle Make",
+                        value: this.props.newPost.vehicle_make })
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-group" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "label",
+                        { htmlFor: "vehicle_model" },
+                        "Vehicle Model"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
+                            return _this2.props.onChange('vehicle_model', e);
+                        }, type: "text", className: "form-control",
+                        id: "vehicle_model",
+                        placeholder: "Vehicle Model",
+                        value: this.props.newPost.vehicle_model })
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-group" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "label",
+                        { htmlFor: "vehicle_year" },
+                        "Vehicle Year"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
+                            return _this2.props.onChange('vehicle_year', e);
+                        }, type: "number", className: "form-control",
+                        id: "vehicle_year",
+                        placeholder: "Vehicle Year",
+                        value: this.props.newPost.vehicle_year })
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-group" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "label",
+                        { htmlFor: "vehicle_title_type" },
+                        "Vehicle Title Type"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "select",
+                        { onChange: function onChange(e) {
+                                return _this2.props.onChange('vehicle_title_type', e);
+                            }, type: "text", className: "form-control",
+                            id: "vehicle_title_type",
+                            placeholder: "Vehicle Title Type",
+                            value: this.props.newPost.vehicle_title_type },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "option",
+                            { value: "Clean Title", defaultValue: true },
+                            "Clean Title"
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "option",
+                            { value: "Branded Title" },
+                            "Branded Title"
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "option",
+                            { value: "Salvage Title" },
+                            "Salvage Title"
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "next-step" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { className: "btn btn-blue", onClick: this.props.nextStep },
+                        "Next Step"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { className: "btn btn-blue", onClick: this.props.previousStep },
+                        "Previous Step"
+                    )
+                )
+            );
+        }
+    }]);
+
+    return VehicleInfo;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (VehicleInfo);
+
+/***/ }),
+/* 126 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var VehicleInfo = function (_Component) {
+    _inherits(VehicleInfo, _Component);
+
+    function VehicleInfo() {
+        _classCallCheck(this, VehicleInfo);
+
+        return _possibleConstructorReturn(this, (VehicleInfo.__proto__ || Object.getPrototypeOf(VehicleInfo)).apply(this, arguments));
+    }
+
+    _createClass(VehicleInfo, [{
+        key: "render",
+        value: function render() {
+            var _this2 = this;
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "container" },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-group" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "label",
+                        { htmlFor: "features" },
+                        "Features"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", { onChange: function onChange(e) {
+                            return _this2.props.onChange('features', e);
+                        }, rows: "5", type: "text", className: "form-control",
+                        id: "features",
+                        "aria-describedby": "emailHelp", placeholder: "Features",
+                        value: this.props.newPost.features })
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "next-step" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { className: "btn btn-blue", onClick: this.props.nextStep },
+                        "Next Step"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { className: "btn btn-blue", onClick: this.props.previousStep },
+                        "Previous Step"
+                    )
+                )
+            );
+        }
+    }]);
+
+    return VehicleInfo;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (VehicleInfo);
+
+/***/ }),
+/* 127 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
 var Sell = function (_Component) {
     _inherits(Sell, _Component);
 
@@ -65896,13 +66357,13 @@ var Sell = function (_Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Sell);
 
 /***/ }),
-/* 125 */
+/* 128 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__BrowseAllHero__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__BrowseAllHero__ = __webpack_require__(129);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_axios__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -65956,7 +66417,7 @@ var BrowseAll = function (_Component) {
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'div',
                             { className: 'img' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'img-fluid', src: '/img/about-us.jpg', alt: '' })
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'img-fluid', src: post.image_url !== null ? post.image_url : '/img/default-image.jpg', alt: '' })
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'div',
@@ -66102,7 +66563,7 @@ var BrowseAll = function (_Component) {
 /* harmony default export */ __webpack_exports__["a"] = (BrowseAll);
 
 /***/ }),
-/* 126 */
+/* 129 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -66163,7 +66624,7 @@ var BrowseAllHero = function (_Component) {
 /* harmony default export */ __webpack_exports__["a"] = (BrowseAllHero);
 
 /***/ }),
-/* 127 */
+/* 130 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -66171,8 +66632,8 @@ var BrowseAllHero = function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios_index__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_axios_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__DetailsForm__ = __webpack_require__(128);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_ErrorPage__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__DetailsForm__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_ErrorPage__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_sweetalert2_react__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_sweetalert2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_sweetalert2_react__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -66204,7 +66665,24 @@ var MyPostDetails = function (_Component) {
                 budget: '',
                 mileage: '',
                 location: '',
-                timeframe: ''
+                timeframe: '',
+                // VEHICLE INFO
+                vehicle_overview: '',
+                vehicle_type: '',
+                vehicle_make: '',
+                vehicle_model: '',
+                vehicle_year: '',
+                vehicle_title_type: '',
+                // FEATURES
+                features: '',
+                //IMAGES
+                image_url: '',
+                // PAYMENT OPTIONS
+                payment_type: '',
+                seller_preference: '',
+                loan_payment_method: '',
+                dealer_door_price: '',
+                other_notes: ''
             },
             showConfirmUpdate: false,
             showDelete: false,
@@ -66249,7 +66727,25 @@ var MyPostDetails = function (_Component) {
                         budget: details.budget,
                         mileage: details.mileage,
                         location: details.location,
-                        timeframe: details.location
+                        timeframe: details.timeframe,
+                        // VEHICLE INFO
+                        vehicle_overview: details.vehicle_overview,
+                        vehicle_type: details.vehicle_type,
+                        vehicle_make: details.vehicle_make,
+                        vehicle_model: details.vehicle_model,
+                        vehicle_year: details.vehicle_year,
+                        vehicle_title_type: details.vehicle_title_type,
+                        // FEATURES
+                        features: details.features,
+                        // IMAGE
+                        image_url: details.image_url,
+                        // PAYMENT OPTIONS
+                        payment_type: details.payment_type,
+                        seller_preference: details.seller_preference,
+                        loan_payment_method: details.loan_payment_method,
+                        dealer_door_price: details.dealer_door_price,
+                        other_notes: details.other_notes
+
                     }
                 });
             }).catch(function (error) {
@@ -66402,7 +66898,7 @@ var MyPostDetails = function (_Component) {
 /* harmony default export */ __webpack_exports__["a"] = (MyPostDetails);
 
 /***/ }),
-/* 128 */
+/* 131 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -66459,13 +66955,14 @@ var DetailsForm = function (_Component) {
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             "label",
                             { htmlFor: "description" },
-                            "Body:"
+                            "Description:"
                         ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", {
                             onChange: this.props.onChange,
                             value: this.props.postDetails.description ? this.props.postDetails.description : '',
                             name: "description",
                             ref: "description",
+                            rows: "5",
                             type: "text",
                             className: "form-control" })
                     ),
@@ -66482,7 +66979,7 @@ var DetailsForm = function (_Component) {
                             value: this.props.postDetails.mileage ? this.props.postDetails.mileage : '',
                             name: "mileage",
                             ref: "mileage",
-                            type: "text",
+                            type: "number",
                             className: "form-control" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -66498,7 +66995,7 @@ var DetailsForm = function (_Component) {
                             value: this.props.postDetails.budget ? this.props.postDetails.budget : '',
                             name: "budget",
                             ref: "budget",
-                            type: "text",
+                            type: "number",
                             className: "form-control" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -66525,11 +67022,278 @@ var DetailsForm = function (_Component) {
                             { htmlFor: "timeframe" },
                             "Timeframe:"
                         ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "select",
+                            {
+                                onChange: this.props.onChange,
+                                value: this.props.postDetails.timeframe ? this.props.postDetails.timeframe : '',
+                                name: "timeframe",
+                                ref: "timeframe",
+                                type: "text",
+                                className: "form-control" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "option",
+                                { defaultValue: true, disabled: true, value: this.props.postDetails.timeframe ? this.props.postDetails.timeframe : '' },
+                                this.props.postDetails.timeframe ? this.props.postDetails.timeframe : ''
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "option",
+                                { value: "1 Week" },
+                                "1 Week"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "option",
+                                { value: "2-3 Weeks" },
+                                "2-3 Weeks"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "option",
+                                { value: "1 Month" },
+                                "1 Month"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "option",
+                                { value: "2-3 Months" },
+                                "2-3 Months"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "option",
+                                { value: "3 Months or More" },
+                                "3 Months or More"
+                            )
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "form-group" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "label",
+                            { htmlFor: "vehicle_overview" },
+                            "Vehicle Overview:"
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", {
+                            onChange: this.props.onChange,
+                            value: this.props.postDetails.vehicle_overview ? this.props.postDetails.vehicle_overview : '',
+                            name: "vehicle_overview",
+                            ref: "vehicle_overview",
+                            type: "text",
+                            rows: "5",
+                            className: "form-control" })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "form-group" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "label",
+                            { htmlFor: "vehicle_type" },
+                            "Vehicle Type:"
+                        ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
                             onChange: this.props.onChange,
-                            value: this.props.postDetails.timeframe ? this.props.postDetails.timeframe : '',
-                            name: "timeframe",
-                            ref: "timeframe",
+                            value: this.props.postDetails.vehicle_type ? this.props.postDetails.vehicle_type : '',
+                            name: "vehicle_type",
+                            ref: "vehicle_type",
+                            type: "text",
+                            className: "form-control" })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "form-group" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "label",
+                            { htmlFor: "vehicle_make" },
+                            "Vehicle Make:"
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
+                            onChange: this.props.onChange,
+                            value: this.props.postDetails.vehicle_make ? this.props.postDetails.vehicle_make : '',
+                            name: "vehicle_make",
+                            ref: "vehicle_make",
+                            type: "text",
+                            className: "form-control" })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "form-group" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "label",
+                            { htmlFor: "vehicle_model" },
+                            "Vehicle Model:"
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
+                            onChange: this.props.onChange,
+                            value: this.props.postDetails.vehicle_model ? this.props.postDetails.vehicle_model : '',
+                            name: "vehicle_model",
+                            ref: "vehicle_model",
+                            type: "text",
+                            className: "form-control" })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "form-group" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "label",
+                            { htmlFor: "vehicle_year" },
+                            "Vehicle Year:"
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
+                            onChange: this.props.onChange,
+                            value: this.props.postDetails.vehicle_year ? this.props.postDetails.vehicle_year : '',
+                            name: "vehicle_year",
+                            ref: "vehicle_year",
+                            type: "number",
+                            className: "form-control" })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "form-group" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "label",
+                            { htmlFor: "vehicle_title_type" },
+                            "Vehicle Title Type:"
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "select",
+                            {
+                                onChange: this.props.onChange,
+                                value: this.props.postDetails.vehicle_title_type ? this.props.postDetails.vehicle_title_type : '',
+                                name: "vehicle_title_type",
+                                ref: "vehicle_title_type",
+                                type: "text",
+                                className: "form-control" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "option",
+                                { defaultValue: true, disabled: true, value: this.props.postDetails.vehicle_title_type ? this.props.postDetails.vehicle_title_type : '' },
+                                this.props.postDetails.vehicle_title_type ? this.props.postDetails.vehicle_title_type : ''
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "option",
+                                { value: "Clean Title", defaultValue: true },
+                                "Clean Title"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "option",
+                                { value: "Branded Title" },
+                                "Branded Title"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "option",
+                                { value: "Salvage Title" },
+                                "Salvage Title"
+                            )
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "form-group" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "label",
+                            { htmlFor: "features" },
+                            "Features:"
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", {
+                            onChange: this.props.onChange,
+                            value: this.props.postDetails.features ? this.props.postDetails.features : '',
+                            name: "features",
+                            ref: "features",
+                            rows: "5",
+                            type: "text",
+                            className: "form-control" })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "form-group" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "label",
+                            { htmlFor: "image_url" },
+                            "Image Url"
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
+                            onChange: this.props.onChange,
+                            value: this.props.postDetails.image_url ? this.props.postDetails.image_url : '',
+                            name: "image_url",
+                            ref: "image_url",
+                            type: "text",
+                            className: "form-control" }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "mb-2 img-fluid", src: this.props.postDetails.image_url ? this.props.postDetails.image_url : 'img/deafult-image.jpg', alt: "" })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "form-group" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "label",
+                            { htmlFor: "payment_type" },
+                            "Payment Type:"
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
+                            onChange: this.props.onChange,
+                            value: this.props.postDetails.payment_type ? this.props.postDetails.payment_type : '',
+                            name: "payment_type",
+                            ref: "payment_type",
+                            type: "text",
+                            className: "form-control" })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "form-group" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "label",
+                            { htmlFor: "seller_preference" },
+                            "Seller Preference:"
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
+                            onChange: this.props.onChange,
+                            value: this.props.postDetails.seller_preference ? this.props.postDetails.seller_preference : '',
+                            name: "seller_preference",
+                            ref: "seller_preference",
+                            type: "text",
+                            className: "form-control" })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "form-group" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "label",
+                            { htmlFor: "loan_payment_method" },
+                            "Loan Payment Method:"
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
+                            onChange: this.props.onChange,
+                            value: this.props.postDetails.loan_payment_method ? this.props.postDetails.loan_payment_method : '',
+                            name: "loan_payment_method",
+                            ref: "loan_payment_method",
+                            type: "text",
+                            className: "form-control" })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "form-group" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "label",
+                            { htmlFor: "dealer_door_price" },
+                            "Dealer Door Price:"
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
+                            onChange: this.props.onChange,
+                            value: this.props.postDetails.dealer_door_price ? this.props.postDetails.dealer_door_price : '',
+                            name: "dealer_door_price",
+                            ref: "dealer_door_price",
+                            type: "number",
+                            className: "form-control" })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "form-group" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "label",
+                            { htmlFor: "other_notes" },
+                            "Other Notes:"
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
+                            onChange: this.props.onChange,
+                            value: this.props.postDetails.other_notes ? this.props.postDetails.other_notes : '',
+                            name: "other_notes",
+                            ref: "other_notes",
                             type: "text",
                             className: "form-control" })
                     ),
@@ -66554,7 +67318,7 @@ var DetailsForm = function (_Component) {
 /* harmony default export */ __webpack_exports__["a"] = (DetailsForm);
 
 /***/ }),
-/* 129 */
+/* 132 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -66609,7 +67373,7 @@ var ErrorPage = function (_Component) {
 /* harmony default export */ __webpack_exports__["a"] = (ErrorPage);
 
 /***/ }),
-/* 130 */
+/* 133 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -66683,20 +67447,151 @@ var PostDetails = function (_Component) {
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 "div",
                                 { className: "card-body" },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "span",
+                                    { className: "blue" },
+                                    "ID: "
+                                ),
+                                " ",
                                 this.state.posts.id,
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "span",
+                                    { className: "blue" },
+                                    "Title: "
+                                ),
                                 this.state.posts.title,
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "span",
+                                    { className: "blue" },
+                                    "Description: "
+                                ),
                                 this.state.posts.description,
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "span",
+                                    { className: "blue" },
+                                    "Budget: "
+                                ),
                                 "$",
                                 this.state.posts.budget,
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "span",
+                                    { className: "blue" },
+                                    "Mileage: "
+                                ),
                                 this.state.posts.mileage,
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "span",
+                                    { className: "blue" },
+                                    "Location: "
+                                ),
                                 this.state.posts.location,
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "span",
+                                    { className: "blue" },
+                                    "Timeframe:"
+                                ),
                                 this.state.posts.timeframe,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "span",
+                                    { className: "blue" },
+                                    "Vehicle Overview: "
+                                ),
+                                this.state.posts.vehicle_overview,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "span",
+                                    { className: "blue" },
+                                    "Vehicle Type: "
+                                ),
+                                this.state.posts.vehicle_type,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "span",
+                                    { className: "blue" },
+                                    "Vehicle Make: "
+                                ),
+                                this.state.posts.vehicle_make,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "span",
+                                    { className: "blue" },
+                                    "Vehicle Model: "
+                                ),
+                                this.state.posts.vehicle_model,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "span",
+                                    { className: "blue" },
+                                    "Vehicle Year: "
+                                ),
+                                this.state.posts.vehicle_year,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "span",
+                                    { className: "blue" },
+                                    "Vehicle Title Type: "
+                                ),
+                                this.state.posts.vehicle_title_type,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "span",
+                                    { className: "blue" },
+                                    "Features: "
+                                ),
+                                this.state.posts.features,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "span",
+                                    { className: "blue" },
+                                    "Image Url: "
+                                ),
+                                this.state.posts.image_url,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "span",
+                                    { className: "blue" },
+                                    "Payment Type: "
+                                ),
+                                this.state.posts.payment_type,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "span",
+                                    { className: "blue" },
+                                    "Seller Preference: "
+                                ),
+                                this.state.posts.seller_preference,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "span",
+                                    { className: "blue" },
+                                    "Payment Method: "
+                                ),
+                                this.state.posts.loan_payment_method,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "span",
+                                    { className: "blue" },
+                                    "Dealer Out the Door Price: "
+                                ),
+                                this.state.posts.dealer_door_price,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "span",
+                                    { className: "blue" },
+                                    "Other Notes: "
+                                ),
+                                this.state.posts.other_notes,
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null)
                             )
                         )
@@ -66717,17 +67612,17 @@ var PostDetails = function (_Component) {
 /* harmony default export */ __webpack_exports__["a"] = (PostDetails);
 
 /***/ }),
-/* 131 */
+/* 134 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 132 */,
-/* 133 */,
-/* 134 */,
 /* 135 */,
-/* 136 */
+/* 136 */,
+/* 137 */,
+/* 138 */,
+/* 139 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -66743,162 +67638,16 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var BasicInfo = function (_Component) {
-    _inherits(BasicInfo, _Component);
+var Image = function (_Component) {
+    _inherits(Image, _Component);
 
-    function BasicInfo() {
-        _classCallCheck(this, BasicInfo);
+    function Image() {
+        _classCallCheck(this, Image);
 
-        return _possibleConstructorReturn(this, (BasicInfo.__proto__ || Object.getPrototypeOf(BasicInfo)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (Image.__proto__ || Object.getPrototypeOf(Image)).apply(this, arguments));
     }
 
-    _createClass(BasicInfo, [{
-        key: 'render',
-        value: function render() {
-            var _this2 = this;
-
-            var styles = {
-                marginTop: '100px'
-            };
-
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: 'container' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'form-group' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'label',
-                        { htmlFor: 'title' },
-                        'Title'
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
-                            return _this2.props.onChange('title', e);
-                        }, type: 'text', className: 'form-control',
-                        id: 'title',
-                        'aria-describedby': 'emailHelp', placeholder: 'Enter Title',
-                        value: this.props.newPost.title })
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'form-group' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'label',
-                        { htmlFor: 'description' },
-                        'Description'
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
-                            return _this2.props.onChange('description', e);
-                        }, type: 'text', className: 'form-control',
-                        id: 'description',
-                        placeholder: 'Description',
-                        value: this.props.newPost.description })
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'form-group' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'label',
-                        { htmlFor: 'mileage' },
-                        'Mileage'
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
-                            return _this2.props.onChange('mileage', e);
-                        }, type: 'text', className: 'form-control',
-                        id: 'mileage',
-                        placeholder: 'Mileage',
-                        value: this.props.newPost.mileage })
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'form-group' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'label',
-                        { htmlFor: 'budget' },
-                        'Budget'
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
-                            return _this2.props.onChange('budget', e);
-                        }, type: 'text', className: 'form-control',
-                        id: 'budget',
-                        placeholder: 'Budget',
-                        value: this.props.newPost.budget })
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'form-group' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'label',
-                        { htmlFor: 'location' },
-                        'Location'
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
-                            return _this2.props.onChange('location', e);
-                        }, type: 'text', className: 'form-control',
-                        id: 'location',
-                        placeholder: 'Location',
-                        value: this.props.newPost.location })
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'form-group' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'label',
-                        { htmlFor: 'timeframe' },
-                        'Timeframe'
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
-                            return _this2.props.onChange('timeframe', e);
-                        }, type: 'text', className: 'form-control',
-                        id: 'timeframe',
-                        placeholder: 'Timeframe',
-                        value: this.props.newPost.timeframe })
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'next-step' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'a',
-                        { className: 'btn btn-blue', onClick: this.props.nextStep },
-                        'Next Step'
-                    )
-                )
-            );
-        }
-    }]);
-
-    return BasicInfo;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
-
-/* harmony default export */ __webpack_exports__["a"] = (BasicInfo);
-
-/***/ }),
-/* 137 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-var VehicleInfo = function (_Component) {
-    _inherits(VehicleInfo, _Component);
-
-    function VehicleInfo() {
-        _classCallCheck(this, VehicleInfo);
-
-        return _possibleConstructorReturn(this, (VehicleInfo.__proto__ || Object.getPrototypeOf(VehicleInfo)).apply(this, arguments));
-    }
-
-    _createClass(VehicleInfo, [{
+    _createClass(Image, [{
         key: "render",
         value: function render() {
             var _this2 = this;
@@ -66911,93 +67660,147 @@ var VehicleInfo = function (_Component) {
                     { className: "form-group" },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "label",
-                        { htmlFor: "vehicle_type" },
-                        "Vehicle Type"
+                        { htmlFor: "image_url" },
+                        "Image Url"
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
-                            return _this2.props.onChange('vehicle_type', e);
+                            return _this2.props.onChange('image_url', e);
+                        }, rows: "5", type: "text", className: "form-control",
+                        id: "image_url",
+                        "aria-describedby": "emailHelp", placeholder: "Image Url",
+                        value: this.props.newPost.image_url })
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "next-step" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { className: "btn btn-blue", onClick: this.props.nextStep },
+                        "Next Step"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { className: "btn btn-blue", onClick: this.props.previousStep },
+                        "Previous Step"
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Image;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Image);
+
+/***/ }),
+/* 140 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var PaymentInfo = function (_Component) {
+    _inherits(PaymentInfo, _Component);
+
+    function PaymentInfo() {
+        _classCallCheck(this, PaymentInfo);
+
+        return _possibleConstructorReturn(this, (PaymentInfo.__proto__ || Object.getPrototypeOf(PaymentInfo)).apply(this, arguments));
+    }
+
+    _createClass(PaymentInfo, [{
+        key: "render",
+        value: function render() {
+            var _this2 = this;
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "container" },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-group" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "label",
+                        { htmlFor: "payment_type" },
+                        "Payment Type"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
+                            return _this2.props.onChange('payment_type', e);
                         }, type: "text", className: "form-control",
-                        id: "vehicle_type",
-                        "aria-describedby": "emailHelp", placeholder: "Vehicle Type",
-                        value: this.props.newPost.vehicle_type })
+                        id: "payment_type",
+                        "aria-describedby": "emailHelp", placeholder: "Payment Type",
+                        value: this.props.newPost.payment_type })
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "div",
                     { className: "form-group" },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "label",
-                        { htmlFor: "vehicle_make" },
-                        "Vehicle Make"
+                        { htmlFor: "seller_preference" },
+                        "Seller Preference"
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
-                            return _this2.props.onChange('vehicle_make', e);
+                            return _this2.props.onChange('seller_preference', e);
                         }, type: "text", className: "form-control",
-                        id: "vehicle_make",
-                        placeholder: "Vehicle Make",
-                        value: this.props.newPost.vehicle_make })
+                        id: "seller_preference",
+                        "aria-describedby": "emailHelp", placeholder: "Seller Preference",
+                        value: this.props.newPost.seller_preference })
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "div",
                     { className: "form-group" },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "label",
-                        { htmlFor: "vehicle_model" },
-                        "Vehicle Model"
+                        { htmlFor: "loan_payment_method" },
+                        "Loan Payment Method"
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
-                            return _this2.props.onChange('vehicle_model', e);
+                            return _this2.props.onChange('loan_payment_method', e);
                         }, type: "text", className: "form-control",
-                        id: "vehicle_model",
-                        placeholder: "Vehicle Model",
-                        value: this.props.newPost.vehicle_model })
+                        id: "loan_payment_method",
+                        "aria-describedby": "emailHelp", placeholder: "Loan Payment Method",
+                        value: this.props.newPost.loan_payment_method })
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "div",
                     { className: "form-group" },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "label",
-                        { htmlFor: "vehicle_year" },
-                        "Vehicle Year"
+                        { htmlFor: "dealer_door_price" },
+                        "Dealer Door Out the Door Price"
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
-                            return _this2.props.onChange('vehicle_year', e);
+                            return _this2.props.onChange('dealer_door_price', e);
                         }, type: "number", className: "form-control",
-                        id: "vehicle_year",
-                        placeholder: "Vehicle Year",
-                        value: this.props.newPost.vehicle_year })
+                        id: "dealer_door_price",
+                        "aria-describedby": "emailHelp", placeholder: "Dealer Door Out the Door Price",
+                        value: this.props.newPost.dealer_door_price })
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "div",
                     { className: "form-group" },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "label",
-                        { htmlFor: "vehicle_title_type" },
-                        "Vehicle Title Type"
+                        { htmlFor: "other_notes" },
+                        "Other Notes"
                     ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "select",
-                        { onChange: function onChange(e) {
-                                return _this2.props.onChange('vehicle_title_type', e);
-                            }, type: "text", className: "form-control",
-                            id: "vehicle_title_type",
-                            placeholder: "Vehicle Title Type",
-                            value: this.props.newPost.vehicle_title_type },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "option",
-                            { value: "Clean Title", defaultValue: true },
-                            "Clean Title"
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "option",
-                            { value: "Branded Title" },
-                            "Branded Title"
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "option",
-                            { value: "Salvage Title" },
-                            "Salvage Title"
-                        )
-                    )
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", { onChange: function onChange(e) {
+                            return _this2.props.onChange('other_notes', e);
+                        }, rows: "5", type: "text", className: "form-control",
+                        id: "other_notes",
+                        "aria-describedby": "emailHelp", placeholder: "Other Notes",
+                        value: this.props.newPost.other_notes })
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "div",
@@ -67017,142 +67820,10 @@ var VehicleInfo = function (_Component) {
         }
     }]);
 
-    return VehicleInfo;
+    return PaymentInfo;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
-/* harmony default export */ __webpack_exports__["a"] = (VehicleInfo);
-
-/***/ }),
-/* 138 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-var VehicleInfo = function (_Component) {
-    _inherits(VehicleInfo, _Component);
-
-    function VehicleInfo() {
-        _classCallCheck(this, VehicleInfo);
-
-        return _possibleConstructorReturn(this, (VehicleInfo.__proto__ || Object.getPrototypeOf(VehicleInfo)).apply(this, arguments));
-    }
-
-    _createClass(VehicleInfo, [{
-        key: "render",
-        value: function render() {
-            var _this2 = this;
-
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "container" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "form-group" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "label",
-                        { htmlFor: "vehicle_type" },
-                        "Vehicle Type"
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
-                            return _this2.props.onChange('vehicle_type', e);
-                        }, type: "text", className: "form-control",
-                        id: "vehicle_type",
-                        "aria-describedby": "emailHelp", placeholder: "Vehicle Type",
-                        value: this.props.newPost.vehicle_type })
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "form-group" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "label",
-                        { htmlFor: "vehicle_make" },
-                        "Vehicle Make"
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
-                            return _this2.props.onChange('vehicle_make', e);
-                        }, type: "text", className: "form-control",
-                        id: "vehicle_make",
-                        placeholder: "Vehicle Make",
-                        value: this.props.newPost.vehicle_make })
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "form-group" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "label",
-                        { htmlFor: "vehicle_model" },
-                        "Vehicle Model"
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
-                            return _this2.props.onChange('vehicle_model', e);
-                        }, type: "text", className: "form-control",
-                        id: "vehicle_model",
-                        placeholder: "Vehicle Model",
-                        value: this.props.newPost.vehicle_model })
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "form-group" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "label",
-                        { htmlFor: "vehicle_year" },
-                        "Vehicle Year"
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
-                            return _this2.props.onChange('vehicle_year', e);
-                        }, type: "text", className: "form-control",
-                        id: "vehicle_year",
-                        placeholder: "Vehicle Year",
-                        value: this.props.newPost.vehicle_year })
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "form-group" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "label",
-                        { htmlFor: "vehicle_title_type" },
-                        "Vehicle Title Type"
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
-                            return _this2.props.onChange('vehicle_title_type', e);
-                        }, type: "text", className: "form-control",
-                        id: "vehicle_title_type",
-                        placeholder: "Vehicle Title Type",
-                        value: this.props.newPost.vehicle_title_type })
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "next-step" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "a",
-                        { className: "btn btn-blue", onClick: this.props.nextStep },
-                        "Next Step"
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "a",
-                        { className: "btn btn-blue", onClick: this.props.previousStep },
-                        "Previous Step"
-                    )
-                )
-            );
-        }
-    }]);
-
-    return VehicleInfo;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
-
-/* harmony default export */ __webpack_exports__["a"] = (VehicleInfo);
+/* harmony default export */ __webpack_exports__["a"] = (PaymentInfo);
 
 /***/ })
 /******/ ]);

@@ -22,18 +22,33 @@ class CreatePostsTable extends Migration
                 ->on('users')
                 ->onDelete('cascade');
             $table->string('title')->nullable();
-            $table->text('description')->nullable();
+            $table->longText('description')->nullable();
             $table->integer('budget')->nullable();
             $table->integer('mileage')->nullable();
             $table->string('location')->nullable();
             $table->string('timeframe')->nullable();
 
             // Vehicle Info
+            $table->longText('vehicle_overview')->nullable();
             $table->string('vehicle_type')->nullable();
             $table->string('vehicle_make')->nullable();
             $table->string('vehicle_model')->nullable();
             $table->integer('vehicle_year')->nullable();
             $table->string('vehicle_title_type')->nullable();
+
+            // Features
+            $table->longText('features')->nullable();
+
+            // Images
+            $table->string('image_url')->nullable();
+
+            // Payment Options
+            $table->string('payment_type')->nullable();
+            $table->string('seller_preference')->nullable();
+            $table->string('loan_payment_method')->nullable();
+            $table->string('dealer_door_price')->nullable();
+            $table->longText('other_notes')->nullable();
+
         });
     }
 

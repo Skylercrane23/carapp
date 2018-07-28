@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export default class VehicleInfo extends Component {
+export default class Image extends Component {
 
 
     render() {
@@ -8,11 +8,11 @@ export default class VehicleInfo extends Component {
         return (
             <div className="container">
                 <div className="form-group">
-                    <label htmlFor="features">Features</label>
-                    <textarea onChange={(e) => this.props.onChange('features', e)} rows="5" type="text" className="form-control"
-                           id="features"
-                           aria-describedby="emailHelp" placeholder="Features"
-                           value={this.props.newPost.features}/>
+                    <label htmlFor="image_url">Image Url</label>
+                    <input onChange={(e) => this.props.onChange('image_url', e)} rows="5" type="text" className="form-control"
+                              id="image_url"
+                              aria-describedby="emailHelp" placeholder="Image Url"
+                              value={this.props.newPost.image_url}/>
                 </div>
 
                 <div className="next-step">

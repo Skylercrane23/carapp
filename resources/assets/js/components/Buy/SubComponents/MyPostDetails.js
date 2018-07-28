@@ -15,6 +15,23 @@ export default class MyPostDetails extends Component {
                 mileage: '',
                 location: '',
                 timeframe: '',
+                // VEHICLE INFO
+                vehicle_overview: '',
+                vehicle_type: '',
+                vehicle_make: '',
+                vehicle_model: '',
+                vehicle_year: '',
+                vehicle_title_type: '',
+                // FEATURES
+                features: '',
+                //IMAGES
+                image_url: '',
+                // PAYMENT OPTIONS
+                payment_type: '',
+                seller_preference: '',
+                loan_payment_method: '',
+                dealer_door_price: '',
+                other_notes: ''
             },
             showConfirmUpdate: false,
             showDelete: false,
@@ -50,7 +67,25 @@ export default class MyPostDetails extends Component {
                         budget: details.budget,
                         mileage: details.mileage,
                         location: details.location,
-                        timeframe: details.location,
+                        timeframe: details.timeframe,
+                        // VEHICLE INFO
+                        vehicle_overview: details.vehicle_overview,
+                        vehicle_type: details.vehicle_type,
+                        vehicle_make: details.vehicle_make,
+                        vehicle_model: details.vehicle_model,
+                        vehicle_year: details.vehicle_year,
+                        vehicle_title_type: details.vehicle_title_type,
+                        // FEATURES
+                        features: details.features,
+                        // IMAGE
+                        image_url: details.image_url,
+                        // PAYMENT OPTIONS
+                        payment_type: details.payment_type,
+                        seller_preference: details.seller_preference,
+                        loan_payment_method: details.loan_payment_method,
+                        dealer_door_price: details.dealer_door_price,
+                        other_notes: details.other_notes,
+
                     }
                 })
             })

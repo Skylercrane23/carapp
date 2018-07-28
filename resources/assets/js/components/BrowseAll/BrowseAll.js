@@ -26,7 +26,7 @@ export default class BrowseAll extends Component {
                 <div className="col-md-6 col-sm-12 buypost animated fadeIn" key={post.id}>
                     <div className="card">
                         <div className="img">
-                            <img className="img-fluid" src="/img/about-us.jpg" alt=""/>
+                            <img className="img-fluid" src={post.image_url !== null ? post.image_url : '/img/default-image.jpg'} alt=""/>
                         </div>
                         <div className="right">
                             <div className="header">

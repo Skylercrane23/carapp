@@ -57,11 +57,22 @@ class PostController extends Controller
             'location' => $request['location'],
             'timeframe' => $request['timeframe'],
             // VEHICLE INFO
+            'vehicle_overview' => $request['vehicle_overview'],
             'vehicle_type' => $request['vehicle_type'],
             'vehicle_make' => $request['vehicle_make'],
             'vehicle_model' => $request['vehicle_model'],
             'vehicle_year' => $request['vehicle_year'],
             'vehicle_title_type' => $request['vehicle_title_type'],
+            //FEATURES
+            'features' => $request['features'],
+            // IMAGES
+            'image_url' => $request['image_url'],
+            //PAYMENT OPTIONS
+            'payment_type' => $request['payment_type'],
+            'seller_preference' => $request['seller_preference'],
+            'loan_payment_method' => $request['loan_payment_method'],
+            'dealer_door_price' => $request['dealer_door_price'],
+            'other_notes' => $request['other_notes'],
         ]);
 
         $post->save();

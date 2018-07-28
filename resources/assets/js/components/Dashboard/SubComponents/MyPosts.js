@@ -6,14 +6,13 @@ export default class MyPosts extends Component {
         var data = this.props.myPosts;
         var userPosts = Object.values(data);
         var firstThree = userPosts.slice(0,2);
-        //console.log(userPosts.length);
         if (firstThree.length > 0) {
             return firstThree.map(post => {
                 return (
                     <div className="col-md-12 col-sm-12 buypost animated fadeIn" key={post.id}>
                         <div className="card">
                                 <div className="img">
-                                    <img className="img-fluid" src="/img/about-us.jpg" alt=""/>
+                                    <img className="img-fluid" src={post.image_url !== null ? post.image_url : '/img/default-image.jpg'} alt=""/>
                                 </div>
                                 <div className="right">
                                     <div className="header">

@@ -8,6 +8,13 @@ export default class VehicleInfo extends Component {
         return (
             <div className="container">
                 <div className="form-group">
+                    <label htmlFor="vehicle_overview">Vehicle Overview</label>
+                    <textarea onChange={(e) => this.props.onChange('vehicle_overview', e)} rows="5" type="text" className="form-control"
+                           id="vehicle_overview"
+                           aria-describedby="emailHelp" placeholder="Vehicle Overview"
+                           value={this.props.newPost.vehicle_overview}/>
+                </div>
+                <div className="form-group">
                     <label htmlFor="vehicle_type">Vehicle Type</label>
                     <input onChange={(e) => this.props.onChange('vehicle_type', e)} type="text" className="form-control"
                            id="vehicle_type"

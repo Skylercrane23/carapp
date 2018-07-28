@@ -1,15 +1,19 @@
 import React, {Component} from 'react';
 import axios from "axios/index";
+import SweetAlert from 'sweetalert2-react';
 
 import BasicInfo from "./CreatePostSteps/BasicInfo";
 import VehicleInfo from "./CreatePostSteps/VehicleInfo";
 import Features from "./CreatePostSteps/Features";
+import Image from "./CreatePostSteps/Image";
+import PaymentInfo from "./CreatePostSteps/PaymentInfo";
 
 export default class CreatePost extends Component {
     constructor(props) {
         super(props);
         this.state = {
             step: 1,
+            showCancel: false,
             newPost: {
                 title: '',
                 description: '',
@@ -18,11 +22,22 @@ export default class CreatePost extends Component {
                 location: '',
                 timeframe: '',
                 // VEHICLE INFO
+                vehicle_overview: '',
                 vehicle_type: '',
                 vehicle_make: '',
                 vehicle_model: '',
                 vehicle_year: '',
                 vehicle_title_type: '',
+                // FEATURES
+                features: '',
+                //IMAGES
+                image_url: '',
+                // PAYMENT OPTIONS
+                payment_type: '',
+                seller_preference: '',
+                loan_payment_method: '',
+                dealer_door_price: '',
+                other_notes: ''
             }
         };
         this.createPost = this.createPost.bind(this);
@@ -60,8 +75,12 @@ export default class CreatePost extends Component {
     }
 
     cancel(){
-        this.props.history.push('/home/buy');
+        this.setState({
+            showCancel: true,
+        })
     }
+
+
 
     showStep(){
         switch (this.state.step){
@@ -85,6 +104,20 @@ export default class CreatePost extends Component {
                             nextStep={this.nextStep}
                             previousStep={this.previousStep}
                         />
+            case 4:
+                return <Image
+                            newPost={this.state.newPost}
+                            onChange={this.handleInput}
+                            nextStep={this.nextStep}
+                            previousStep={this.previousStep}
+                        />
+            case 5:
+                return <PaymentInfo
+                            newPost={this.state.newPost}
+                            onChange={this.handleInput}
+                            nextStep={this.nextStep}
+                            previousStep={this.previousStep}
+                        />
         }
     };
 
@@ -103,6 +136,23 @@ export default class CreatePost extends Component {
                         <a className="button transparent-blue" onClick={this.cancel}>Cancel</a>
                     </form>
                 </div>
+
+                <SweetAlert
+                    show={this.state.showCancel}
+                    title="Cancel Post"
+                    type='info'
+                    text="Are you sure you want to cancel creating this post? You will lose all data."
+                    animation={false}
+                    customClass='animated fadeIn'
+                    reverseButtons={true}
+                    showCancelButton={true}
+                    cancelButtonText='Cancel'
+                    confirmButtonText='Ok'
+                    onConfirm={ () => {
+                        this.props.history.push('/home/buy');
+                    }}
+                />
+
             </div>
         );
     }
