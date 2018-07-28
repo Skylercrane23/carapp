@@ -15724,6 +15724,9 @@ if (typeof window === 'undefined') {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios_index__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_axios_index__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__CreatePostSteps_BasicInfo__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__CreatePostSteps_VehicleInfo__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__CreatePostSteps_Features__ = __webpack_require__(138);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -15731,6 +15734,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
 
 
 
@@ -15760,7 +15767,7 @@ var CreatePost = function (_Component) {
     }
 
     _createClass(CreatePost, [{
-        key: 'handleInput',
+        key: "handleInput",
         value: function handleInput(key, e) {
             /*Duplicating and updating the state */
             var state = Object.assign({}, this.state.newPost);
@@ -15768,7 +15775,7 @@ var CreatePost = function (_Component) {
             this.setState({ newPost: state });
         }
     }, {
-        key: 'createPost',
+        key: "createPost",
         value: function createPost(e) {
             var _this2 = this;
 
@@ -15778,124 +15785,124 @@ var CreatePost = function (_Component) {
             });
         }
     }, {
-        key: 'cancel',
+        key: "cancel",
         value: function cancel() {
             this.props.history.push('/home/buy');
         }
     }, {
-        key: 'render',
+        key: "render",
         value: function render() {
             var _this3 = this;
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { id: 'CreatePost' },
+                "div",
+                { id: "CreatePost" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'container', style: { marginTop: 100 } },
-                    'Create Post',
+                    "div",
+                    { className: "container", style: { marginTop: 100 } },
+                    "Create Post",
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'form',
+                        "form",
                         null,
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'form-group' },
+                            "div",
+                            { className: "form-group" },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'label',
-                                { htmlFor: 'title' },
-                                'Title'
+                                "label",
+                                { htmlFor: "title" },
+                                "Title"
                             ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
                                     return _this3.handleInput('title', e);
-                                }, type: 'text', className: 'form-control',
-                                id: 'title',
-                                'aria-describedby': 'emailHelp', placeholder: 'Enter Title',
+                                }, type: "text", className: "form-control",
+                                id: "title",
+                                "aria-describedby": "emailHelp", placeholder: "Enter Title",
                                 value: this.state.newPost.title })
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'form-group' },
+                            "div",
+                            { className: "form-group" },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'label',
-                                { htmlFor: 'description' },
-                                'Description'
+                                "label",
+                                { htmlFor: "description" },
+                                "Description"
                             ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
                                     return _this3.handleInput('description', e);
-                                }, type: 'text', className: 'form-control',
-                                id: 'description',
-                                placeholder: 'Description',
+                                }, type: "text", className: "form-control",
+                                id: "description",
+                                placeholder: "Description",
                                 value: this.state.newPost.description })
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'form-group' },
+                            "div",
+                            { className: "form-group" },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'label',
-                                { htmlFor: 'mileage' },
-                                'Mileage'
+                                "label",
+                                { htmlFor: "mileage" },
+                                "Mileage"
                             ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
                                     return _this3.handleInput('mileage', e);
-                                }, type: 'text', className: 'form-control',
-                                id: 'mileage',
-                                placeholder: 'Mileage',
+                                }, type: "text", className: "form-control",
+                                id: "mileage",
+                                placeholder: "Mileage",
                                 value: this.state.newPost.mileage })
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'form-group' },
+                            "div",
+                            { className: "form-group" },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'label',
-                                { htmlFor: 'budget' },
-                                'Budget'
+                                "label",
+                                { htmlFor: "budget" },
+                                "Budget"
                             ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
                                     return _this3.handleInput('budget', e);
-                                }, type: 'text', className: 'form-control',
-                                id: 'budget',
-                                placeholder: 'Budget',
+                                }, type: "text", className: "form-control",
+                                id: "budget",
+                                placeholder: "Budget",
                                 value: this.state.newPost.budget })
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'form-group' },
+                            "div",
+                            { className: "form-group" },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'label',
-                                { htmlFor: 'location' },
-                                'Location'
+                                "label",
+                                { htmlFor: "location" },
+                                "Location"
                             ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
                                     return _this3.handleInput('location', e);
-                                }, type: 'text', className: 'form-control',
-                                id: 'location',
-                                placeholder: 'Location',
+                                }, type: "text", className: "form-control",
+                                id: "location",
+                                placeholder: "Location",
                                 value: this.state.newPost.location })
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'form-group' },
+                            "div",
+                            { className: "form-group" },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'label',
-                                { htmlFor: 'timeframe' },
-                                'Timeframe'
+                                "label",
+                                { htmlFor: "timeframe" },
+                                "Timeframe"
                             ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
                                     return _this3.handleInput('timeframe', e);
-                                }, type: 'text', className: 'form-control',
-                                id: 'timeframe',
-                                placeholder: 'Timeframe',
+                                }, type: "text", className: "form-control",
+                                id: "timeframe",
+                                placeholder: "Timeframe",
                                 value: this.state.newPost.timeframe })
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'button',
-                            { onClick: this.createPost, type: 'submit', className: 'button blue square' },
-                            'Submit'
+                            "button",
+                            { onClick: this.createPost, type: "submit", className: "button blue square" },
+                            "Submit"
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'a',
-                            { className: 'button transparent-blue', onClick: this.cancel },
-                            'Cancel'
+                            "a",
+                            { className: "button transparent-blue", onClick: this.cancel },
+                            "Cancel"
                         )
                     )
                 )
@@ -66755,6 +66762,199 @@ var PostDetails = function (_Component) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 132 */,
+/* 133 */,
+/* 134 */,
+/* 135 */,
+/* 136 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var BasicInfo = function (_Component) {
+    _inherits(BasicInfo, _Component);
+
+    function BasicInfo() {
+        _classCallCheck(this, BasicInfo);
+
+        return _possibleConstructorReturn(this, (BasicInfo.__proto__ || Object.getPrototypeOf(BasicInfo)).apply(this, arguments));
+    }
+
+    _createClass(BasicInfo, [{
+        key: 'render',
+        value: function render() {
+
+            var styles = {
+                marginTop: '100px'
+            };
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'container', style: styles },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'row justify-content-center' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'col-md-12' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'card' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'card-body' },
+                                'BasicInfo'
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return BasicInfo;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* unused harmony default export */ var _unused_webpack_default_export = (BasicInfo);
+
+/***/ }),
+/* 137 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var VehicleInfo = function (_Component) {
+    _inherits(VehicleInfo, _Component);
+
+    function VehicleInfo() {
+        _classCallCheck(this, VehicleInfo);
+
+        return _possibleConstructorReturn(this, (VehicleInfo.__proto__ || Object.getPrototypeOf(VehicleInfo)).apply(this, arguments));
+    }
+
+    _createClass(VehicleInfo, [{
+        key: 'render',
+        value: function render() {
+
+            var styles = {
+                marginTop: '100px'
+            };
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'container', style: styles },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'row justify-content-center' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'col-md-12' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'card' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'card-body' },
+                                'VehicleInfo'
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return VehicleInfo;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* unused harmony default export */ var _unused_webpack_default_export = (VehicleInfo);
+
+/***/ }),
+/* 138 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var VehicleInfo = function (_Component) {
+    _inherits(VehicleInfo, _Component);
+
+    function VehicleInfo() {
+        _classCallCheck(this, VehicleInfo);
+
+        return _possibleConstructorReturn(this, (VehicleInfo.__proto__ || Object.getPrototypeOf(VehicleInfo)).apply(this, arguments));
+    }
+
+    _createClass(VehicleInfo, [{
+        key: 'render',
+        value: function render() {
+
+            var styles = {
+                marginTop: '100px'
+            };
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'container', style: styles },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'row justify-content-center' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'col-md-12' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'card' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'card-body' },
+                                'VehicleInfo'
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return VehicleInfo;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* unused harmony default export */ var _unused_webpack_default_export = (VehicleInfo);
 
 /***/ })
 /******/ ]);

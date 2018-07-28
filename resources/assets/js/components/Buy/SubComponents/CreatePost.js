@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import axios from "axios/index";
 
+import BasicInfo from "./CreatePostSteps/BasicInfo";
+import VehicleInfo from "./CreatePostSteps/VehicleInfo";
+import Features from "./CreatePostSteps/Features";
+
 export default class CreatePost extends Component {
     constructor(props) {
         super(props);
