@@ -31,6 +31,12 @@ class PostsTableSeeder extends Seeder
                 'mileage' => $faker->numberBetween(10000,100000),
                 'location' => $faker->city,
                 'timeframe' => $timeframe,
+                // VEHICLE INFO
+                'vehicle_type' =>  $faker->words($nb = 2, $asText = true),
+                'vehicle_make' =>  $faker->words($nb = 2, $asText = true),
+                'vehicle_model' =>  $faker->words($nb = 2, $asText = true),
+                'vehicle_year' => $faker->numberBetween(1950,2019),
+                'vehicle_title_type' =>  $faker->words($nb = 2, $asText = true),
             ]);
         }
     }

@@ -56,6 +56,12 @@ class PostController extends Controller
             'mileage' => $request['mileage'],
             'location' => $request['location'],
             'timeframe' => $request['timeframe'],
+            // VEHICLE INFO
+            'vehicle_type' => $request['vehicle_type'],
+            'vehicle_make' => $request['vehicle_make'],
+            'vehicle_model' => $request['vehicle_model'],
+            'vehicle_year' => $request['vehicle_year'],
+            'vehicle_title_type' => $request['vehicle_title_type'],
         ]);
 
         $post->save();

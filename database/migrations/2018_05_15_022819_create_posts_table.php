@@ -27,6 +27,13 @@ class CreatePostsTable extends Migration
             $table->integer('mileage')->nullable();
             $table->string('location')->nullable();
             $table->string('timeframe')->nullable();
+
+            // Vehicle Info
+            $table->string('vehicle_type')->nullable();
+            $table->string('vehicle_make')->nullable();
+            $table->string('vehicle_model')->nullable();
+            $table->integer('vehicle_year')->nullable();
+            $table->string('vehicle_title_type')->nullable();
         });
     }
 

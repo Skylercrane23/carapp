@@ -12,7 +12,19 @@ class Post extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'description', 'user_id', 'budget', 'mileage', 'location', 'timeframe'
+        'title',
+        'description',
+        'user_id',
+        'budget',
+        'mileage',
+        'location',
+        'timeframe',
+        // VEHICLE INFO
+        'vehicle_type',
+        'vehicle_make',
+        'vehicle_model',
+        'vehicle_year',
+        'vehicle_title_type',
     ];
 
     /**

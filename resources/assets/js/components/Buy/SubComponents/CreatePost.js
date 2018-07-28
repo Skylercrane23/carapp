@@ -9,6 +9,7 @@ export default class CreatePost extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            step: 1,
             newPost: {
                 title: '',
                 description: '',
@@ -16,11 +17,31 @@ export default class CreatePost extends Component {
                 mileage: '',
                 location: '',
                 timeframe: '',
+                // VEHICLE INFO
+                vehicle_type: '',
+                vehicle_make: '',
+                vehicle_model: '',
+                vehicle_year: '',
+                vehicle_title_type: '',
             }
         };
         this.createPost = this.createPost.bind(this);
         this.handleInput = this.handleInput.bind(this);
         this.cancel = this.cancel.bind(this);
+        this.nextStep = this.nextStep.bind(this);
+        this.previousStep = this.previousStep.bind(this);
+    }
+
+    nextStep(){
+        this.setState({
+            step: this.state.step + 1,
+        })
+    }
+
+    previousStep(){
+        this.setState({
+            step: this.state.step - 1,
+        })
     }
 
     handleInput(key, e) {
@@ -42,55 +63,42 @@ export default class CreatePost extends Component {
         this.props.history.push('/home/buy');
     }
 
+    showStep(){
+        switch (this.state.step){
+            case 1:
+                return  <BasicInfo
+                            newPost={this.state.newPost}
+                            onChange={this.handleInput}
+                            nextStep={this.nextStep}
+                        />
+            case 2:
+                return <VehicleInfo
+                            newPost={this.state.newPost}
+                            onChange={this.handleInput}
+                            nextStep={this.nextStep}
+                            previousStep={this.previousStep}
+                        />
+            case 3:
+                return <Features
+                            newPost={this.state.newPost}
+                            onChange={this.handleInput}
+                            nextStep={this.nextStep}
+                            previousStep={this.previousStep}
+                        />
+        }
+    };
+
     render() {
 
         return (
             <div id="CreatePost">
+
                 <div className="container" style={{marginTop: 100}}>
                     Create Post
                     <form>
-                        <div className="form-group">
-                            <label htmlFor="title">Title</label>
-                            <input onChange={(e) => this.handleInput('title', e)} type="text" className="form-control"
-                                   id="title"
-                                   aria-describedby="emailHelp" placeholder="Enter Title"
-                                   value={this.state.newPost.title}/>
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="description">Description</label>
-                            <input onChange={(e) => this.handleInput('description', e)} type="text" className="form-control"
-                                   id="description"
-                                   placeholder="Description"
-                                   value={this.state.newPost.description}/>
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="mileage">Mileage</label>
-                            <input onChange={(e) => this.handleInput('mileage', e)} type="text" className="form-control"
-                                   id="mileage"
-                                   placeholder="Mileage"
-                                   value={this.state.newPost.mileage}/>
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="budget">Budget</label>
-                            <input onChange={(e) => this.handleInput('budget', e)} type="text" className="form-control"
-                                   id="budget"
-                                   placeholder="Budget"
-                                   value={this.state.newPost.budget}/>
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="location">Location</label>
-                            <input onChange={(e) => this.handleInput('location', e)} type="text" className="form-control"
-                                   id="location"
-                                   placeholder="Location"
-                                   value={this.state.newPost.location}/>
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="timeframe">Timeframe</label>
-                            <input onChange={(e) => this.handleInput('timeframe', e)} type="text" className="form-control"
-                                   id="timeframe"
-                                   placeholder="Timeframe"
-                                   value={this.state.newPost.timeframe}/>
-                        </div>
+
+                        {this.showStep()}
+
                         <button onClick={this.createPost} type="submit" className="button blue square">Submit</button>
                         <a className="button transparent-blue" onClick={this.cancel}>Cancel</a>
                     </form>
