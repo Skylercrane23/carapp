@@ -7,7 +7,11 @@ export default class CreatePost extends Component {
         this.state = {
             newPost: {
                 title: '',
-                body: '',
+                description: '',
+                budget: '',
+                mileage: '',
+                location: '',
+                timeframe: '',
             }
         };
         this.createPost = this.createPost.bind(this);
@@ -24,16 +28,8 @@ export default class CreatePost extends Component {
 
     createPost(e) {
         e.preventDefault();
-        axios.post('/api/posts', {
-            body: this.state.newPost.body,
-            title: this.state.newPost.title
-        }).then( (res) => {
-            this.setState({
-                newPost: {
-                    title: '',
-                    body: '',
-                }
-            });
+        axios.post('/api/posts', this.state.newPost)
+            .then( (res) => {
             this.props.history.push('/home/buy');
         });
     }
@@ -57,11 +53,39 @@ export default class CreatePost extends Component {
                                    value={this.state.newPost.title}/>
                         </div>
                         <div className="form-group">
-                            <label htmlFor="body">Body</label>
-                            <input onChange={(e) => this.handleInput('body', e)} type="text" className="form-control"
-                                   id="body"
-                                   placeholder="Body"
-                                   value={this.state.newPost.body}/>
+                            <label htmlFor="description">Description</label>
+                            <input onChange={(e) => this.handleInput('description', e)} type="text" className="form-control"
+                                   id="description"
+                                   placeholder="Description"
+                                   value={this.state.newPost.description}/>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="mileage">Mileage</label>
+                            <input onChange={(e) => this.handleInput('mileage', e)} type="text" className="form-control"
+                                   id="mileage"
+                                   placeholder="Mileage"
+                                   value={this.state.newPost.mileage}/>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="budget">Budget</label>
+                            <input onChange={(e) => this.handleInput('budget', e)} type="text" className="form-control"
+                                   id="budget"
+                                   placeholder="Budget"
+                                   value={this.state.newPost.budget}/>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="location">Location</label>
+                            <input onChange={(e) => this.handleInput('location', e)} type="text" className="form-control"
+                                   id="location"
+                                   placeholder="Location"
+                                   value={this.state.newPost.location}/>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="timeframe">Timeframe</label>
+                            <input onChange={(e) => this.handleInput('timeframe', e)} type="text" className="form-control"
+                                   id="timeframe"
+                                   placeholder="Timeframe"
+                                   value={this.state.newPost.timeframe}/>
                         </div>
                         <button onClick={this.createPost} type="submit" className="button blue square">Submit</button>
                         <a className="button transparent-blue" onClick={this.cancel}>Cancel</a>

@@ -10,8 +10,11 @@ export default class MyPostDetails extends Component {
         this.state = {
             postDetails: {
                 title: '',
-                body: '',
-                id: ''
+                description: '',
+                budget: '',
+                mileage: '',
+                location: '',
+                timeframe: '',
             },
             showConfirmUpdate: false,
             showDelete: false,
@@ -43,7 +46,11 @@ export default class MyPostDetails extends Component {
                 this.setState({
                     postDetails: {
                         title: details.title,
-                        body: details.body,
+                        description: details.description,
+                        budget: details.budget,
+                        mileage: details.mileage,
+                        location: details.location,
+                        timeframe: details.location,
                     }
                 })
             })
@@ -78,10 +85,7 @@ export default class MyPostDetails extends Component {
     // UPDATE POST DETAILS
     updatePostDetails() {
         //e.preventDefault();
-        axios.put(`/api/myposts/` + this.props.match.params.id, {
-            body: this.state.postDetails.body,
-            title: this.state.postDetails.title
-        })
+        axios.put(`/api/myposts/` + this.props.match.params.id, this.state.postDetails)
             .then((res) => {
                 this.setState({ showConfirmUpdate: false });
                 this.props.history.push('/home/buy');
@@ -90,7 +94,7 @@ export default class MyPostDetails extends Component {
                 this.setState({
                     hasError: true,
                     error: error,
-                    errorInfo: 'You are not authorized to update this content.'
+                    errorInfo: 'Please Try Again'
                 })
             });
     }
@@ -147,6 +151,8 @@ export default class MyPostDetails extends Component {
                                         title="Confirm Update"
                                         type='info'
                                         text="Do you want to confirm this update?"
+                                        animation={false}
+                                        customClass='animated fadeIn'
                                         reverseButtons={true}
                                         showCancelButton={true}
                                         cancelButtonText='Cancel'
@@ -160,6 +166,8 @@ export default class MyPostDetails extends Component {
                                         show={this.state.showDelete}
                                         title="Delete Post?"
                                         type='info'
+                                        animation={false}
+                                        customClass='animated fadeIn'
                                         text="Do you want to delete this post?"
                                         reverseButtons={true}
                                         showCancelButton={true}

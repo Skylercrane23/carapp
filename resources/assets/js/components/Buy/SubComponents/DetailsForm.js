@@ -11,19 +11,59 @@ export default class DetailsForm extends Component {
                         <label htmlFor="title">Title: </label>
                         <input
                             onChange={this.props.onChange}
-                            value={this.props.postDetails.title}
+                            value={this.props.postDetails.title ? this.props.postDetails.title : ''}
                             name="title"
                             ref="title"
                             type="text"
                             className="form-control"/>
                     </div>
                     <div className="form-group">
-                        <label htmlFor="body">Body:</label>
+                        <label htmlFor="description">Body:</label>
                         <input
                             onChange={this.props.onChange}
-                            value={this.props.postDetails.body}
-                            name="body"
-                            ref="body"
+                            value={this.props.postDetails.description ? this.props.postDetails.description : ''}
+                            name="description"
+                            ref="description"
+                            type="text"
+                            className="form-control"/>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="mileage">Mileage:</label>
+                        <input
+                            onChange={this.props.onChange}
+                            value={this.props.postDetails.mileage ? this.props.postDetails.mileage : '' }
+                            name="mileage"
+                            ref="mileage"
+                            type="text"
+                            className="form-control"/>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="budget">Budget:</label>
+                        <input
+                            onChange={this.props.onChange}
+                            value={this.props.postDetails.budget ? this.props.postDetails.budget : '' }
+                            name="budget"
+                            ref="budget"
+                            type="text"
+                            className="form-control"/>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="location">Location:</label>
+                        <input
+                            onChange={this.props.onChange}
+                            value={this.props.postDetails.location ? this.props.postDetails.location : '' }
+                            name="location"
+                            ref="location"
+                            type="text"
+                            className="form-control"/>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="timeframe">Timeframe:</label>
+                        <input
+                            onChange={this.props.onChange}
+                            value={this.props.postDetails.timeframe ? this.props.postDetails.timeframe : '' }
+                            name="timeframe"
+                            ref="timeframe"
                             type="text"
                             className="form-control"/>
                     </div>

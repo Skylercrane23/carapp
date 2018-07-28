@@ -42,7 +42,7 @@ class PostController extends Controller
 
         //dd($request);
         $this->validate($request, [
-            'body' => 'required',
+            'description' => 'required',
             'title' => 'required',
         ]);
 
