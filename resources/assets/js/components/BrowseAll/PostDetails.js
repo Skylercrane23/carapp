@@ -53,7 +53,8 @@ export default class PostDetails extends Component {
 
                                 <span className="blue">Features: </span>{this.state.posts.features}<br/><br/>
 
-                                <span className="blue">Image Url: </span>{this.state.posts.image_url}<br/><br/>
+                                <span className="blue">Image Url: </span>{this.state.posts.image_url}<br/>
+                                <img className="img-fluid" src={this.state.posts.image_url !== null ? this.state.posts.image_url : 'img/default-image.jpg'} alt=""/><br/>
 
                                 <span className="blue">Payment Type: </span>{this.state.posts.payment_type}<br/>
                                 <span className="blue">Seller Preference: </span>{this.state.posts.seller_preference}<br/>

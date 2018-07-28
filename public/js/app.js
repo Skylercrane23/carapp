@@ -67557,6 +67557,7 @@ var PostDetails = function (_Component) {
                                 ),
                                 this.state.posts.image_url,
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "img-fluid", src: this.state.posts.image_url !== null ? this.state.posts.image_url : 'img/default-image.jpg', alt: "" }),
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     "span",
