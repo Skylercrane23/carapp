@@ -1,0 +1,54 @@
+/* POST DETAILS COMPONENT STYLES
+==============================*/
+
+#PostDetails {
+    padding-top: 70px;
+
+    .top-section {
+        margin-top: 25px;
+        .image-container {
+            background-size: cover;
+            height: 100%;
+            min-height: 400px;
+            background-position: center center;
+            img {
+
+            }
+        }
+        .card {
+            h4 {
+                margin-bottom: 0;
+                //@include ellipsis(2,2)
+            }
+            p {
+                margin-bottom: 20px;
+            }
+            .basic-info, .payment-info {
+                margin-bottom: 20px;
+                h6 {
+
+                }
+                p {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+    .bottom-section {
+        margin-top: 25px;
+        .vehicle-info {
+            margin-bottom: 20px;
+            h6 {
+
+            }
+            p {
+                margin-bottom: 5px;
+            }
+        }
+
+        .other-notes {
+            margin-top: 25px;
+        }
+    }
+
+}

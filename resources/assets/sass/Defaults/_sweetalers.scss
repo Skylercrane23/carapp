@@ -1,0 +1,27 @@
+/* SWEETALERT CLASS STYLES
+========================*/
+
+.swal2-popup {
+    border-radius: 0 !important;
+}
+
+.swal2-actions {
+    .swal2-styled {
+        padding: 0 20px !important;
+        outline: none;
+        border: none !important;
+        &:focus {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+    }
+    .swal2-cancel {
+        background-color: $grey !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .swal2-confirm {
+        background-color: $blue !important;
+    }
+}

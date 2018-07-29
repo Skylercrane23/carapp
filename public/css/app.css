@@ -10550,6 +10550,11 @@ form input[type='checkbox'] {
   width: 15px;
 }
 
+form select {
+  border-radius: 0;
+  outline: none;
+}
+
 /* HELPER CLASS STYLES
 ====================*/
 
@@ -10574,6 +10579,10 @@ form input[type='checkbox'] {
 
 .dark-grey {
   color: #292929;
+}
+
+.grey {
+  color: #999;
 }
 
 /* BACKGROUND HELPER CLASSES
@@ -10625,12 +10634,58 @@ form input[type='checkbox'] {
   font-family: "Open Sans", sans-serif;
 }
 
+.box-shadow {
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+}
+
+.box-shadow-lg {
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+}
+
 hr.green-underline {
   height: 2px;
   width: 200px;
   border: none;
   background: #4DAF4D;
   margin: 20px auto;
+}
+
+/* SWEETALERT CLASS STYLES
+========================*/
+
+.swal2-popup {
+  border-radius: 0 !important;
+}
+
+.swal2-actions .swal2-styled {
+  padding: 0 20px !important;
+  outline: none;
+  border: none !important;
+}
+
+.swal2-actions .swal2-styled:focus {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.swal2-actions .swal2-cancel {
+  background-color: #999 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.swal2-actions .swal2-confirm {
+  background-color: #19496F !important;
 }
 
 /* BUTTON COMPONENT STYLES
@@ -11451,6 +11506,58 @@ button.transparent-blue:hover {
 #BrowseAllHero .buying-container h3,
 #BrowseAllHero .buying-container h5 {
   color: #ffffff;
+}
+
+/* POST DETAILS COMPONENT STYLES
+==============================*/
+
+#PostDetails {
+  padding-top: 70px;
+}
+
+#PostDetails .top-section {
+  margin-top: 25px;
+}
+
+#PostDetails .top-section .image-container {
+  background-size: cover;
+  height: 100%;
+  min-height: 400px;
+  background-position: center center;
+}
+
+#PostDetails .top-section .card h4 {
+  margin-bottom: 0;
+}
+
+#PostDetails .top-section .card p {
+  margin-bottom: 20px;
+}
+
+#PostDetails .top-section .card .basic-info,
+#PostDetails .top-section .card .payment-info {
+  margin-bottom: 20px;
+}
+
+#PostDetails .top-section .card .basic-info p,
+#PostDetails .top-section .card .payment-info p {
+  margin-bottom: 5px;
+}
+
+#PostDetails .bottom-section {
+  margin-top: 25px;
+}
+
+#PostDetails .bottom-section .vehicle-info {
+  margin-bottom: 20px;
+}
+
+#PostDetails .bottom-section .vehicle-info p {
+  margin-bottom: 5px;
+}
+
+#PostDetails .bottom-section .other-notes {
+  margin-top: 25px;
 }
 
 /* LANDING PAGE STYLES
