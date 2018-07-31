@@ -16,7 +16,7 @@
                     <div class="form-container">
                             <h3>Sign In with CarApp</h3>
                             <p>Please enter your details below.</p>
-                            <form class="mt-4" method="POST" action="{{ route('login') }}">
+                            <form class="mt-4 register-form" method="POST" action="{{ route('login') }}">
                                 @csrf
 
                                 <div class="form-group row mb-4">

@@ -10516,43 +10516,91 @@ h6 {
 /* FORM STYLES
 ============*/
 
-form {
+form.register-form {
   width: 100%;
   max-width: 500px;
 }
 
-form label {
+form.register-form label {
   font-size: 14px;
   font-weight: 300;
 }
 
-form .form-control {
+form.register-form .form-control {
   border: none;
   border-bottom: 2px solid #19496F;
   border-radius: 0;
 }
 
-form .form-control:focus {
+form.register-form .form-control:focus {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
   border-color: #4DAF4D;
 }
 
-form .form-control.is-invalid:focus {
+form.register-form .form-control.is-invalid:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-form input[type='checkbox'] {
+form.register-form input[type='checkbox'] {
   border-radius: 0;
   height: 15px;
   width: 15px;
 }
 
-form select {
+form.register-form select {
   border-radius: 0;
   outline: none;
+}
+
+form.register-form textarea {
+  border: 2px solid #19496F !important;
+}
+
+form.create-post {
+  width: 100%;
+}
+
+form.create-post label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+form.create-post .form-control:not(textarea) {
+  border: 2px solid #EAEAEA;
+  height: 50px;
+  font-size: 16px;
+}
+
+form.create-post .form-control:not(textarea):focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #19496F;
+}
+
+form.create-post .form-control:not(textarea).is-invalid:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+form.create-post textarea {
+  border: 2px solid #EAEAEA;
+  font-size: 16px;
+}
+
+form.create-post textarea:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #19496F;
+}
+
+form.create-post textarea.is-invalid:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 /* HELPER CLASS STYLES
@@ -11451,6 +11499,103 @@ button.transparent-blue:hover {
 
 .buypost-container .buypost .right .btn-container .button:first-child {
   margin-left: 0;
+}
+
+#CreatePost {
+  margin-top: 70px;
+  padding-top: 25px;
+  min-height: calc(100vh - 70px);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.75)), to(rgba(255, 255, 255, 0.75))), url("/img/create-post-bg.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("/img/create-post-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#CreatePost .card {
+  margin-top: 100px;
+}
+
+#CreatePost .card .cancel-button {
+  position: absolute;
+  right: 25px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#CreatePost .card h4 {
+  margin-top: 25px;
+  margin-bottom: 35px;
+}
+
+#CreatePost .card .progress-bar {
+  margin-bottom: 25px;
+  margin-top: 15px;
+}
+
+#CreatePost .card .progress-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#CreatePost .card .progress-header .header {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+#CreatePost .card form {
+  max-width: 100%;
+}
+
+#CreatePost .card .next-step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+#CreatePost .card .next-step a.btn {
+  background: #19496F;
+  border-radius: 50px;
+  color: #ffffff;
+  padding: 6px 20px;
+}
+
+#CreatePost .card .next-step a.btn:hover {
+  background: #226499;
+}
+
+#CreatePost .card .section-info {
+  margin-top: 10px;
+  margin-bottom: 35px;
+  color: #999;
+  font-weight: 400;
 }
 
 /* BROWSE ALL COMPONENT STYLES

@@ -1,0 +1,76 @@
+
+#CreatePost {
+    margin-top: 70px;
+    padding-top: 25px;
+    min-height: calc(100vh - 70px);
+    background: linear-gradient(
+                    rgba(255, 255, 255, .75),
+                    rgba(255, 255, 255, .75)
+    ),
+    url('/img/create-post-bg.jpg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .card {
+
+        .cancel-button {
+            position: absolute;
+            right: 25px;
+            top: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        margin-top: 100px;
+        h4 {
+            margin-top: 25px;
+            margin-bottom: 35px;
+        }
+        .progress-bar {
+            margin-bottom: 25px;
+            margin-top: 15px;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-around;
+            align-content: center;
+            align-items: center;
+            .header {
+                font-weight: $w-bold;
+                font-size: 16px;
+            }
+        }
+
+        form {
+            max-width: 100%;
+        }
+
+        .next-step {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            a.btn {
+                background: $blue;
+                border-radius: 50px;
+                color: $white;
+                padding: 6px 20px;
+                &:hover {
+                    background: lighten($blue, 10%);
+                }
+            }
+        }
+
+        .section-info {
+            margin-top: 10px;
+            margin-bottom: 35px;
+            color: $grey;
+            font-weight: $w-regular;
+        }
+    }
+}

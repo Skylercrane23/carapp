@@ -12,7 +12,7 @@
 @import "./Defaults/defaults";
 @import "./Defaults/forms";
 @import "./Defaults/helper_classes";
-@import "./Defaults/sweetalers";
+@import "./Defaults/sweetalerts";
 
 // SCSS COMPONENT IMPORTS
 @import "./Components/buttons";
@@ -31,6 +31,7 @@
 @import "./Components/Buy/BuyHero";
 @import "./Components/Buy/MyPostDetails";
 @import "./Components/Buy/buypost";
+@import "./Components/Buy/CreatePost";
 
 // BROWSE ALL RELATED COMPONENTS STYLES
 @import "./Components/Browse/BrowseAll";

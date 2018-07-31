@@ -46,8 +46,8 @@ class UserPostsController extends Controller
         } else {
             return response('something went wrong', 401);
         }
-
     }
+
 
 
     // DELETE USER POST

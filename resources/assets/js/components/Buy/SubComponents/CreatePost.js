@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from "axios/index";
 import SweetAlert from 'sweetalert2-react';
+import { Line } from 'rc-progress';
 
 import BasicInfo from "./CreatePostSteps/BasicInfo";
 import VehicleInfo from "./CreatePostSteps/VehicleInfo";
@@ -126,14 +127,34 @@ export default class CreatePost extends Component {
         return (
             <div id="CreatePost">
 
-                <div className="container" style={{marginTop: 100}}>
-                    Create Post
-                    <form>
+                <div className="container card">
+                    <a className="cancel-button" onClick={this.cancel}><i className="fas fa-times"></i></a>
 
-                        {this.showStep()}
+                    <h4 className="text-center">Create Post</h4>
+                    <div className="progress-header">
+                        <div className="header">Basic Info</div>
+                        <div className="header">Vehicle Info</div>
+                        <div className="header">Features</div>
+                        <div className="header">Images</div>
+                        <div className="header">Payment</div>
+                        <div className="header">Complete</div>
+                    </div>
+                    <Line percent={ this.state.step / 6 * 100 }
+                          strokeWidth=".5"
+                          trailWidth=".5"
+                          strokeLinecap="square"
+                          gapPosition="top"
+                          trailColor="#EAEAEA"
+                          strokeColor="#4DAF4D"
+                          className="progress-bar"/>
 
-                        <button onClick={this.createPost} type="submit" className="button blue square">Submit</button>
-                        <a className="button transparent-blue" onClick={this.cancel}>Cancel</a>
+                    <form className="create-post">
+
+                        <div className="animated fadeIn">
+                            {this.showStep()}
+                        </div>
+                        {/*<button onClick={this.createPost} type="submit" className="button blue square">Submit</button>*/}
+
                     </form>
                 </div>
 
@@ -148,6 +169,12 @@ export default class CreatePost extends Component {
                     showCancelButton={true}
                     cancelButtonText='Cancel'
                     confirmButtonText='Ok'
+                    onCancel={ () => {
+                        console.log('cancelled');
+                        this.setState({
+                            showCancel: false,
+                        })
+                    }}
                     onConfirm={ () => {
                         this.props.history.push('/home/buy');
                     }}

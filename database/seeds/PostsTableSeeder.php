@@ -51,7 +51,7 @@ class PostsTableSeeder extends Seeder
                 'title' => $faker->words($nb = 3, $asText = true),
                 'description' => $faker->sentence($nbWords = 6, $variableNbWords = true),
                 'budget' => $faker->numberBetween(0,50000),
-                'mileage' => $faker->numberBetween(10000,100000),
+                'mileage' => $faker->words($nb = 3, $asText = true),
                 'location' => $faker->city,
                 'timeframe' => $timeframe,
                 // VEHICLE INFO

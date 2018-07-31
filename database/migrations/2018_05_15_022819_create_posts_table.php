@@ -24,7 +24,7 @@ class CreatePostsTable extends Migration
             $table->string('title')->nullable();
             $table->longText('description')->nullable();
             $table->integer('budget')->nullable();
-            $table->integer('mileage')->nullable();
+            $table->string('mileage')->nullable();
             $table->string('location')->nullable();
             $table->string('timeframe')->nullable();
 

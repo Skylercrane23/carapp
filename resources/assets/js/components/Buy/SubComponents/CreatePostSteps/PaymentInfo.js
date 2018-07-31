@@ -48,8 +48,8 @@ export default class PaymentInfo extends Component {
                 </div>
 
                 <div className="next-step">
-                    <a className="btn btn-blue" onClick={this.props.nextStep}>Next Step</a>
                     <a className="btn btn-blue" onClick={this.props.previousStep}>Previous Step</a>
+                    <a className="btn btn-blue" onClick={this.props.nextStep}>Next Step</a>
                 </div>
             </div>
         );
