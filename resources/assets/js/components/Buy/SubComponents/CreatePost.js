@@ -8,6 +8,7 @@ import VehicleInfo from "./CreatePostSteps/VehicleInfo";
 import Features from "./CreatePostSteps/Features";
 import Image from "./CreatePostSteps/Image";
 import PaymentInfo from "./CreatePostSteps/PaymentInfo";
+import Complete from "./CreatePostSteps/Complete";
 
 export default class CreatePost extends Component {
     constructor(props) {
@@ -118,6 +119,13 @@ export default class CreatePost extends Component {
                             onChange={this.handleInput}
                             nextStep={this.nextStep}
                             previousStep={this.previousStep}
+                        />
+            case 6:
+                return <Complete
+                            newPost={this.state.newPost}
+                            previousStep={this.previousStep}
+                            nextStep={this.nextStep}
+                            createPost={this.createPost}
                         />
         }
     };

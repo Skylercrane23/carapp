@@ -10586,6 +10586,24 @@ form.create-post .form-control:not(textarea).is-invalid:focus {
           box-shadow: none;
 }
 
+form.create-post select {
+  border: 2px solid #EAEAEA;
+  height: 50px !important;
+  font-size: 16px;
+}
+
+form.create-post select:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #19496F;
+}
+
+form.create-post select.is-invalid:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 form.create-post textarea {
   border: 2px solid #EAEAEA;
   font-size: 16px;
@@ -11564,6 +11582,23 @@ button.transparent-blue:hover {
   max-width: 100%;
 }
 
+#CreatePost .card .preview-post {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+#CreatePost .card .preview-post .btn-container a.blue {
+  color: #ffffff;
+}
+
+#CreatePost .card .preview-post .btn-container a.bluehover {
+  color: #19496F;
+}
+
+#CreatePost .card .card-preview-heading {
+  margin-bottom: 15px !important;
+}
+
 #CreatePost .card .next-step {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11589,6 +11624,24 @@ button.transparent-blue:hover {
 
 #CreatePost .card .next-step a.btn:hover {
   background: #226499;
+}
+
+#CreatePost .card .create-post-btn {
+  background: #19496F;
+  border-radius: 50px;
+  color: #ffffff;
+  padding: 6px 20px;
+  margin: 30px auto;
+}
+
+#CreatePost .card .create-post-btn:hover {
+  background: #226499;
+}
+
+#CreatePost .card .complete-text {
+  max-width: 600px;
+  text-align: center;
+  margin: 15px auto;
 }
 
 #CreatePost .card .section-info {

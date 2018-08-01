@@ -62,6 +62,21 @@ form.create-post {
         }
 
     }
+    select {
+        border: 2px solid $light-grey;
+        height: 50px !important;
+        font-size: 16px;
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            border-color: $blue;
+        }
+        &.is-invalid {
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
     textarea {
         border: 2px solid $light-grey;
         font-size: 16px;

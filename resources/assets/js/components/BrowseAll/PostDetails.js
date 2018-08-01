@@ -25,11 +25,11 @@ export default class PostDetails extends Component {
     render() {
 
         return (
-            <div className="container-fluid" id="PostDetails">
+            <div className="container" id="PostDetails">
                 <div className="row top-section">
                     <div className="col-md-7">
                         <div className="image-container box-shadow-lg"
-                             style={{backgroundImage: `url(${this.state.posts.image_url !== null ? this.state.posts.image_url : 'img/default-image.jpg'})`}}>
+                             style={{backgroundImage: `url(${this.state.posts.image_url !== null ? this.state.posts.image_url : '/img/default-image.jpg'})`}}>
                         </div>
                     </div>
                     <div className="col-md-5">

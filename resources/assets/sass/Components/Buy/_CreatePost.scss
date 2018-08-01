@@ -48,6 +48,23 @@
             max-width: 100%;
         }
 
+        .preview-post {
+            max-width: 520px;
+            margin: 0 auto;
+            .btn-container {
+                a.blue {
+                    color: $white;
+                    &hover {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+
+        .card-preview-heading {
+            margin-bottom: 15px !important;
+        }
+
         .next-step {
             display: flex;
             justify-content: space-between;
@@ -64,6 +81,23 @@
                     background: lighten($blue, 10%);
                 }
             }
+        }
+
+        .create-post-btn {
+            background: $blue;
+            border-radius: 50px;
+            color: $white;
+            padding: 6px 20px;
+            margin: 30px auto;
+            &:hover {
+                background: lighten($blue, 10%);
+            }
+        }
+
+        .complete-text {
+            max-width: 600px;
+            text-align: center;
+            margin: 15px auto;
         }
 
         .section-info {

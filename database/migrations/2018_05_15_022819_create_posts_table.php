@@ -33,7 +33,7 @@ class CreatePostsTable extends Migration
             $table->string('vehicle_type')->nullable();
             $table->string('vehicle_make')->nullable();
             $table->string('vehicle_model')->nullable();
-            $table->integer('vehicle_year')->nullable();
+            $table->string('vehicle_year')->nullable();
             $table->string('vehicle_title_type')->nullable();
 
             // Features
@@ -45,8 +45,8 @@ class CreatePostsTable extends Migration
             // Payment Options
             $table->string('payment_type')->nullable();
             $table->string('seller_preference')->nullable();
-            $table->string('loan_payment_method')->nullable();
-            $table->string('dealer_door_price')->nullable();
+            $table->integer('loan_payment_method')->nullable();
+            $table->integer('dealer_door_price')->nullable();
             $table->longText('other_notes')->nullable();
 
         });

@@ -59,7 +59,7 @@ class PostsTableSeeder extends Seeder
                 'vehicle_type' =>  $faker->words($nb = 2, $asText = true),
                 'vehicle_make' =>  $faker->words($nb = 2, $asText = true),
                 'vehicle_model' =>  $faker->words($nb = 2, $asText = true),
-                'vehicle_year' => $faker->numberBetween(1950,2019),
+                'vehicle_year' => $faker->words($nb = 2, $asText = true),
                 'vehicle_title_type' =>  $faker->words($nb = 2, $asText = true),
                 // FEATURES
                 'features' => $faker->sentence($nbWords = 6, $variableNbWords = true),
@@ -68,7 +68,7 @@ class PostsTableSeeder extends Seeder
                 //PAYMENT OPTIONS
                 'payment_type' => $faker->words($nb = 2, $asText = true),
                 'seller_preference' => $faker->words($nb = 2, $asText = true),
-                'loan_payment_method' => $faker->words($nb = 2, $asText = true),
+                'loan_payment_method' => $faker->numberBetween(100,1000),
                 'dealer_door_price' => $faker->numberBetween(0,50000),
                 'other_notes' => $faker->sentence($nbWords = 6, $variableNbWords = true),
             ]);
