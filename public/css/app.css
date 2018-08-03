@@ -11481,6 +11481,7 @@ button.transparent-blue:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  width: 100%;
 }
 
 .buypost-container .buypost .right .overview p {
@@ -11488,7 +11489,12 @@ button.transparent-blue:hover {
 }
 
 .buypost-container .buypost .right .overview .left-overview {
+  width: 50%;
   margin-right: 20px;
+}
+
+.buypost-container .buypost .right .overview .right-overview {
+  width: 50%;
 }
 
 .buypost-container .buypost .right .btn-container {
@@ -11519,7 +11525,8 @@ button.transparent-blue:hover {
   margin-left: 0;
 }
 
-#CreatePost {
+#CreatePost,
+#MyPostDetails {
   margin-top: 70px;
   padding-top: 25px;
   min-height: calc(100vh - 70px);
@@ -11538,29 +11545,54 @@ button.transparent-blue:hover {
           align-items: flex-start;
 }
 
-#CreatePost .card {
+#CreatePost .card,
+#MyPostDetails .card {
   margin-top: 100px;
 }
 
-#CreatePost .card .cancel-button {
+#CreatePost .card .cancel-button,
+#MyPostDetails .card .cancel-button {
   position: absolute;
+  color: red;
   right: 25px;
   top: 10px;
   font-size: 24px;
   cursor: pointer;
 }
 
-#CreatePost .card h4 {
+#CreatePost .card .delete-button,
+#MyPostDetails .card .delete-button {
+  color: red;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+#CreatePost .card .delete-button i,
+#MyPostDetails .card .delete-button i {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+#CreatePost .card h4,
+#MyPostDetails .card h4 {
   margin-top: 25px;
   margin-bottom: 35px;
 }
 
-#CreatePost .card .progress-bar {
+#CreatePost .card .progress-bar,
+#MyPostDetails .card .progress-bar {
   margin-bottom: 25px;
   margin-top: 15px;
 }
 
-#CreatePost .card .progress-header {
+#CreatePost .card .progress-header,
+#MyPostDetails .card .progress-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11573,33 +11605,40 @@ button.transparent-blue:hover {
           align-items: center;
 }
 
-#CreatePost .card .progress-header .header {
+#CreatePost .card .progress-header .header,
+#MyPostDetails .card .progress-header .header {
   font-weight: 700;
   font-size: 16px;
 }
 
-#CreatePost .card form {
+#CreatePost .card form,
+#MyPostDetails .card form {
   max-width: 100%;
 }
 
-#CreatePost .card .preview-post {
+#CreatePost .card .preview-post,
+#MyPostDetails .card .preview-post {
   max-width: 520px;
   margin: 0 auto;
 }
 
-#CreatePost .card .preview-post .btn-container a.blue {
+#CreatePost .card .preview-post .btn-container a.blue,
+#MyPostDetails .card .preview-post .btn-container a.blue {
   color: #ffffff;
 }
 
-#CreatePost .card .preview-post .btn-container a.bluehover {
+#CreatePost .card .preview-post .btn-container a.bluehover,
+#MyPostDetails .card .preview-post .btn-container a.bluehover {
   color: #19496F;
 }
 
-#CreatePost .card .card-preview-heading {
+#CreatePost .card .card-preview-heading,
+#MyPostDetails .card .card-preview-heading {
   margin-bottom: 15px !important;
 }
 
-#CreatePost .card .next-step {
+#CreatePost .card .next-step,
+#MyPostDetails .card .next-step {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11615,18 +11654,21 @@ button.transparent-blue:hover {
   margin-bottom: 25px;
 }
 
-#CreatePost .card .next-step a.btn {
+#CreatePost .card .next-step a.btn,
+#MyPostDetails .card .next-step a.btn {
   background: #19496F;
   border-radius: 50px;
   color: #ffffff;
   padding: 6px 20px;
 }
 
-#CreatePost .card .next-step a.btn:hover {
+#CreatePost .card .next-step a.btn:hover,
+#MyPostDetails .card .next-step a.btn:hover {
   background: #226499;
 }
 
-#CreatePost .card .create-post-btn {
+#CreatePost .card .create-post-btn,
+#MyPostDetails .card .create-post-btn {
   background: #19496F;
   border-radius: 50px;
   color: #ffffff;
@@ -11634,17 +11676,20 @@ button.transparent-blue:hover {
   margin: 30px auto;
 }
 
-#CreatePost .card .create-post-btn:hover {
+#CreatePost .card .create-post-btn:hover,
+#MyPostDetails .card .create-post-btn:hover {
   background: #226499;
 }
 
-#CreatePost .card .complete-text {
+#CreatePost .card .complete-text,
+#MyPostDetails .card .complete-text {
   max-width: 600px;
   text-align: center;
   margin: 15px auto;
 }
 
-#CreatePost .card .section-info {
+#CreatePost .card .section-info,
+#MyPostDetails .card .section-info {
   margin-top: 10px;
   margin-bottom: 35px;
   color: #999;

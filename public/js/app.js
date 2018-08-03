@@ -60601,11 +60601,6 @@ var MyPosts = function (_Component) {
                                     "div",
                                     { className: "overview" },
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        "small",
-                                        { className: "w-bold" },
-                                        "overview"
-                                    ),
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                         "div",
                                         { className: "overview-container" },
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -60620,7 +60615,7 @@ var MyPosts = function (_Component) {
                                                     "Budget: ",
                                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                         "span",
-                                                        null,
+                                                        { className: "w-bold" },
                                                         "$",
                                                         post.budget
                                                     )
@@ -60635,7 +60630,7 @@ var MyPosts = function (_Component) {
                                                     "Location: ",
                                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                         "span",
-                                                        null,
+                                                        { className: "w-bold" },
                                                         post.location
                                                     )
                                                 )
@@ -60653,7 +60648,7 @@ var MyPosts = function (_Component) {
                                                     "Mileage: ",
                                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                         "span",
-                                                        null,
+                                                        { className: "w-bold" },
                                                         post.mileage
                                                     )
                                                 )
@@ -60667,7 +60662,7 @@ var MyPosts = function (_Component) {
                                                     "Timeframe: ",
                                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                         "span",
-                                                        null,
+                                                        { className: "w-bold" },
                                                         post.timeframe
                                                     )
                                                 )
@@ -66690,11 +66685,6 @@ var MyBuyPosts = function (_Component) {
                                     "div",
                                     { className: "overview" },
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        "small",
-                                        { className: "w-bold" },
-                                        "overview"
-                                    ),
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                         "div",
                                         { className: "overview-container" },
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -66709,7 +66699,7 @@ var MyBuyPosts = function (_Component) {
                                                     "Budget: ",
                                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                         "span",
-                                                        null,
+                                                        { className: "w-bold" },
                                                         post.budget !== null ? '$' + post.budget : ' '
                                                     )
                                                 )
@@ -66723,7 +66713,7 @@ var MyBuyPosts = function (_Component) {
                                                     "Location: ",
                                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                         "span",
-                                                        null,
+                                                        { className: "w-bold" },
                                                         post.location
                                                     )
                                                 )
@@ -66741,7 +66731,7 @@ var MyBuyPosts = function (_Component) {
                                                     "Mileage: ",
                                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                         "span",
-                                                        null,
+                                                        { className: "w-bold" },
                                                         post.mileage
                                                     )
                                                 )
@@ -66755,7 +66745,7 @@ var MyBuyPosts = function (_Component) {
                                                     "Timetable: ",
                                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                         "span",
-                                                        null,
+                                                        { className: "w-bold" },
                                                         post.timeframe
                                                     )
                                                 )
@@ -69451,6 +69441,12 @@ var BrowseAllHero = function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_ErrorPage__ = __webpack_require__(223);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_sweetalert2_react__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_sweetalert2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_sweetalert2_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rc_progress__ = __webpack_require__(172);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__EditPostSteps_EditBasicInfo__ = __webpack_require__(232);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__EditPostSteps_EditVehicleInfo__ = __webpack_require__(233);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__EditPostSteps_EditFeatures__ = __webpack_require__(234);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__EditPostSteps_EditImage__ = __webpack_require__(235);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__EditPostSteps_EditPaymentInfo__ = __webpack_require__(236);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -69459,6 +69455,14 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+
+
+
+
+
+
+
+// STEPS
 
 
 
@@ -69474,6 +69478,7 @@ var MyPostDetails = function (_Component) {
         var _this = _possibleConstructorReturn(this, (MyPostDetails.__proto__ || Object.getPrototypeOf(MyPostDetails)).call(this, props));
 
         _this.state = {
+            step: 1,
             postDetails: {
                 title: '',
                 description: '',
@@ -69503,11 +69508,14 @@ var MyPostDetails = function (_Component) {
             showDelete: false,
             hasError: false
         };
-        _this.setPostDetailState = _this.setPostDetailState.bind(_this);
+        //this.setPostDetailState = this.setPostDetailState.bind(this);
+        _this.handleInput = _this.handleInput.bind(_this);
         _this.updatePostDetails = _this.updatePostDetails.bind(_this);
         _this.confirmUpdate = _this.confirmUpdate.bind(_this);
         _this.deletePost = _this.deletePost.bind(_this);
         _this.confirmDelete = _this.confirmDelete.bind(_this);
+        _this.nextStep = _this.nextStep.bind(_this);
+        _this.previousStep = _this.previousStep.bind(_this);
         return _this;
     }
 
@@ -69534,7 +69542,6 @@ var MyPostDetails = function (_Component) {
 
             __WEBPACK_IMPORTED_MODULE_1_axios_index___default.a.get('/api/myposts/' + this.props.match.params.id).then(function (response) {
                 var details = response.data;
-                //console.log(details);
                 _this2.setState({
                     postDetails: {
                         title: details.title,
@@ -69571,19 +69578,25 @@ var MyPostDetails = function (_Component) {
                 });
             });
         }
+    }, {
+        key: "handleInput",
+        value: function handleInput(key, e) {
+            /*Duplicating and updating the state */
+            var state = Object.assign({}, this.state.newPost);
+            state[key] = e.target.value;
+            this.setState({ newPost: state });
+        }
 
         // SET STATE FOR
+        // setPostDetailState(e) {
+        //     var field = e.target.name;
+        //     var value = e.target.value;
+        //     this.state.postDetails[field] = value;
+        //     return this.setState({
+        //         postDetails: this.state.postDetails
+        //     })
+        // }
 
-    }, {
-        key: "setPostDetailState",
-        value: function setPostDetailState(e) {
-            var field = e.target.name;
-            var value = e.target.value;
-            this.state.postDetails[field] = value;
-            return this.setState({
-                postDetails: this.state.postDetails
-            });
-        }
     }, {
         key: "confirmUpdate",
         value: function confirmUpdate(e) {
@@ -69633,6 +69646,60 @@ var MyPostDetails = function (_Component) {
             });
         }
     }, {
+        key: "nextStep",
+        value: function nextStep() {
+            this.setState({
+                step: this.state.step + 1
+            });
+        }
+    }, {
+        key: "previousStep",
+        value: function previousStep() {
+            this.setState({
+                step: this.state.step - 1
+            });
+        }
+    }, {
+        key: "showStep",
+        value: function showStep() {
+            switch (this.state.step) {
+                case 1:
+                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__EditPostSteps_EditBasicInfo__["a" /* default */], {
+                        postDetails: this.state.postDetails,
+                        onChange: this.handleInput,
+                        nextStep: this.nextStep
+                    });
+                case 2:
+                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__EditPostSteps_EditVehicleInfo__["a" /* default */], {
+                        postDetails: this.state.postDetails,
+                        onChange: this.handleInput,
+                        nextStep: this.nextStep,
+                        previousStep: this.previousStep
+                    });
+                case 3:
+                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__EditPostSteps_EditFeatures__["a" /* default */], {
+                        postDetails: this.state.postDetails,
+                        onChange: this.handleInput,
+                        nextStep: this.nextStep,
+                        previousStep: this.previousStep
+                    });
+                case 4:
+                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__EditPostSteps_EditImage__["a" /* default */], {
+                        postDetails: this.state.postDetails,
+                        onChange: this.handleInput,
+                        nextStep: this.nextStep,
+                        previousStep: this.previousStep
+                    });
+                case 5:
+                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__EditPostSteps_EditPaymentInfo__["a" /* default */], {
+                        postDetails: this.state.postDetails,
+                        onChange: this.handleInput,
+                        nextStep: this.nextStep,
+                        previousStep: this.previousStep
+                    });
+            }
+        }
+    }, {
         key: "render",
         value: function render() {
             var _this4 = this;
@@ -69648,60 +69715,95 @@ var MyPostDetails = function (_Component) {
                     { id: "MyPostDetails", className: "animated fadeIn" },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
-                        { className: "container" },
+                        { className: "container card" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "a",
+                            { className: "cancel-button delete-button", onClick: this.confirmDelete },
+                            "Delete ",
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fas fa-times" })
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "h4",
+                            { className: "text-center" },
+                            "Create Post"
+                        ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             "div",
-                            { className: "row justify-content-center" },
+                            { className: "progress-header" },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 "div",
-                                { className: "col-md-12" },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "div",
-                                    { className: "card" },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        "div",
-                                        { className: "card-body" },
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__DetailsForm__["a" /* default */], {
-                                            postDetails: this.state.postDetails,
-                                            onChange: this.setPostDetailState,
-                                            update: this.confirmUpdate,
-                                            "delete": this.confirmDelete
-                                        })
-                                    ),
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_sweetalert2_react___default.a, {
-                                        show: this.state.showConfirmUpdate,
-                                        title: "Confirm Update",
-                                        type: "info",
-                                        text: "Do you want to confirm this update?",
-                                        animation: false,
-                                        customClass: "animated fadeIn",
-                                        reverseButtons: true,
-                                        showCancelButton: true,
-                                        cancelButtonText: "Cancel",
-                                        confirmButtonText: "Update",
-                                        onConfirm: function onConfirm() {
-                                            _this4.updatePostDetails();
-                                        }
-                                    }),
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_sweetalert2_react___default.a, {
-                                        show: this.state.showDelete,
-                                        title: "Delete Post?",
-                                        type: "info",
-                                        animation: false,
-                                        customClass: "animated fadeIn",
-                                        text: "Do you want to delete this post?",
-                                        reverseButtons: true,
-                                        showCancelButton: true,
-                                        cancelButtonText: "Cancel",
-                                        confirmButtonText: "Delete",
-                                        onConfirm: function onConfirm() {
-                                            _this4.deletePost();
-                                        }
-                                    })
-                                )
+                                { className: "header" },
+                                "Basic Info"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "div",
+                                { className: "header" },
+                                "Vehicle Info"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "div",
+                                { className: "header" },
+                                "Features"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "div",
+                                { className: "header" },
+                                "Images"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "div",
+                                { className: "header" },
+                                "Payment"
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5_rc_progress__["a" /* Line */], { percent: this.state.step / 5 * 100,
+                            strokeWidth: ".5",
+                            trailWidth: ".5",
+                            strokeLinecap: "square",
+                            gapPosition: "top",
+                            trailColor: "#EAEAEA",
+                            strokeColor: "#4DAF4D",
+                            className: "progress-bar" }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "form",
+                            { className: "create-post" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "div",
+                                { className: "animated fadeIn" },
+                                this.showStep()
                             )
                         )
-                    )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_sweetalert2_react___default.a, {
+                        show: this.state.showConfirmUpdate,
+                        title: "Confirm Update",
+                        type: "info",
+                        text: "Do you want to confirm this update?",
+                        animation: false,
+                        customClass: "animated fadeIn",
+                        reverseButtons: true,
+                        showCancelButton: true,
+                        cancelButtonText: "Cancel",
+                        confirmButtonText: "Update",
+                        onConfirm: function onConfirm() {
+                            _this4.updatePostDetails();
+                        }
+                    }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_sweetalert2_react___default.a, {
+                        show: this.state.showDelete,
+                        title: "Delete Post?",
+                        type: "info",
+                        animation: false,
+                        customClass: "animated fadeIn",
+                        text: "Do you want to delete this post?",
+                        reverseButtons: true,
+                        showCancelButton: true,
+                        cancelButtonText: "Cancel",
+                        confirmButtonText: "Delete",
+                        onConfirm: function onConfirm() {
+                            _this4.deletePost();
+                        }
+                    })
                 );
             }
         }
@@ -70130,7 +70232,7 @@ var DetailsForm = function (_Component) {
     return DetailsForm;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
-/* harmony default export */ __webpack_exports__["a"] = (DetailsForm);
+/* unused harmony default export */ var _unused_webpack_default_export = (DetailsForm);
 
 /***/ }),
 /* 223 */
@@ -70580,6 +70682,989 @@ var PostDetails = function (_Component) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */,
+/* 231 */,
+/* 232 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var EditBasicInfo = function (_Component) {
+    _inherits(EditBasicInfo, _Component);
+
+    function EditBasicInfo() {
+        _classCallCheck(this, EditBasicInfo);
+
+        return _possibleConstructorReturn(this, (EditBasicInfo.__proto__ || Object.getPrototypeOf(EditBasicInfo)).apply(this, arguments));
+    }
+
+    _createClass(EditBasicInfo, [{
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            var styles = {
+                marginTop: '100px'
+            };
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'container' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'h5',
+                    { className: 'section-info' },
+                    '* Please provide basic car details for your post. Title and Description are required. Please fill out as much info as possible to help sellers get a better idea of what kind of car you are looking to purchase.'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'form-row' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'col-md-6 col-sm-12' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'form-group' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'label',
+                                { htmlFor: 'title' },
+                                '* Title'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { required: true, onChange: function onChange(e) {
+                                    return _this2.props.onChange('title', e);
+                                }, type: 'text',
+                                className: 'form-control',
+                                id: 'title',
+                                'aria-describedby': 'emailHelp', placeholder: 'Ex. Looking for AWD vehicle...',
+                                value: this.props.postDetails.title })
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'form-group' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'label',
+                                { htmlFor: 'description' },
+                                '* Description'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('textarea', { required: true, onChange: function onChange(e) {
+                                    return _this2.props.onChange('description', e);
+                                }, rows: '10', type: 'text',
+                                className: 'form-control',
+                                id: 'description',
+                                placeholder: 'Enter a description about the type of vehicle you are looking to purchase.',
+                                value: this.props.postDetails.description })
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'col-md-6 col-sm-12' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'form-group' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'label',
+                                { htmlFor: 'mileage' },
+                                'Mileage'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'select',
+                                { onChange: function onChange(e) {
+                                        return _this2.props.onChange('mileage', e);
+                                    }, type: 'text',
+                                    className: 'form-control',
+                                    id: 'mileage',
+                                    placeholder: 'Mileage',
+                                    value: this.props.postDetails.mileage },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { defaultValue: true, disabled: true, value: '' },
+                                    'Select Desired Mileage'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: '0 to 9,000' },
+                                    '0 to 9,999 Miles'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: '10,000 to 24,000' },
+                                    '10,000 to 24,000 Miles'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: '25,000 to 49,999' },
+                                    '25,000 to 49,999 Miles'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: '50,000 to 74,999' },
+                                    '50,000 to 74,999 Miles'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: '75,000 to 99,000' },
+                                    '75,000 to 99,000 Miles'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: '100,000 or More' },
+                                    '100,000 Mile or More'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: 'No Preference' },
+                                    'No Preference'
+                                )
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'form-group' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'label',
+                                { htmlFor: 'budget' },
+                                'Budget'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
+                                    return _this2.props.onChange('budget', e);
+                                }, type: 'number',
+                                className: 'form-control',
+                                id: 'budget',
+                                placeholder: 'Ex. 15000',
+                                value: this.props.postDetails.budget })
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'form-group' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'label',
+                                { htmlFor: 'location' },
+                                'Location'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
+                                    return _this2.props.onChange('location', e);
+                                }, type: 'text',
+                                className: 'form-control',
+                                id: 'location',
+                                placeholder: 'Ex. Orem Ut',
+                                value: this.props.postDetails.location })
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'form-group' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'label',
+                                { htmlFor: 'timeframe' },
+                                'Timeframe'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'select',
+                                { onChange: function onChange(e) {
+                                        return _this2.props.onChange('timeframe', e);
+                                    }, type: 'text',
+                                    className: 'form-control',
+                                    id: 'timeframe',
+                                    placeholder: 'Timeframe',
+                                    value: this.props.postDetails.timeframe },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { defaultValue: true, disabled: true, value: '' },
+                                    'Select Desired Purchase Timeframe'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: '1 Week' },
+                                    '1 Week'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: '2-3 Weeks' },
+                                    '2-3 Weeks'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: '1 Month' },
+                                    '1 Month'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: '2-3 Months' },
+                                    '2-3 Months'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: '3 Months or More' },
+                                    '3 Months or More'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: 'No Preference' },
+                                    'No Preference'
+                                )
+                            )
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'next-step' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'a',
+                        { className: 'btn btn-blue invisible', onClick: this.props.nextStep },
+                        'Previous Step'
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'a',
+                        { className: 'btn btn-blue ', onClick: this.props.nextStep },
+                        'Next Step'
+                    )
+                )
+            );
+        }
+    }]);
+
+    return EditBasicInfo;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (EditBasicInfo);
+
+/***/ }),
+/* 233 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var EditVehicleInfo = function (_Component) {
+    _inherits(EditVehicleInfo, _Component);
+
+    function EditVehicleInfo() {
+        _classCallCheck(this, EditVehicleInfo);
+
+        return _possibleConstructorReturn(this, (EditVehicleInfo.__proto__ || Object.getPrototypeOf(EditVehicleInfo)).apply(this, arguments));
+    }
+
+    _createClass(EditVehicleInfo, [{
+        key: "render",
+        value: function render() {
+            var _this2 = this;
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "container" },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "h5",
+                    { className: "section-info" },
+                    "* Please provide vehicle information for the next car you are looking to purchase. You may be as specific or general as you would like. In the Vehicle Overview section please enter a brief description of the specifics of the vehicle you are looking to purchase."
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "vehicle_overview" },
+                                "Vehicle Overview"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", { onChange: function onChange(e) {
+                                    return _this2.props.onChange('vehicle_overview', e);
+                                }, rows: "5", type: "text", className: "form-control",
+                                id: "vehicle_overview",
+                                "aria-describedby": "emailHelp", placeholder: "Vehicle Overview",
+                                value: this.props.newPost.vehicle_overview })
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-6 col-sm-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "vehicle_type" },
+                                "Vehicle Type"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "select",
+                                { onChange: function onChange(e) {
+                                        return _this2.props.onChange('vehicle_type', e);
+                                    }, type: "text", className: "form-control",
+                                    id: "vehicle_type",
+                                    placeholder: "Vehicle Title Type",
+                                    value: this.props.newPost.vehicle_type },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "", defaultValue: true, disabled: true },
+                                    "Select Vehicle Type"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Car" },
+                                    "Car"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Truck" },
+                                    "Truck"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "SUV" },
+                                    "SUV"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Van" },
+                                    "Van"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Minivan" },
+                                    "Minivan"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Hatchback" },
+                                    "Hatchback"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Coup" },
+                                    "Coup"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Convertible" },
+                                    "Convertible"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "No Preference" },
+                                    "No Preference"
+                                )
+                            )
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-6 col-sm-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "vehicle_make" },
+                                "Vehicle Make"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
+                                    return _this2.props.onChange('vehicle_make', e);
+                                }, type: "text", className: "form-control",
+                                id: "vehicle_make",
+                                placeholder: "Ex. Mazda ",
+                                value: this.props.newPost.vehicle_make })
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-4 col-sm-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "vehicle_model" },
+                                "Vehicle Model"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
+                                    return _this2.props.onChange('vehicle_model', e);
+                                }, type: "text", className: "form-control",
+                                id: "vehicle_model",
+                                placeholder: "Ex. Mazda CX-5",
+                                value: this.props.newPost.vehicle_model })
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-4 col-sm-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "vehicle_year" },
+                                "Vehicle Year"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "select",
+                                { onChange: function onChange(e) {
+                                        return _this2.props.onChange('vehicle_year', e);
+                                    }, type: "text", className: "form-control",
+                                    id: "vehicle_year",
+                                    placeholder: "Vehicle Title Type",
+                                    value: this.props.newPost.vehicle_year },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "", defaultValue: true, disabled: true },
+                                    "Select Vehicle Year Range"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "2018 or Newer" },
+                                    "2018 or Newer"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "2014 to 2017" },
+                                    "2014 to 2017"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "2010 to 2013" },
+                                    "2010 to 2013"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "2006 to 2009" },
+                                    "2006 to 2009"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "2002 to 2005" },
+                                    "2002 to 2005"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "1998 to 2001" },
+                                    "1998 to 2001"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "1997 or Older" },
+                                    "1997 or Older"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "No Preference" },
+                                    "No Preference"
+                                )
+                            )
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-4 col-sm-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "vehicle_title_type" },
+                                "Vehicle Title Type"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "select",
+                                { onChange: function onChange(e) {
+                                        return _this2.props.onChange('vehicle_title_type', e);
+                                    }, type: "text", className: "form-control",
+                                    id: "vehicle_title_type",
+                                    placeholder: "Vehicle Title Type",
+                                    value: this.props.newPost.vehicle_title_type },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "", defaultValue: true, disabled: true },
+                                    "Select Vehicle Title Type"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Clean Title" },
+                                    "Clean Title"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Branded Title" },
+                                    "Branded Title"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Salvage Title" },
+                                    "Salvage Title"
+                                )
+                            )
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "next-step" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { className: "btn btn-blue", onClick: this.props.previousStep },
+                        "Previous Step"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { className: "btn btn-blue", onClick: this.props.nextStep },
+                        "Next Step"
+                    )
+                )
+            );
+        }
+    }]);
+
+    return EditVehicleInfo;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (EditVehicleInfo);
+
+/***/ }),
+/* 234 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var VehicleInfo = function (_Component) {
+    _inherits(VehicleInfo, _Component);
+
+    function VehicleInfo() {
+        _classCallCheck(this, VehicleInfo);
+
+        return _possibleConstructorReturn(this, (VehicleInfo.__proto__ || Object.getPrototypeOf(VehicleInfo)).apply(this, arguments));
+    }
+
+    _createClass(VehicleInfo, [{
+        key: "render",
+        value: function render() {
+            var _this2 = this;
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "container" },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "h5",
+                    { className: "section-info" },
+                    "* Please provide details of the types of features you are looking for in your next vehicle purchase. You can be as specific you want as well as indicate any features that are a must have etc."
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "features" },
+                                "Features"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", { onChange: function onChange(e) {
+                                    return _this2.props.onChange('features', e);
+                                }, rows: "10", type: "text",
+                                className: "form-control",
+                                id: "features",
+                                "aria-describedby": "emailHelp", placeholder: "Enter a description of desired features",
+                                value: this.props.newPost.features })
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "next-step" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { className: "btn btn-blue", onClick: this.props.previousStep },
+                        "Previous Step"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { className: "btn btn-blue", onClick: this.props.nextStep },
+                        "Next Step"
+                    )
+                )
+            );
+        }
+    }]);
+
+    return VehicleInfo;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (VehicleInfo);
+
+/***/ }),
+/* 235 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var EditImage = function (_Component) {
+    _inherits(EditImage, _Component);
+
+    function EditImage() {
+        _classCallCheck(this, EditImage);
+
+        return _possibleConstructorReturn(this, (EditImage.__proto__ || Object.getPrototypeOf(EditImage)).apply(this, arguments));
+    }
+
+    _createClass(EditImage, [{
+        key: "render",
+        value: function render() {
+            var _this2 = this;
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "container" },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "h5",
+                    { className: "section-info" },
+                    "* Post image is meant to be used as an idea board for the type of car you are looking to buy. Head to google and find an image of the type of color you want. You can be really specific like getting a picture of a Mazda 6 or just a general photo of a sedan. Please copy the image url and enter in the box below. If you did it correctly you should see a preview of your image before continuing."
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "image_url" },
+                                "Image Url"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
+                                    return _this2.props.onChange('image_url', e);
+                                }, rows: "5", type: "text",
+                                className: "form-control",
+                                id: "image_url",
+                                "aria-describedby": "emailHelp", placeholder: "Image Url",
+                                value: this.props.newPost.image_url !== '' ? this.props.newPost.image_url : '/img/default-image.jpg' })
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { className: "d-block", htmlFor: "" },
+                                "Image Preview"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "img-fluid w-100",
+                                src: this.props.newPost.image_url !== '' ? this.props.newPost.image_url : '/img/default-image.jpg' })
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "next-step" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { className: "btn btn-blue", onClick: this.props.previousStep },
+                        "Previous Step"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { className: "btn btn-blue", onClick: this.props.nextStep },
+                        "Next Step"
+                    )
+                )
+            );
+        }
+    }]);
+
+    return EditImage;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (EditImage);
+
+/***/ }),
+/* 236 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var EditPaymentInfo = function (_Component) {
+    _inherits(EditPaymentInfo, _Component);
+
+    function EditPaymentInfo() {
+        _classCallCheck(this, EditPaymentInfo);
+
+        return _possibleConstructorReturn(this, (EditPaymentInfo.__proto__ || Object.getPrototypeOf(EditPaymentInfo)).apply(this, arguments));
+    }
+
+    _createClass(EditPaymentInfo, [{
+        key: "render",
+        value: function render() {
+            var _this2 = this;
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "container" },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "h5",
+                    { className: "section-info" },
+                    "* Payment info will not require any credit card or banking information. This section is to find out how you plan to purchase the car. Are you paying cash or getting a loan? Prefer buying privately or through a dealership? Please provide as accurate information as you can."
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-6 col-sm-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "payment_type" },
+                                "Payment Type"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "select",
+                                { onChange: function onChange(e) {
+                                        return _this2.props.onChange('payment_type', e);
+                                    }, type: "text", className: "form-control",
+                                    id: "payment_type",
+                                    "aria-describedby": "emailHelp", placeholder: "Payment Type",
+                                    value: this.props.newPost.payment_type },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "", disabled: true, defaultValue: true },
+                                    "Please select desired payment type"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Cash" },
+                                    "Cash"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Auto Loan" },
+                                    "Auto Loan"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "No Preference" },
+                                    "No Preference"
+                                )
+                            )
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-6 col-sm-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "seller_preference" },
+                                "Seller Preference"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "select",
+                                { onChange: function onChange(e) {
+                                        return _this2.props.onChange('seller_preference', e);
+                                    }, type: "text",
+                                    className: "form-control",
+                                    id: "seller_preference",
+                                    "aria-describedby": "emailHelp", placeholder: "Seller Preference",
+                                    value: this.props.newPost.seller_preference },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "", disabled: true, defaultValue: true },
+                                    "Please Select Desired Seller Preference"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Dealership" },
+                                    "Dealership"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Privately" },
+                                    "Privately"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "No Preference" },
+                                    "No Preference"
+                                )
+                            )
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-6 col-sm-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "loan_payment_method" },
+                                "If Loan, Desired Monthly Payment?"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
+                                    return _this2.props.onChange('loan_payment_method', e);
+                                }, type: "number",
+                                className: "form-control",
+                                id: "loan_payment_method",
+                                "aria-describedby": "emailHelp", placeholder: "Ex. 200",
+                                value: this.props.newPost.loan_payment_method })
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-6 col-sm-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "dealer_door_price" },
+                                "Dealer Door Out the Door Price"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
+                                    return _this2.props.onChange('dealer_door_price', e);
+                                }, type: "number",
+                                className: "form-control",
+                                id: "dealer_door_price",
+                                "aria-describedby": "emailHelp", placeholder: "Ex. 16000",
+                                value: this.props.newPost.dealer_door_price })
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-sm-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "other_notes" },
+                                "Other Notes"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", { onChange: function onChange(e) {
+                                    return _this2.props.onChange('other_notes', e);
+                                }, rows: "5", type: "text",
+                                className: "form-control",
+                                id: "other_notes",
+                                "aria-describedby": "emailHelp", placeholder: "Other Notes",
+                                value: this.props.newPost.other_notes })
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "next-step" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { className: "btn btn-blue", onClick: this.props.previousStep },
+                        "Previous Step"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { className: "btn btn-blue", onClick: this.props.nextStep },
+                        "Next Step"
+                    )
+                )
+            );
+        }
+    }]);
+
+    return EditPaymentInfo;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (EditPaymentInfo);
 
 /***/ })
 /******/ ]);

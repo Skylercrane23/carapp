@@ -20,22 +20,21 @@ export default class MyPosts extends Component {
                                         <p>{post.description} </p>
                                     </div>
                                     <div className="overview">
-                                        <small className="w-bold">overview</small>
                                         <div className="overview-container">
                                             <div className="left-overview">
                                                 <div className="budget">
-                                                    <p>Budget: <span>${post.budget}</span></p>
+                                                    <p>Budget: <span className="w-bold">${post.budget}</span></p>
                                                 </div>
                                                 <div className="location">
-                                                    <p>Location: <span>{post.location}</span></p>
+                                                    <p>Location: <span className="w-bold">{post.location}</span></p>
                                                 </div>
                                             </div>
                                             <div className="right-overview">
                                                 <div className="budget">
-                                                    <p>Mileage: <span>{post.mileage}</span></p>
+                                                    <p>Mileage: <span className="w-bold">{post.mileage}</span></p>
                                                 </div>
                                                 <div className="location">
-                                                    <p>Timeframe: <span>{post.timeframe}</span></p>
+                                                    <p>Timeframe: <span className="w-bold">{post.timeframe}</span></p>
                                                 </div>
                                             </div>
                                         </div>

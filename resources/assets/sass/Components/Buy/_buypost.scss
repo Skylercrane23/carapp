@@ -59,17 +59,18 @@
                 .overview-container {
                     display: flex;
                     flex-direction: row;
-
+                    width: 100%;
                 }
                 p {
                     font-size: 12px;
                 }
 
                 .left-overview {
+                    width: 50%;
                     margin-right: 20px;
                 }
                 .right-overview {
-
+                    width: 50%;
                 }
             }
             .btn-container {
