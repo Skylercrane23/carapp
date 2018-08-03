@@ -48,12 +48,12 @@ export default class BasicInfo extends Component {
                                     placeholder="Mileage"
                                     value={this.props.newPost.mileage}>
                                 <option defaultValue disabled value="">Select Desired Mileage</option>
-                                <option value="0 to 9,000">0 to 9,999 Miles</option>
-                                <option value="10,000 to 24,000">10,000 to 24,000 Miles</option>
-                                <option value="25,000 to 49,999">25,000 to 49,999 Miles</option>
-                                <option value="50,000 to 74,999">50,000 to 74,999 Miles</option>
-                                <option value="75,000 to 99,000">75,000 to 99,000 Miles</option>
-                                <option value="100,000 or More">100,000 Mile or More</option>
+                                <option value="0 to 9K">0 to 9,999 Miles</option>
+                                <option value="10K to 24K">10,000 to 24,000 Miles</option>
+                                <option value="25K to 49K">25,000 to 49,999 Miles</option>
+                                <option value="50K to 74K">50,000 to 74,999 Miles</option>
+                                <option value="75K to 99K">75,000 to 99,000 Miles</option>
+                                <option value="100K or More">100,000 Mile or More</option>
                                 <option value="No Preference">No Preference</option>
                             </select>
                         </div>

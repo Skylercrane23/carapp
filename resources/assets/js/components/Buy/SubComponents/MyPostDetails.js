@@ -11,6 +11,7 @@ import EditVehicleInfo from "./EditPostSteps/EditVehicleInfo";
 import EditFeatures from "./EditPostSteps/EditFeatures";
 import EditImage from "./EditPostSteps/EditImage";
 import EditPaymentInfo from "./EditPostSteps/EditPaymentInfo";
+import EditComplete from "./EditPostSteps/EditComplete";
 
 export default class MyPostDetails extends Component {
     constructor(props) {
@@ -112,9 +113,9 @@ export default class MyPostDetails extends Component {
 
     handleInput(key, e) {
         /*Duplicating and updating the state */
-        var state = Object.assign({}, this.state.newPost);
+        var state = Object.assign({}, this.state.postDetails);
         state[key] = e.target.value;
-        this.setState({newPost: state});
+        this.setState({postDetails: state});
     }
 
     // SET STATE FOR
@@ -221,6 +222,12 @@ export default class MyPostDetails extends Component {
                     nextStep={this.nextStep}
                     previousStep={this.previousStep}
                 />
+            case 6:
+                return <EditComplete
+                    postDetails={this.state.postDetails}
+                    previousStep={this.previousStep}
+                    updatePostDetails={this.updatePostDetails}
+                />
         }
     };
 
@@ -241,15 +248,16 @@ export default class MyPostDetails extends Component {
                     <div className="container card">
                         <a className="cancel-button delete-button" onClick={this.confirmDelete}>Delete <i className="fas fa-times"></i></a>
 
-                        <h4 className="text-center">Create Post</h4>
+                        <h4 className="text-center">Edit Post</h4>
                         <div className="progress-header">
                             <div className="header">Basic Info</div>
                             <div className="header">Vehicle Info</div>
                             <div className="header">Features</div>
                             <div className="header">Images</div>
                             <div className="header">Payment</div>
+                            <div className="header">Update</div>
                         </div>
-                        <Line percent={this.state.step / 5 * 100}
+                        <Line percent={this.state.step / 6 * 100}
                               strokeWidth=".5"
                               trailWidth=".5"
                               strokeLinecap="square"

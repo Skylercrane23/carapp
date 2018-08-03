@@ -33,32 +33,34 @@ export default class BrowseAll extends Component {
                                 <h5>{post.title} </h5>
                                 <p>{post.description} </p>
                             </div>
-                            <div className="overview">
-                                <small className="w-bold">overview</small>
-                                <div className="overview-container">
-                                    <div className="left-overview">
-                                        <div className="budget">
-                                            <p>Budget: <span>${post.budget}</span></p>
+                            <div className="d-flex flex-column justify-content-between" style={{height: 110 + 'px'}}>
+                                <div className="overview">
+                                    <div className="overview-container">
+                                        <div className="left-overview">
+                                            <div className="budget">
+                                                <p>Budget: <span>${post.budget}</span></p>
+                                            </div>
+                                            <div className="location">
+                                                <p>Location: <span>{post.location}</span></p>
+                                            </div>
                                         </div>
-                                        <div className="location">
-                                            <p>Location: <span>{post.location}</span></p>
-                                        </div>
-                                    </div>
-                                    <div className="right-overview">
-                                        <div className="budget">
-                                            <p>Mileage: <span>{post.mileage}</span></p>
-                                        </div>
-                                        <div className="location">
-                                            <p>Timeframe: <span>{post.timeframe}</span></p>
+                                        <div className="right-overview">
+                                            <div className="budget">
+                                                <p>Mileage: <span>{post.mileage}</span></p>
+                                            </div>
+                                            <div className="location">
+                                                <p>Timeframe: <span>{post.timeframe}</span></p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div className="btn-container">
+                                    <a className="button circle blue small"
+                                       href={'/home/post-details/' + post.id}>View
+                                    </a>
+                                </div>
                             </div>
-                            <div className="btn-container">
-                                <a className="button circle blue small"
-                                   href={'/home/post-details/' + post.id}>View
-                                </a>
-                            </div>
+
                         </div>
                     </div>
                 </div>

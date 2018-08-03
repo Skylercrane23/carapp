@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 88);
+/******/ 	return __webpack_require__(__webpack_require__.s = 89);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -73,7 +73,7 @@
 if (false) {
   module.exports = require('./cjs/react.production.min.js');
 } else {
-  module.exports = __webpack_require__(113);
+  module.exports = __webpack_require__(114);
 }
 
 
@@ -103,7 +103,7 @@ if (true) {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(132)(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(133)(isValidElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
@@ -119,7 +119,7 @@ if (true) {
 
 
 var bind = __webpack_require__(56);
-var isBuffer = __webpack_require__(95);
+var isBuffer = __webpack_require__(96);
 
 /*global toString:true*/
 
@@ -493,7 +493,7 @@ if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(94);
+module.exports = __webpack_require__(95);
 
 /***/ }),
 /* 6 */
@@ -510,11 +510,11 @@ module.exports = function (it, key) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createBrowserHistory__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createBrowserHistory__ = __webpack_require__(135);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__createBrowserHistory__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createHashHistory__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createHashHistory__ = __webpack_require__(138);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__createHashHistory__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__ = __webpack_require__(139);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__LocationUtils__ = __webpack_require__(24);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["a"]; });
@@ -630,7 +630,7 @@ module.exports = __webpack_require__(13) ? function (object, key, value) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var anObject = __webpack_require__(19);
-var IE8_DOM_DEFINE = __webpack_require__(74);
+var IE8_DOM_DEFINE = __webpack_require__(75);
 var toPrimitive = __webpack_require__(38);
 var dP = Object.defineProperty;
 
@@ -671,7 +671,7 @@ module.exports = !__webpack_require__(20)(function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 // to indexed object, toObject with fallback for non-array-like ES3 strings
-var IObject = __webpack_require__(77);
+var IObject = __webpack_require__(78);
 var defined = __webpack_require__(39);
 module.exports = function (it) {
   return IObject(defined(it));
@@ -839,7 +839,7 @@ var createPath = function createPath(location) {
 
 var global = __webpack_require__(4);
 var core = __webpack_require__(9);
-var ctx = __webpack_require__(73);
+var ctx = __webpack_require__(74);
 var hide = __webpack_require__(10);
 var has = __webpack_require__(6);
 var PROTOTYPE = 'prototype';
@@ -1093,7 +1093,7 @@ if (false) {
   checkDCE();
   module.exports = require('./cjs/react-dom.production.min.js');
 } else {
-  module.exports = __webpack_require__(116);
+  module.exports = __webpack_require__(117);
 }
 
 
@@ -1104,8 +1104,8 @@ if (false) {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return createLocation; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return locationsAreEqual; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_resolve_pathname__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_value_equal__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_resolve_pathname__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_value_equal__ = __webpack_require__(137);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PathUtils__ = __webpack_require__(17);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -1192,7 +1192,7 @@ module.exports = function (bitmap, value) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 / 15.2.3.14 Object.keys(O)
-var $keys = __webpack_require__(76);
+var $keys = __webpack_require__(77);
 var enumBugKeys = __webpack_require__(43);
 
 module.exports = Object.keys || function keys(O) {
@@ -1253,7 +1253,7 @@ module.exports = g;
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(2);
-var normalizeHeaderName = __webpack_require__(98);
+var normalizeHeaderName = __webpack_require__(99);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -1347,7 +1347,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(97)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(98)))
 
 /***/ }),
 /* 31 */
@@ -1795,7 +1795,7 @@ if (typeof window === 'undefined') {
     return null;
   };
 } else {
-  module.exports = __webpack_require__(165); // eslint-disable-line global-require
+  module.exports = __webpack_require__(166); // eslint-disable-line global-require
 }
 
 /***/ }),
@@ -1903,7 +1903,7 @@ exports.default = function (instance, Constructor) {
 
 exports.__esModule = true;
 
-var _typeof2 = __webpack_require__(81);
+var _typeof2 = __webpack_require__(82);
 
 var _typeof3 = _interopRequireDefault(_typeof2);
 
@@ -1946,7 +1946,7 @@ var PROTOTYPE = 'prototype';
 // Create object with fake `null` prototype: use iframe Object with cleared prototype
 var createDict = function () {
   // Thrash, waste and sodomy: IE GC bug
-  var iframe = __webpack_require__(75)('iframe');
+  var iframe = __webpack_require__(76)('iframe');
   var i = enumBugKeys.length;
   var lt = '<';
   var gt = '>';
@@ -2030,7 +2030,7 @@ var _create = __webpack_require__(208);
 
 var _create2 = _interopRequireDefault(_create);
 
-var _typeof2 = __webpack_require__(81);
+var _typeof2 = __webpack_require__(82);
 
 var _typeof3 = _interopRequireDefault(_typeof2);
 
@@ -14978,12 +14978,12 @@ module.exports = function bind(fn, thisArg) {
 
 
 var utils = __webpack_require__(2);
-var settle = __webpack_require__(99);
-var buildURL = __webpack_require__(101);
-var parseHeaders = __webpack_require__(102);
-var isURLSameOrigin = __webpack_require__(103);
+var settle = __webpack_require__(100);
+var buildURL = __webpack_require__(102);
+var parseHeaders = __webpack_require__(103);
+var isURLSameOrigin = __webpack_require__(104);
 var createError = __webpack_require__(58);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(104);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(105);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -15080,7 +15080,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(105);
+      var cookies = __webpack_require__(106);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -15164,7 +15164,7 @@ module.exports = function xhrAdapter(config) {
 "use strict";
 
 
-var enhanceError = __webpack_require__(100);
+var enhanceError = __webpack_require__(101);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -15248,33 +15248,33 @@ module.exports = emptyObject;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(132);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(140);
 /* unused harmony reexport HashRouter */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(66);
 /* unused harmony reexport Link */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(141);
 /* unused harmony reexport MemoryRouter */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(143);
 /* unused harmony reexport NavLink */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(145);
 /* unused harmony reexport Prompt */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(147);
 /* unused harmony reexport Redirect */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(67);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(34);
 /* unused harmony reexport Router */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(149);
 /* unused harmony reexport StaticRouter */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(151);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__generatePath__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__generatePath__ = __webpack_require__(153);
 /* unused harmony reexport generatePath */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__matchPath__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__matchPath__ = __webpack_require__(154);
 /* unused harmony reexport matchPath */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__withRouter__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__withRouter__ = __webpack_require__(155);
 /* unused harmony reexport withRouter */
 
 
@@ -15747,7 +15747,7 @@ Route.childContextTypes = {
 /* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isarray = __webpack_require__(143)
+var isarray = __webpack_require__(144)
 
 /**
  * Expose `pathToRegexp`.
@@ -16231,7 +16231,7 @@ var generatePath = function generatePath() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_axios_index__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_sweetalert2_react__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_sweetalert2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_sweetalert2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rc_progress__ = __webpack_require__(172);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rc_progress__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__CreatePostSteps_BasicInfo__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__CreatePostSteps_VehicleInfo__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__CreatePostSteps_Features__ = __webpack_require__(214);
@@ -16403,7 +16403,8 @@ var CreatePost = function (_Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'a',
                         { className: 'cancel-button', onClick: this.cancel },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-times' })
+                        'Cancel ',
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-times ml-2' })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'h4',
@@ -16494,6 +16495,25 @@ var CreatePost = function (_Component) {
 
 /***/ }),
 /* 72 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Line__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Circle__ = __webpack_require__(211);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__Line__["a"]; });
+/* unused harmony reexport Circle */
+
+
+
+
+
+/* unused harmony default export */ var _unused_webpack_default_export = ({
+  Line: __WEBPACK_IMPORTED_MODULE_0__Line__["a" /* default */],
+  Circle: __WEBPACK_IMPORTED_MODULE_1__Circle__["a" /* default */]
+});
+
+/***/ }),
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16522,7 +16542,7 @@ exports.default = _assign2.default || function (target) {
 };
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // optional / simple context binding
@@ -16548,16 +16568,16 @@ module.exports = function (fn, that, length) {
 
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = !__webpack_require__(13) && !__webpack_require__(20)(function () {
-  return Object.defineProperty(__webpack_require__(75)('div'), 'a', { get: function () { return 7; } }).a != 7;
+  return Object.defineProperty(__webpack_require__(76)('div'), 'a', { get: function () { return 7; } }).a != 7;
 });
 
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(12);
@@ -16570,7 +16590,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var has = __webpack_require__(6);
@@ -16593,11 +16613,11 @@ module.exports = function (object, names) {
 
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
-var cof = __webpack_require__(78);
+var cof = __webpack_require__(79);
 // eslint-disable-next-line no-prototype-builtins
 module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
   return cof(it) == 'String' ? it.split('') : Object(it);
@@ -16605,7 +16625,7 @@ module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
 
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -16616,7 +16636,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.13 ToObject(argument)
@@ -16627,7 +16647,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16648,7 +16668,7 @@ exports.default = function (obj, keys) {
 };
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16675,14 +16695,14 @@ exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.d
 };
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var LIBRARY = __webpack_require__(47);
 var $export = __webpack_require__(18);
-var redefine = __webpack_require__(83);
+var redefine = __webpack_require__(84);
 var hide = __webpack_require__(10);
 var Iterators = __webpack_require__(48);
 var $iterCreate = __webpack_require__(186);
@@ -16751,18 +16771,18 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
 
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(10);
 
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
-var $keys = __webpack_require__(76);
+var $keys = __webpack_require__(77);
 var hiddenKeys = __webpack_require__(43).concat('length', 'prototype');
 
 exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
@@ -16771,7 +16791,7 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
 
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var pIE = __webpack_require__(28);
@@ -16779,7 +16799,7 @@ var createDesc = __webpack_require__(25);
 var toIObject = __webpack_require__(14);
 var toPrimitive = __webpack_require__(38);
 var has = __webpack_require__(6);
-var IE8_DOM_DEFINE = __webpack_require__(74);
+var IE8_DOM_DEFINE = __webpack_require__(75);
 var gOPD = Object.getOwnPropertyDescriptor;
 
 exports.f = __webpack_require__(13) ? gOPD : function getOwnPropertyDescriptor(O, P) {
@@ -16793,7 +16813,7 @@ exports.f = __webpack_require__(13) ? gOPD : function getOwnPropertyDescriptor(O
 
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16840,7 +16860,7 @@ var enhancer = function enhancer(WrappedComponent) {
 /* harmony default export */ __webpack_exports__["a"] = (enhancer);
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16875,15 +16895,15 @@ var propTypes = {
 };
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(89);
-module.exports = __webpack_require__(225);
+__webpack_require__(90);
+module.exports = __webpack_require__(230);
 
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16892,7 +16912,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_App__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_App__ = __webpack_require__(130);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_router_dom__ = __webpack_require__(62);
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -16900,7 +16920,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  * building robust, powerful web applications using React + Laravel.
  */
 
-__webpack_require__(90);
+__webpack_require__(91);
 
 
 
@@ -16922,11 +16942,11 @@ __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODU
  */
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-window._ = __webpack_require__(91);
+window._ = __webpack_require__(92);
 window.Popper = __webpack_require__(54).default;
 
 /**
@@ -16938,7 +16958,7 @@ window.Popper = __webpack_require__(54).default;
 try {
   window.$ = window.jQuery = __webpack_require__(55);
 
-  __webpack_require__(93);
+  __webpack_require__(94);
 } catch (e) {}
 
 /**
@@ -16983,7 +17003,7 @@ if (token) {
 // });
 
 /***/ }),
-/* 91 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -34093,10 +34113,10 @@ if (token) {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(29), __webpack_require__(92)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(29), __webpack_require__(93)(module)))
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -34124,7 +34144,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
@@ -38057,7 +38077,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38065,7 +38085,7 @@ module.exports = function(module) {
 
 var utils = __webpack_require__(2);
 var bind = __webpack_require__(56);
-var Axios = __webpack_require__(96);
+var Axios = __webpack_require__(97);
 var defaults = __webpack_require__(30);
 
 /**
@@ -38100,14 +38120,14 @@ axios.create = function create(instanceConfig) {
 
 // Expose Cancel & CancelToken
 axios.Cancel = __webpack_require__(60);
-axios.CancelToken = __webpack_require__(111);
+axios.CancelToken = __webpack_require__(112);
 axios.isCancel = __webpack_require__(59);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(112);
+axios.spread = __webpack_require__(113);
 
 module.exports = axios;
 
@@ -38116,7 +38136,7 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, exports) {
 
 /*!
@@ -38143,7 +38163,7 @@ function isSlowBuffer (obj) {
 
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38151,8 +38171,8 @@ function isSlowBuffer (obj) {
 
 var defaults = __webpack_require__(30);
 var utils = __webpack_require__(2);
-var InterceptorManager = __webpack_require__(106);
-var dispatchRequest = __webpack_require__(107);
+var InterceptorManager = __webpack_require__(107);
+var dispatchRequest = __webpack_require__(108);
 
 /**
  * Create a new instance of Axios
@@ -38229,7 +38249,7 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -38419,7 +38439,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38438,7 +38458,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 99 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38471,7 +38491,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 100 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38499,7 +38519,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 
 /***/ }),
-/* 101 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38572,7 +38592,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 102 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38632,7 +38652,7 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 103 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38707,7 +38727,7 @@ module.exports = (
 
 
 /***/ }),
-/* 104 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38750,7 +38770,7 @@ module.exports = btoa;
 
 
 /***/ }),
-/* 105 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38810,7 +38830,7 @@ module.exports = (
 
 
 /***/ }),
-/* 106 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38869,18 +38889,18 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 107 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(2);
-var transformData = __webpack_require__(108);
+var transformData = __webpack_require__(109);
 var isCancel = __webpack_require__(59);
 var defaults = __webpack_require__(30);
-var isAbsoluteURL = __webpack_require__(109);
-var combineURLs = __webpack_require__(110);
+var isAbsoluteURL = __webpack_require__(110);
+var combineURLs = __webpack_require__(111);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -38962,7 +38982,7 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 108 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38989,7 +39009,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 109 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39010,7 +39030,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 110 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39031,7 +39051,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 111 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39095,7 +39115,7 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 112 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39129,7 +39149,7 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 113 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39155,7 +39175,7 @@ var invariant = __webpack_require__(21);
 var emptyObject = __webpack_require__(61);
 var warning = __webpack_require__(22);
 var emptyFunction = __webpack_require__(32);
-var checkPropTypes = __webpack_require__(114);
+var checkPropTypes = __webpack_require__(115);
 
 // TODO: this is special because it gets imported during build.
 
@@ -40550,7 +40570,7 @@ module.exports = react;
 
 
 /***/ }),
-/* 114 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40566,7 +40586,7 @@ module.exports = react;
 if (true) {
   var invariant = __webpack_require__(21);
   var warning = __webpack_require__(22);
-  var ReactPropTypesSecret = __webpack_require__(115);
+  var ReactPropTypesSecret = __webpack_require__(116);
   var loggedTypeFailures = {};
 }
 
@@ -40616,7 +40636,7 @@ module.exports = checkPropTypes;
 
 
 /***/ }),
-/* 115 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40635,7 +40655,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 116 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40659,16 +40679,16 @@ if (true) {
 var invariant = __webpack_require__(21);
 var React = __webpack_require__(0);
 var warning = __webpack_require__(22);
-var ExecutionEnvironment = __webpack_require__(117);
+var ExecutionEnvironment = __webpack_require__(118);
 var _assign = __webpack_require__(31);
 var emptyFunction = __webpack_require__(32);
-var checkPropTypes = __webpack_require__(118);
-var getActiveElement = __webpack_require__(120);
-var shallowEqual = __webpack_require__(121);
-var containsNode = __webpack_require__(122);
+var checkPropTypes = __webpack_require__(119);
+var getActiveElement = __webpack_require__(121);
+var shallowEqual = __webpack_require__(122);
+var containsNode = __webpack_require__(123);
 var emptyObject = __webpack_require__(61);
-var hyphenateStyleName = __webpack_require__(125);
-var camelizeStyleName = __webpack_require__(127);
+var hyphenateStyleName = __webpack_require__(126);
+var camelizeStyleName = __webpack_require__(128);
 
 // Relying on the `invariant()` implementation lets us
 // have preserve the format and params in the www builds.
@@ -57296,7 +57316,7 @@ module.exports = reactDom;
 
 
 /***/ }),
-/* 117 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57335,7 +57355,7 @@ var ExecutionEnvironment = {
 module.exports = ExecutionEnvironment;
 
 /***/ }),
-/* 118 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57351,7 +57371,7 @@ module.exports = ExecutionEnvironment;
 if (true) {
   var invariant = __webpack_require__(21);
   var warning = __webpack_require__(22);
-  var ReactPropTypesSecret = __webpack_require__(119);
+  var ReactPropTypesSecret = __webpack_require__(120);
   var loggedTypeFailures = {};
 }
 
@@ -57401,7 +57421,7 @@ module.exports = checkPropTypes;
 
 
 /***/ }),
-/* 119 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57420,7 +57440,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 120 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57462,7 +57482,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 121 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57533,7 +57553,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 122 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57548,7 +57568,7 @@ module.exports = shallowEqual;
  * 
  */
 
-var isTextNode = __webpack_require__(123);
+var isTextNode = __webpack_require__(124);
 
 /*eslint-disable no-bitwise */
 
@@ -57576,7 +57596,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 123 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57591,7 +57611,7 @@ module.exports = containsNode;
  * @typechecks
  */
 
-var isNode = __webpack_require__(124);
+var isNode = __webpack_require__(125);
 
 /**
  * @param {*} object The object to check.
@@ -57604,7 +57624,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 124 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57632,7 +57652,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 125 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57647,7 +57667,7 @@ module.exports = isNode;
 
 
 
-var hyphenate = __webpack_require__(126);
+var hyphenate = __webpack_require__(127);
 
 var msPattern = /^ms-/;
 
@@ -57674,7 +57694,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 126 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57710,7 +57730,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 127 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57725,7 +57745,7 @@ module.exports = hyphenate;
 
 
 
-var camelize = __webpack_require__(128);
+var camelize = __webpack_require__(129);
 
 var msPattern = /^-ms-/;
 
@@ -57753,7 +57773,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 128 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57788,13 +57808,13 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 129 */
+/* 130 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__routes__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__routes__ = __webpack_require__(131);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -57834,20 +57854,20 @@ var App = function (_Component) {
 /* harmony default export */ __webpack_exports__["a"] = (App);
 
 /***/ }),
-/* 130 */
+/* 131 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Dashboard_Dashboard__ = __webpack_require__(157);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Messages_Messages__ = __webpack_require__(162);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Buy_Buy__ = __webpack_require__(163);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Dashboard_Dashboard__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Messages_Messages__ = __webpack_require__(163);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Buy_Buy__ = __webpack_require__(164);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Sell_Sell__ = __webpack_require__(218);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_BrowseAll_BrowseAll__ = __webpack_require__(219);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Buy_SubComponents_MyPostDetails__ = __webpack_require__(221);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_BrowseAll_PostDetails__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_BrowseAll_PostDetails__ = __webpack_require__(229);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_Buy_SubComponents_CreatePost__ = __webpack_require__(71);
 
 
@@ -57875,7 +57895,7 @@ var App = function (_Component) {
 ));
 
 /***/ }),
-/* 131 */
+/* 132 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -57941,7 +57961,7 @@ BrowserRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (BrowserRouter);
 
 /***/ }),
-/* 132 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57957,7 +57977,7 @@ BrowserRouter.propTypes = {
 var assign = __webpack_require__(31);
 
 var ReactPropTypesSecret = __webpack_require__(64);
-var checkPropTypes = __webpack_require__(133);
+var checkPropTypes = __webpack_require__(134);
 
 var printWarning = function() {};
 
@@ -58503,7 +58523,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 
 /***/ }),
-/* 133 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58601,7 +58621,7 @@ module.exports = checkPropTypes;
 
 
 /***/ }),
-/* 134 */
+/* 135 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -58905,7 +58925,7 @@ var createBrowserHistory = function createBrowserHistory() {
 /* harmony default export */ __webpack_exports__["a"] = (createBrowserHistory);
 
 /***/ }),
-/* 135 */
+/* 136 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -58981,7 +59001,7 @@ function resolvePathname(to) {
 /* harmony default export */ __webpack_exports__["a"] = (resolvePathname);
 
 /***/ }),
-/* 136 */
+/* 137 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59025,7 +59045,7 @@ function valueEqual(a, b) {
 /* harmony default export */ __webpack_exports__["a"] = (valueEqual);
 
 /***/ }),
-/* 137 */
+/* 138 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59346,7 +59366,7 @@ var createHashHistory = function createHashHistory() {
 /* harmony default export */ __webpack_exports__["a"] = (createHashHistory);
 
 /***/ }),
-/* 138 */
+/* 139 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59514,7 +59534,7 @@ var createMemoryHistory = function createMemoryHistory() {
 /* harmony default export */ __webpack_exports__["a"] = (createMemoryHistory);
 
 /***/ }),
-/* 139 */
+/* 140 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59579,18 +59599,18 @@ HashRouter.propTypes = {
 /* unused harmony default export */ var _unused_webpack_default_export = (HashRouter);
 
 /***/ }),
-/* 140 */
+/* 141 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__ = __webpack_require__(142);
 // Written in this round about way for babel-transform-imports
 
 
 /* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__["a" /* default */]);
 
 /***/ }),
-/* 141 */
+/* 142 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59656,7 +59676,7 @@ MemoryRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (MemoryRouter);
 
 /***/ }),
-/* 142 */
+/* 143 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59742,7 +59762,7 @@ NavLink.defaultProps = {
 /* unused harmony default export */ var _unused_webpack_default_export = (NavLink);
 
 /***/ }),
-/* 143 */
+/* 144 */
 /***/ (function(module, exports) {
 
 module.exports = Array.isArray || function (arr) {
@@ -59751,18 +59771,18 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 144 */
+/* 145 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__ = __webpack_require__(146);
 // Written in this round about way for babel-transform-imports
 
 
 /* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__["a" /* default */]);
 
 /***/ }),
-/* 145 */
+/* 146 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59853,18 +59873,18 @@ Prompt.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Prompt);
 
 /***/ }),
-/* 146 */
+/* 147 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__ = __webpack_require__(148);
 // Written in this round about way for babel-transform-imports
 
 
 /* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__["a" /* default */]);
 
 /***/ }),
-/* 147 */
+/* 148 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59993,18 +60013,18 @@ Redirect.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Redirect);
 
 /***/ }),
-/* 148 */
+/* 149 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__ = __webpack_require__(150);
 // Written in this round about way for babel-transform-imports
 
 
 /* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__["a" /* default */]);
 
 /***/ }),
-/* 149 */
+/* 150 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60170,18 +60190,18 @@ StaticRouter.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (StaticRouter);
 
 /***/ }),
-/* 150 */
+/* 151 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__ = __webpack_require__(152);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__["a" /* default */]);
 
 /***/ }),
-/* 151 */
+/* 152 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60273,7 +60293,7 @@ Switch.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Switch);
 
 /***/ }),
-/* 152 */
+/* 153 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60284,7 +60304,7 @@ Switch.propTypes = {
 /* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_generatePath__["a" /* default */]);
 
 /***/ }),
-/* 153 */
+/* 154 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60295,18 +60315,18 @@ Switch.propTypes = {
 /* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__["a" /* default */]);
 
 /***/ }),
-/* 154 */
+/* 155 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__ = __webpack_require__(156);
 // Written in this round about way for babel-transform-imports
 
 
 /* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__["a" /* default */]);
 
 /***/ }),
-/* 155 */
+/* 156 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60314,7 +60334,7 @@ Switch.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(156);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(157);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(68);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -60355,7 +60375,7 @@ var withRouter = function withRouter(Component) {
 /* harmony default export */ __webpack_exports__["a"] = (withRouter);
 
 /***/ }),
-/* 156 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60430,7 +60450,7 @@ module.exports = hoistNonReactStatics;
 
 
 /***/ }),
-/* 157 */
+/* 158 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60440,10 +60460,10 @@ module.exports = hoistNonReactStatics;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_axios__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__SubComponents_MyPosts__ = __webpack_require__(158);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__SubComponents_DashHero__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__SubComponents_PotentialBuyers__ = __webpack_require__(160);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__SubComponents_MyMessages__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__SubComponents_MyPosts__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__SubComponents_DashHero__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__SubComponents_PotentialBuyers__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__SubComponents_MyMessages__ = __webpack_require__(162);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -60534,7 +60554,7 @@ if (document.getElementById('dashboard')) {
 }
 
 /***/ }),
-/* 158 */
+/* 159 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60599,91 +60619,95 @@ var MyPosts = function (_Component) {
                                 ),
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     "div",
-                                    { className: "overview" },
+                                    { className: "d-flex flex-column justify-content-between", style: { height: 110 + 'px' } },
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                         "div",
-                                        { className: "overview-container" },
+                                        { className: "overview" },
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                             "div",
-                                            { className: "left-overview" },
+                                            { className: "overview-container" },
                                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                 "div",
-                                                { className: "budget" },
+                                                { className: "left-overview" },
                                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                    "p",
-                                                    null,
-                                                    "Budget: ",
+                                                    "div",
+                                                    { className: "budget" },
                                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                        "span",
-                                                        { className: "w-bold" },
-                                                        "$",
-                                                        post.budget
+                                                        "p",
+                                                        null,
+                                                        "Budget: ",
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                            "span",
+                                                            { className: "w-bold" },
+                                                            "$",
+                                                            post.budget
+                                                        )
+                                                    )
+                                                ),
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    "div",
+                                                    { className: "location" },
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        "p",
+                                                        null,
+                                                        "Location: ",
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                            "span",
+                                                            { className: "w-bold" },
+                                                            post.location
+                                                        )
                                                     )
                                                 )
                                             ),
                                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                 "div",
-                                                { className: "location" },
+                                                { className: "right-overview" },
                                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                    "p",
-                                                    null,
-                                                    "Location: ",
+                                                    "div",
+                                                    { className: "budget" },
                                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                        "span",
-                                                        { className: "w-bold" },
-                                                        post.location
+                                                        "p",
+                                                        null,
+                                                        "Mileage: ",
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                            "span",
+                                                            { className: "w-bold" },
+                                                            post.mileage
+                                                        )
                                                     )
-                                                )
-                                            )
-                                        ),
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            "div",
-                                            { className: "right-overview" },
-                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                "div",
-                                                { className: "budget" },
+                                                ),
                                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                    "p",
-                                                    null,
-                                                    "Mileage: ",
+                                                    "div",
+                                                    { className: "location" },
                                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                        "span",
-                                                        { className: "w-bold" },
-                                                        post.mileage
-                                                    )
-                                                )
-                                            ),
-                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                "div",
-                                                { className: "location" },
-                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                    "p",
-                                                    null,
-                                                    "Timeframe: ",
-                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                        "span",
-                                                        { className: "w-bold" },
-                                                        post.timeframe
+                                                        "p",
+                                                        null,
+                                                        "Timeframe: ",
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                            "span",
+                                                            { className: "w-bold" },
+                                                            post.timeframe
+                                                        )
                                                     )
                                                 )
                                             )
                                         )
-                                    )
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "div",
-                                    { className: "btn-container" },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        "a",
-                                        { className: "button circle blue small",
-                                            href: '/home/post-details/' + post.id },
-                                        "View"
                                     ),
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        "a",
-                                        { className: "button circle white small",
-                                            href: '/home/my-post-details/' + post.id },
-                                        "Edit"
+                                        "div",
+                                        { className: "btn-container" },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            "a",
+                                            { className: "button circle blue small",
+                                                href: '/home/post-details/' + post.id },
+                                            "View"
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            "a",
+                                            { className: "button circle white small",
+                                                href: '/home/my-post-details/' + post.id },
+                                            "Edit"
+                                        )
                                     )
                                 )
                             )
@@ -60744,7 +60768,7 @@ var MyPosts = function (_Component) {
 /* harmony default export */ __webpack_exports__["a"] = (MyPosts);
 
 /***/ }),
-/* 159 */
+/* 160 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60810,7 +60834,7 @@ var DashHero = function (_Component) {
 /* harmony default export */ __webpack_exports__["a"] = (DashHero);
 
 /***/ }),
-/* 160 */
+/* 161 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60881,7 +60905,7 @@ var PotentialBuyers = function (_Component) {
 /* harmony default export */ __webpack_exports__["a"] = (PotentialBuyers);
 
 /***/ }),
-/* 161 */
+/* 162 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60952,14 +60976,13 @@ var MyMessages = function (_Component) {
 /* harmony default export */ __webpack_exports__["a"] = (MyMessages);
 
 /***/ }),
-/* 162 */
+/* 163 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__MessageHero__ = __webpack_require__(236);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -60967,6 +60990,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 
 
 
@@ -60984,28 +61008,17 @@ var Messages = function (_Component) {
         key: 'render',
         value: function render() {
 
-            var styles = {
-                marginTop: '100px'
-            };
-
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                { className: 'container', style: styles },
+                { id: 'Buy' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__MessageHero__["a" /* default */], null),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
-                    { className: 'row justify-content-center' },
+                    { className: 'container' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: 'col-md-12' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'card' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'card-body' },
-                                'Messages Component'
-                            )
-                        )
+                        'h3',
+                        { className: 'text-center py-5' },
+                        'Feature Coming Soon'
                     )
                 )
             );
@@ -61015,15 +61028,10 @@ var Messages = function (_Component) {
     return Messages;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
-/*if (document.getElementById('messages')) {
-    ReactDOM.render(<Messages/>, document.getElementById('messages'));
-}*/
-
-
 /* harmony default export */ __webpack_exports__["a"] = (Messages);
 
 /***/ }),
-/* 163 */
+/* 164 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -61031,8 +61039,8 @@ var Messages = function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_axios__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__SubComponents_BuyHero__ = __webpack_require__(164);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__SubComponents_MyBuyPosts__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__SubComponents_BuyHero__ = __webpack_require__(165);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__SubComponents_MyBuyPosts__ = __webpack_require__(172);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__SubComponents_CreatePost__ = __webpack_require__(71);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -61108,7 +61116,7 @@ var Buy = function (_Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Buy);
 
 /***/ }),
-/* 164 */
+/* 165 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -61229,7 +61237,7 @@ var BuyHero = function (_Component) {
 /* harmony default export */ __webpack_exports__["a"] = (BuyHero);
 
 /***/ }),
-/* 165 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61252,15 +61260,15 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _sweetalert = __webpack_require__(166);
+var _sweetalert = __webpack_require__(167);
 
 var _sweetalert2 = _interopRequireDefault(_sweetalert);
 
-var _lodash = __webpack_require__(167);
+var _lodash = __webpack_require__(168);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _mousetrap = __webpack_require__(168);
+var _mousetrap = __webpack_require__(169);
 
 var _mousetrap2 = _interopRequireDefault(_mousetrap);
 
@@ -61268,7 +61276,7 @@ var _warning = __webpack_require__(16);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _outsideTargetHandlerFactory = __webpack_require__(169);
+var _outsideTargetHandlerFactory = __webpack_require__(170);
 
 var _outsideTargetHandlerFactory2 = _interopRequireDefault(_outsideTargetHandlerFactory);
 
@@ -61508,7 +61516,7 @@ var withSwalInstance = exports.withSwalInstance = function withSwalInstance(swal
 exports.default = withSwalInstance(_sweetalert2.default);
 
 /***/ }),
-/* 166 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
@@ -64998,7 +65006,7 @@ if (typeof window !== 'undefined' && window.Sweetalert2){  window.swal = window.
 "            transform: rotate(360deg); } }");
 
 /***/ }),
-/* 167 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -65508,7 +65516,7 @@ module.exports = pick;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(29)))
 
 /***/ }),
-/* 168 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*global define:false */
@@ -66559,7 +66567,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*global define:false */
 
 
 /***/ }),
-/* 169 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66570,7 +66578,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = outsideTargetHandlerFactory;
 
-var _isDOMEquals = __webpack_require__(170);
+var _isDOMEquals = __webpack_require__(171);
 
 var _isDOMEquals2 = _interopRequireDefault(_isDOMEquals);
 
@@ -66597,7 +66605,7 @@ function outsideTargetHandlerFactory(targetNode, eventHandler) {
 }
 
 /***/ }),
-/* 170 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66619,7 +66627,7 @@ function isDOMEquals(dom1, dom2) {
 }
 
 /***/ }),
-/* 171 */
+/* 172 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -66661,7 +66669,8 @@ var MyBuyPosts = function (_Component) {
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 "div",
                                 { className: "img" },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "img-fluid", src: post.image_url !== null ? post.image_url : '/img/default-image.jpg', alt: "" })
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "img-fluid",
+                                    src: post.image_url !== null ? post.image_url : '/img/default-image.jpg', alt: "" })
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 "div",
@@ -66683,90 +66692,96 @@ var MyBuyPosts = function (_Component) {
                                 ),
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     "div",
-                                    { className: "overview" },
+                                    { className: "d-flex flex-column justify-content-between",
+                                        style: { height: 110 + 'px' } },
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                         "div",
-                                        { className: "overview-container" },
+                                        { className: "overview" },
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                             "div",
-                                            { className: "left-overview" },
+                                            { className: "overview-container" },
                                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                 "div",
-                                                { className: "budget" },
+                                                { className: "left-overview" },
                                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                    "p",
-                                                    null,
-                                                    "Budget: ",
+                                                    "div",
+                                                    { className: "budget" },
                                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                        "span",
-                                                        { className: "w-bold" },
-                                                        post.budget !== null ? '$' + post.budget : ' '
+                                                        "p",
+                                                        null,
+                                                        "Budget: ",
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                            "span",
+                                                            {
+                                                                className: "w-bold" },
+                                                            post.budget !== null ? '$' + post.budget : ' '
+                                                        )
+                                                    )
+                                                ),
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    "div",
+                                                    { className: "location" },
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        "p",
+                                                        null,
+                                                        "Location: ",
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                            "span",
+                                                            { className: "w-bold" },
+                                                            post.location
+                                                        )
                                                     )
                                                 )
                                             ),
                                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                 "div",
-                                                { className: "location" },
+                                                { className: "right-overview" },
                                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                    "p",
-                                                    null,
-                                                    "Location: ",
+                                                    "div",
+                                                    { className: "budget" },
                                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                        "span",
-                                                        { className: "w-bold" },
-                                                        post.location
+                                                        "p",
+                                                        null,
+                                                        "Mileage: ",
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                            "span",
+                                                            { className: "w-bold" },
+                                                            post.mileage
+                                                        )
                                                     )
-                                                )
-                                            )
-                                        ),
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            "div",
-                                            { className: "right-overview" },
-                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                "div",
-                                                { className: "budget" },
+                                                ),
                                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                    "p",
-                                                    null,
-                                                    "Mileage: ",
+                                                    "div",
+                                                    { className: "location" },
                                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                        "span",
-                                                        { className: "w-bold" },
-                                                        post.mileage
-                                                    )
-                                                )
-                                            ),
-                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                "div",
-                                                { className: "location" },
-                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                    "p",
-                                                    null,
-                                                    "Timetable: ",
-                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                        "span",
-                                                        { className: "w-bold" },
-                                                        post.timeframe
+                                                        "p",
+                                                        null,
+                                                        "Timetable: ",
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                            "span",
+                                                            { className: "w-bold" },
+                                                            post.timeframe
+                                                        )
                                                     )
                                                 )
                                             )
                                         )
-                                    )
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "div",
-                                    { className: "btn-container" },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        "a",
-                                        { className: "button circle blue small",
-                                            href: '/home/post-details/' + post.id },
-                                        "View"
                                     ),
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        "a",
-                                        { className: "button circle white small",
-                                            href: '/home/my-post-details/' + post.id },
-                                        "Edit"
+                                        "div",
+                                        { className: "btn-container" },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            "a",
+                                            { className: "button circle blue small",
+                                                href: '/home/post-details/' + post.id },
+                                            "View"
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            "a",
+                                            { className: "button circle white small",
+                                                href: '/home/my-post-details/' + post.id },
+                                            "Edit"
+                                        )
                                     )
                                 )
                             )
@@ -66817,32 +66832,13 @@ var MyBuyPosts = function (_Component) {
 /* harmony default export */ __webpack_exports__["a"] = (MyBuyPosts);
 
 /***/ }),
-/* 172 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Line__ = __webpack_require__(173);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Circle__ = __webpack_require__(211);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__Line__["a"]; });
-/* unused harmony reexport Circle */
-
-
-
-
-
-/* unused harmony default export */ var _unused_webpack_default_export = ({
-  Line: __WEBPACK_IMPORTED_MODULE_0__Line__["a" /* default */],
-  Circle: __WEBPACK_IMPORTED_MODULE_1__Circle__["a" /* default */]
-});
-
-/***/ }),
 /* 173 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_objectWithoutProperties__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_objectWithoutProperties__ = __webpack_require__(81);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_objectWithoutProperties___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_objectWithoutProperties__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
@@ -66852,8 +66848,8 @@ var MyBuyPosts = function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__enhancer__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__types__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__enhancer__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__types__ = __webpack_require__(88);
 
 
 
@@ -66984,8 +66980,8 @@ module.exports = function (it) {
 var getKeys = __webpack_require__(26);
 var gOPS = __webpack_require__(44);
 var pIE = __webpack_require__(28);
-var toObject = __webpack_require__(79);
-var IObject = __webpack_require__(77);
+var toObject = __webpack_require__(80);
+var IObject = __webpack_require__(78);
 var $assign = Object.assign;
 
 // should work with symbols and should have deterministic property order (V8 bug)
@@ -67093,7 +67089,7 @@ module.exports = __webpack_require__(51).f('iterator');
 var $at = __webpack_require__(185)(true);
 
 // 21.1.3.27 String.prototype[@@iterator]()
-__webpack_require__(82)(String, 'String', function (iterated) {
+__webpack_require__(83)(String, 'String', function (iterated) {
   this._t = String(iterated); // target
   this._i = 0;                // next index
 // 21.1.5.2.1 %StringIteratorPrototype%.next()
@@ -67184,7 +67180,7 @@ module.exports = document && document.documentElement;
 
 // 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
 var has = __webpack_require__(6);
-var toObject = __webpack_require__(79);
+var toObject = __webpack_require__(80);
 var IE_PROTO = __webpack_require__(41)('IE_PROTO');
 var ObjectProto = Object.prototype;
 
@@ -67237,7 +67233,7 @@ var toIObject = __webpack_require__(14);
 // 22.1.3.13 Array.prototype.keys()
 // 22.1.3.29 Array.prototype.values()
 // 22.1.3.30 Array.prototype[@@iterator]()
-module.exports = __webpack_require__(82)(Array, 'Array', function (iterated, kind) {
+module.exports = __webpack_require__(83)(Array, 'Array', function (iterated, kind) {
   this._t = toIObject(iterated); // target
   this._i = 0;                   // next index
   this._k = kind;                // kind
@@ -67307,7 +67303,7 @@ var global = __webpack_require__(4);
 var has = __webpack_require__(6);
 var DESCRIPTORS = __webpack_require__(13);
 var $export = __webpack_require__(18);
-var redefine = __webpack_require__(83);
+var redefine = __webpack_require__(84);
 var META = __webpack_require__(197).KEY;
 var $fails = __webpack_require__(20);
 var shared = __webpack_require__(42);
@@ -67325,7 +67321,7 @@ var toPrimitive = __webpack_require__(38);
 var createDesc = __webpack_require__(25);
 var _create = __webpack_require__(49);
 var gOPNExt = __webpack_require__(200);
-var $GOPD = __webpack_require__(85);
+var $GOPD = __webpack_require__(86);
 var $DP = __webpack_require__(11);
 var $keys = __webpack_require__(26);
 var gOPD = $GOPD.f;
@@ -67450,7 +67446,7 @@ if (!USE_NATIVE) {
 
   $GOPD.f = $getOwnPropertyDescriptor;
   $DP.f = $defineProperty;
-  __webpack_require__(84).f = gOPNExt.f = $getOwnPropertyNames;
+  __webpack_require__(85).f = gOPNExt.f = $getOwnPropertyNames;
   __webpack_require__(28).f = $propertyIsEnumerable;
   __webpack_require__(44).f = $getOwnPropertySymbols;
 
@@ -67622,7 +67618,7 @@ module.exports = function (it) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.2.2 IsArray(argument)
-var cof = __webpack_require__(78);
+var cof = __webpack_require__(79);
 module.exports = Array.isArray || function isArray(arg) {
   return cof(arg) == 'Array';
 };
@@ -67634,7 +67630,7 @@ module.exports = Array.isArray || function isArray(arg) {
 
 // fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
 var toIObject = __webpack_require__(14);
-var gOPN = __webpack_require__(84).f;
+var gOPN = __webpack_require__(85).f;
 var toString = {}.toString;
 
 var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
@@ -67712,7 +67708,7 @@ module.exports = {
   set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
     function (test, buggy, set) {
       try {
-        set = __webpack_require__(73)(Function.call, __webpack_require__(85).f(Object.prototype, '__proto__').set, 2);
+        set = __webpack_require__(74)(Function.call, __webpack_require__(86).f(Object.prototype, '__proto__').set, 2);
         set(test, []);
         buggy = !(test instanceof Array);
       } catch (e) { buggy = true; }
@@ -67758,9 +67754,9 @@ $export($export.S, 'Object', { create: __webpack_require__(49) });
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_objectWithoutProperties__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_objectWithoutProperties__ = __webpack_require__(81);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_objectWithoutProperties___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_objectWithoutProperties__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
@@ -67772,8 +67768,8 @@ $export($export.S, 'Object', { create: __webpack_require__(49) });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_prop_types__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__enhancer__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__types__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__enhancer__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__types__ = __webpack_require__(88);
 
 
 
@@ -68016,32 +68012,32 @@ var BasicInfo = function (_Component) {
                                 ),
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'option',
-                                    { value: '0 to 9,000' },
+                                    { value: '0 to 9K' },
                                     '0 to 9,999 Miles'
                                 ),
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'option',
-                                    { value: '10,000 to 24,000' },
+                                    { value: '10K to 24K' },
                                     '10,000 to 24,000 Miles'
                                 ),
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'option',
-                                    { value: '25,000 to 49,999' },
+                                    { value: '25K to 49K' },
                                     '25,000 to 49,999 Miles'
                                 ),
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'option',
-                                    { value: '50,000 to 74,999' },
+                                    { value: '50K to 74K' },
                                     '50,000 to 74,999 Miles'
                                 ),
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'option',
-                                    { value: '75,000 to 99,000' },
+                                    { value: '75K to 99K' },
                                     '75,000 to 99,000 Miles'
                                 ),
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'option',
-                                    { value: '100,000 or More' },
+                                    { value: '100K or More' },
                                     '100,000 Mile or More'
                                 ),
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -69100,6 +69096,7 @@ var Complete = function (_Component) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SellHero__ = __webpack_require__(237);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -69107,6 +69104,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
 
 
 
@@ -69123,28 +69122,17 @@ var Sell = function (_Component) {
         key: 'render',
         value: function render() {
 
-            var styles = {
-                marginTop: '100px'
-            };
-
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                { className: 'container', style: styles },
+                { id: 'Buy' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__SellHero__["a" /* default */], null),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
-                    { className: 'row justify-content-center' },
+                    { className: 'container' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: 'col-md-12' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'card' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'card-body' },
-                                'Sell Component'
-                            )
-                        )
+                        'h3',
+                        { className: 'text-center py-5' },
+                        'Feature Coming Soon'
                     )
                 )
             );
@@ -69153,11 +69141,6 @@ var Sell = function (_Component) {
 
     return Sell;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
-
-/*if (document.getElementById('messages')) {
-    ReactDOM.render(<Messages/>, document.getElementById('messages'));
-}*/
-
 
 /* harmony default export */ __webpack_exports__["a"] = (Sell);
 
@@ -69245,90 +69228,89 @@ var BrowseAll = function (_Component) {
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'div',
-                                { className: 'overview' },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'small',
-                                    { className: 'w-bold' },
-                                    'overview'
-                                ),
+                                { className: 'd-flex flex-column justify-content-between', style: { height: 110 + 'px' } },
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'div',
-                                    { className: 'overview-container' },
+                                    { className: 'overview' },
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                         'div',
-                                        { className: 'left-overview' },
+                                        { className: 'overview-container' },
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                             'div',
-                                            { className: 'budget' },
+                                            { className: 'left-overview' },
                                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                'p',
-                                                null,
-                                                'Budget: ',
+                                                'div',
+                                                { className: 'budget' },
                                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                    'span',
+                                                    'p',
                                                     null,
-                                                    '$',
-                                                    post.budget
+                                                    'Budget: ',
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        'span',
+                                                        null,
+                                                        '$',
+                                                        post.budget
+                                                    )
+                                                )
+                                            ),
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                'div',
+                                                { className: 'location' },
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    'p',
+                                                    null,
+                                                    'Location: ',
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        'span',
+                                                        null,
+                                                        post.location
+                                                    )
                                                 )
                                             )
                                         ),
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                             'div',
-                                            { className: 'location' },
+                                            { className: 'right-overview' },
                                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                'p',
-                                                null,
-                                                'Location: ',
+                                                'div',
+                                                { className: 'budget' },
                                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                    'span',
+                                                    'p',
                                                     null,
-                                                    post.location
+                                                    'Mileage: ',
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        'span',
+                                                        null,
+                                                        post.mileage
+                                                    )
                                                 )
-                                            )
-                                        )
-                                    ),
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        'div',
-                                        { className: 'right-overview' },
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'div',
-                                            { className: 'budget' },
+                                            ),
                                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                'p',
-                                                null,
-                                                'Mileage: ',
+                                                'div',
+                                                { className: 'location' },
                                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                    'span',
+                                                    'p',
                                                     null,
-                                                    post.mileage
-                                                )
-                                            )
-                                        ),
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'div',
-                                            { className: 'location' },
-                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                'p',
-                                                null,
-                                                'Timeframe: ',
-                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                    'span',
-                                                    null,
-                                                    post.timeframe
+                                                    'Timeframe: ',
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        'span',
+                                                        null,
+                                                        post.timeframe
+                                                    )
                                                 )
                                             )
                                         )
                                     )
-                                )
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'btn-container' },
+                                ),
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'a',
-                                    { className: 'button circle blue small',
-                                        href: '/home/post-details/' + post.id },
-                                    'View'
+                                    'div',
+                                    { className: 'btn-container' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'a',
+                                        { className: 'button circle blue small',
+                                            href: '/home/post-details/' + post.id },
+                                        'View'
+                                    )
                                 )
                             )
                         )
@@ -69441,12 +69423,13 @@ var BrowseAllHero = function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_ErrorPage__ = __webpack_require__(223);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_sweetalert2_react__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_sweetalert2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_sweetalert2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rc_progress__ = __webpack_require__(172);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__EditPostSteps_EditBasicInfo__ = __webpack_require__(232);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__EditPostSteps_EditVehicleInfo__ = __webpack_require__(233);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__EditPostSteps_EditFeatures__ = __webpack_require__(234);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__EditPostSteps_EditImage__ = __webpack_require__(235);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__EditPostSteps_EditPaymentInfo__ = __webpack_require__(236);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rc_progress__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__EditPostSteps_EditBasicInfo__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__EditPostSteps_EditVehicleInfo__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__EditPostSteps_EditFeatures__ = __webpack_require__(226);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__EditPostSteps_EditImage__ = __webpack_require__(227);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__EditPostSteps_EditPaymentInfo__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__EditPostSteps_EditComplete__ = __webpack_require__(235);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -69463,6 +69446,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 // STEPS
+
 
 
 
@@ -69582,9 +69566,9 @@ var MyPostDetails = function (_Component) {
         key: "handleInput",
         value: function handleInput(key, e) {
             /*Duplicating and updating the state */
-            var state = Object.assign({}, this.state.newPost);
+            var state = Object.assign({}, this.state.postDetails);
             state[key] = e.target.value;
-            this.setState({ newPost: state });
+            this.setState({ postDetails: state });
         }
 
         // SET STATE FOR
@@ -69697,6 +69681,12 @@ var MyPostDetails = function (_Component) {
                         nextStep: this.nextStep,
                         previousStep: this.previousStep
                     });
+                case 6:
+                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__EditPostSteps_EditComplete__["a" /* default */], {
+                        postDetails: this.state.postDetails,
+                        previousStep: this.previousStep,
+                        updatePostDetails: this.updatePostDetails
+                    });
             }
         }
     }, {
@@ -69725,7 +69715,7 @@ var MyPostDetails = function (_Component) {
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             "h4",
                             { className: "text-center" },
-                            "Create Post"
+                            "Edit Post"
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             "div",
@@ -69754,9 +69744,14 @@ var MyPostDetails = function (_Component) {
                                 "div",
                                 { className: "header" },
                                 "Payment"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "div",
+                                { className: "header" },
+                                "Update"
                             )
                         ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5_rc_progress__["a" /* Line */], { percent: this.state.step / 5 * 100,
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5_rc_progress__["a" /* Line */], { percent: this.state.step / 6 * 100,
                             strokeWidth: ".5",
                             trailWidth: ".5",
                             strokeLinecap: "square",
@@ -70296,6 +70291,978 @@ var ErrorPage = function (_Component) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var EditBasicInfo = function (_Component) {
+    _inherits(EditBasicInfo, _Component);
+
+    function EditBasicInfo() {
+        _classCallCheck(this, EditBasicInfo);
+
+        return _possibleConstructorReturn(this, (EditBasicInfo.__proto__ || Object.getPrototypeOf(EditBasicInfo)).apply(this, arguments));
+    }
+
+    _createClass(EditBasicInfo, [{
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            var styles = {
+                marginTop: '100px'
+            };
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'container' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'h5',
+                    { className: 'section-info' },
+                    '* Please provide basic car details for your post. Title and Description are required. Please fill out as much info as possible to help sellers get a better idea of what kind of car you are looking to purchase.'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'form-row' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'col-md-6 col-sm-12' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'form-group' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'label',
+                                { htmlFor: 'title' },
+                                '* Title'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { required: true, onChange: function onChange(e) {
+                                    return _this2.props.onChange('title', e);
+                                }, type: 'text',
+                                className: 'form-control',
+                                id: 'title',
+                                'aria-describedby': 'emailHelp', placeholder: 'Ex. Looking for AWD vehicle...',
+                                value: this.props.postDetails.title })
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'form-group' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'label',
+                                { htmlFor: 'description' },
+                                '* Description'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('textarea', { required: true, onChange: function onChange(e) {
+                                    return _this2.props.onChange('description', e);
+                                }, rows: '10', type: 'text',
+                                className: 'form-control',
+                                id: 'description',
+                                placeholder: 'Enter a description about the type of vehicle you are looking to purchase.',
+                                value: this.props.postDetails.description })
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'col-md-6 col-sm-12' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'form-group' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'label',
+                                { htmlFor: 'mileage' },
+                                'Mileage'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'select',
+                                { onChange: function onChange(e) {
+                                        return _this2.props.onChange('mileage', e);
+                                    }, type: 'text',
+                                    className: 'form-control',
+                                    id: 'mileage',
+                                    placeholder: 'Mileage',
+                                    value: this.props.postDetails.mileage },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { defaultValue: true, disabled: true, value: '' },
+                                    'Select Desired Mileage'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: '10K to 24K' },
+                                    '10,000 to 24,000 Miles'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: '25K to 49K' },
+                                    '25,000 to 49,999 Miles'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: '50K to 74K' },
+                                    '50,000 to 74,999 Miles'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: '75K to 99K' },
+                                    '75,000 to 99,000 Miles'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: '100K or More' },
+                                    '100,000 Mile or More'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: 'No Preference' },
+                                    'No Preference'
+                                )
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'form-group' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'label',
+                                { htmlFor: 'budget' },
+                                'Budget'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
+                                    return _this2.props.onChange('budget', e);
+                                }, type: 'number',
+                                className: 'form-control',
+                                id: 'budget',
+                                placeholder: 'Ex. 15000',
+                                value: this.props.postDetails.budget })
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'form-group' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'label',
+                                { htmlFor: 'location' },
+                                'Location'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
+                                    return _this2.props.onChange('location', e);
+                                }, type: 'text',
+                                className: 'form-control',
+                                id: 'location',
+                                placeholder: 'Ex. Orem Ut',
+                                value: this.props.postDetails.location })
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'form-group' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'label',
+                                { htmlFor: 'timeframe' },
+                                'Timeframe'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'select',
+                                { onChange: function onChange(e) {
+                                        return _this2.props.onChange('timeframe', e);
+                                    }, type: 'text',
+                                    className: 'form-control',
+                                    id: 'timeframe',
+                                    placeholder: 'Timeframe',
+                                    value: this.props.postDetails.timeframe },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { defaultValue: true, disabled: true, value: '' },
+                                    'Select Desired Purchase Timeframe'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: '1 Week' },
+                                    '1 Week'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: '2-3 Weeks' },
+                                    '2-3 Weeks'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: '1 Month' },
+                                    '1 Month'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: '2-3 Months' },
+                                    '2-3 Months'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: '3 Months or More' },
+                                    '3 Months or More'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'option',
+                                    { value: 'No Preference' },
+                                    'No Preference'
+                                )
+                            )
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'next-step' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'a',
+                        { className: 'btn btn-blue invisible', onClick: this.props.nextStep },
+                        'Previous Step'
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'a',
+                        { className: 'btn btn-blue ', onClick: this.props.nextStep },
+                        'Next Step'
+                    )
+                )
+            );
+        }
+    }]);
+
+    return EditBasicInfo;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (EditBasicInfo);
+
+/***/ }),
+/* 225 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var EditVehicleInfo = function (_Component) {
+    _inherits(EditVehicleInfo, _Component);
+
+    function EditVehicleInfo() {
+        _classCallCheck(this, EditVehicleInfo);
+
+        return _possibleConstructorReturn(this, (EditVehicleInfo.__proto__ || Object.getPrototypeOf(EditVehicleInfo)).apply(this, arguments));
+    }
+
+    _createClass(EditVehicleInfo, [{
+        key: "render",
+        value: function render() {
+            var _this2 = this;
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "container" },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "h5",
+                    { className: "section-info" },
+                    "* Please provide vehicle information for the next car you are looking to purchase. You may be as specific or general as you would like. In the Vehicle Overview section please enter a brief description of the specifics of the vehicle you are looking to purchase."
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "vehicle_overview" },
+                                "Vehicle Overview"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", { onChange: function onChange(e) {
+                                    return _this2.props.onChange('vehicle_overview', e);
+                                }, rows: "5", type: "text", className: "form-control",
+                                id: "vehicle_overview",
+                                "aria-describedby": "emailHelp", placeholder: "Vehicle Overview",
+                                value: this.props.postDetails.vehicle_overview })
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-6 col-sm-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "vehicle_type" },
+                                "Vehicle Type"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "select",
+                                { onChange: function onChange(e) {
+                                        return _this2.props.onChange('vehicle_type', e);
+                                    }, type: "text", className: "form-control",
+                                    id: "vehicle_type",
+                                    placeholder: "Vehicle Title Type",
+                                    value: this.props.postDetails.vehicle_type },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "", defaultValue: true, disabled: true },
+                                    "Select Vehicle Type"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Car" },
+                                    "Car"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Truck" },
+                                    "Truck"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "SUV" },
+                                    "SUV"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Van" },
+                                    "Van"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Minivan" },
+                                    "Minivan"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Hatchback" },
+                                    "Hatchback"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Coup" },
+                                    "Coup"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Convertible" },
+                                    "Convertible"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "No Preference" },
+                                    "No Preference"
+                                )
+                            )
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-6 col-sm-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "vehicle_make" },
+                                "Vehicle Make"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
+                                    return _this2.props.onChange('vehicle_make', e);
+                                }, type: "text", className: "form-control",
+                                id: "vehicle_make",
+                                placeholder: "Ex. Mazda ",
+                                value: this.props.postDetails.vehicle_make })
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-4 col-sm-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "vehicle_model" },
+                                "Vehicle Model"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
+                                    return _this2.props.onChange('vehicle_model', e);
+                                }, type: "text", className: "form-control",
+                                id: "vehicle_model",
+                                placeholder: "Ex. Mazda CX-5",
+                                value: this.props.postDetails.vehicle_model })
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-4 col-sm-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "vehicle_year" },
+                                "Vehicle Year"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "select",
+                                { onChange: function onChange(e) {
+                                        return _this2.props.onChange('vehicle_year', e);
+                                    }, type: "text", className: "form-control",
+                                    id: "vehicle_year",
+                                    placeholder: "Vehicle Title Type",
+                                    value: this.props.postDetails.vehicle_year },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "", defaultValue: true, disabled: true },
+                                    "Select Vehicle Year Range"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "2018 or Newer" },
+                                    "2018 or Newer"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "2014 to 2017" },
+                                    "2014 to 2017"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "2010 to 2013" },
+                                    "2010 to 2013"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "2006 to 2009" },
+                                    "2006 to 2009"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "2002 to 2005" },
+                                    "2002 to 2005"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "1998 to 2001" },
+                                    "1998 to 2001"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "1997 or Older" },
+                                    "1997 or Older"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "No Preference" },
+                                    "No Preference"
+                                )
+                            )
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-4 col-sm-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "vehicle_title_type" },
+                                "Vehicle Title Type"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "select",
+                                { onChange: function onChange(e) {
+                                        return _this2.props.onChange('vehicle_title_type', e);
+                                    }, type: "text", className: "form-control",
+                                    id: "vehicle_title_type",
+                                    placeholder: "Vehicle Title Type",
+                                    value: this.props.postDetails.vehicle_title_type },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "", defaultValue: true, disabled: true },
+                                    "Select Vehicle Title Type"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Clean Title" },
+                                    "Clean Title"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Branded Title" },
+                                    "Branded Title"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Salvage Title" },
+                                    "Salvage Title"
+                                )
+                            )
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "next-step" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { className: "btn btn-blue", onClick: this.props.previousStep },
+                        "Previous Step"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { className: "btn btn-blue", onClick: this.props.nextStep },
+                        "Next Step"
+                    )
+                )
+            );
+        }
+    }]);
+
+    return EditVehicleInfo;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (EditVehicleInfo);
+
+/***/ }),
+/* 226 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var VehicleInfo = function (_Component) {
+    _inherits(VehicleInfo, _Component);
+
+    function VehicleInfo() {
+        _classCallCheck(this, VehicleInfo);
+
+        return _possibleConstructorReturn(this, (VehicleInfo.__proto__ || Object.getPrototypeOf(VehicleInfo)).apply(this, arguments));
+    }
+
+    _createClass(VehicleInfo, [{
+        key: "render",
+        value: function render() {
+            var _this2 = this;
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "container" },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "h5",
+                    { className: "section-info" },
+                    "* Please provide details of the types of features you are looking for in your next vehicle purchase. You can be as specific you want as well as indicate any features that are a must have etc."
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "features" },
+                                "Features"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", { onChange: function onChange(e) {
+                                    return _this2.props.onChange('features', e);
+                                }, rows: "10", type: "text",
+                                className: "form-control",
+                                id: "features",
+                                "aria-describedby": "emailHelp", placeholder: "Enter a description of desired features",
+                                value: this.props.postDetails.features })
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "next-step" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { className: "btn btn-blue", onClick: this.props.previousStep },
+                        "Previous Step"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { className: "btn btn-blue", onClick: this.props.nextStep },
+                        "Next Step"
+                    )
+                )
+            );
+        }
+    }]);
+
+    return VehicleInfo;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (VehicleInfo);
+
+/***/ }),
+/* 227 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var EditImage = function (_Component) {
+    _inherits(EditImage, _Component);
+
+    function EditImage() {
+        _classCallCheck(this, EditImage);
+
+        return _possibleConstructorReturn(this, (EditImage.__proto__ || Object.getPrototypeOf(EditImage)).apply(this, arguments));
+    }
+
+    _createClass(EditImage, [{
+        key: "render",
+        value: function render() {
+            var _this2 = this;
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "container" },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "h5",
+                    { className: "section-info" },
+                    "* Post image is meant to be used as an idea board for the type of car you are looking to buy. Head to google and find an image of the type of color you want. You can be really specific like getting a picture of a Mazda 6 or just a general photo of a sedan. Please copy the image url and enter in the box below. If you did it correctly you should see a preview of your image before continuing."
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "image_url" },
+                                "Image Url"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
+                                    return _this2.props.onChange('image_url', e);
+                                }, rows: "5", type: "text",
+                                className: "form-control",
+                                id: "image_url",
+                                "aria-describedby": "emailHelp", placeholder: "Image Url",
+                                value: this.props.postDetails.image_url !== '' ? this.props.postDetails.image_url : '/img/default-image.jpg' })
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { className: "d-block", htmlFor: "" },
+                                "Image Preview"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "img-fluid w-100",
+                                src: this.props.postDetails.image_url !== '' ? this.props.postDetails.image_url : '/img/default-image.jpg' })
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "next-step" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { className: "btn btn-blue", onClick: this.props.previousStep },
+                        "Previous Step"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { className: "btn btn-blue", onClick: this.props.nextStep },
+                        "Next Step"
+                    )
+                )
+            );
+        }
+    }]);
+
+    return EditImage;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (EditImage);
+
+/***/ }),
+/* 228 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var EditPaymentInfo = function (_Component) {
+    _inherits(EditPaymentInfo, _Component);
+
+    function EditPaymentInfo() {
+        _classCallCheck(this, EditPaymentInfo);
+
+        return _possibleConstructorReturn(this, (EditPaymentInfo.__proto__ || Object.getPrototypeOf(EditPaymentInfo)).apply(this, arguments));
+    }
+
+    _createClass(EditPaymentInfo, [{
+        key: "render",
+        value: function render() {
+            var _this2 = this;
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "container" },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "h5",
+                    { className: "section-info" },
+                    "* Payment info will not require any credit card or banking information. This section is to find out how you plan to purchase the car. Are you paying cash or getting a loan? Prefer buying privately or through a dealership? Please provide as accurate information as you can."
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-6 col-sm-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "payment_type" },
+                                "Payment Type"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "select",
+                                { onChange: function onChange(e) {
+                                        return _this2.props.onChange('payment_type', e);
+                                    }, type: "text", className: "form-control",
+                                    id: "payment_type",
+                                    "aria-describedby": "emailHelp", placeholder: "Payment Type",
+                                    value: this.props.postDetails.payment_type },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "", disabled: true, defaultValue: true },
+                                    "Please select desired payment type"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Cash" },
+                                    "Cash"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Auto Loan" },
+                                    "Auto Loan"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "No Preference" },
+                                    "No Preference"
+                                )
+                            )
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-6 col-sm-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "seller_preference" },
+                                "Seller Preference"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "select",
+                                { onChange: function onChange(e) {
+                                        return _this2.props.onChange('seller_preference', e);
+                                    }, type: "text",
+                                    className: "form-control",
+                                    id: "seller_preference",
+                                    "aria-describedby": "emailHelp", placeholder: "Seller Preference",
+                                    value: this.props.postDetails.seller_preference },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "", disabled: true, defaultValue: true },
+                                    "Please Select Desired Seller Preference"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Dealership" },
+                                    "Dealership"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "Privately" },
+                                    "Privately"
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "option",
+                                    { value: "No Preference" },
+                                    "No Preference"
+                                )
+                            )
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-6 col-sm-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "loan_payment_method" },
+                                "If Loan, Desired Monthly Payment?"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
+                                    return _this2.props.onChange('loan_payment_method', e);
+                                }, type: "number",
+                                className: "form-control",
+                                id: "loan_payment_method",
+                                "aria-describedby": "emailHelp", placeholder: "Ex. 200",
+                                value: this.props.postDetails.loan_payment_method })
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-md-6 col-sm-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "dealer_door_price" },
+                                "Dealer Door Out the Door Price"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
+                                    return _this2.props.onChange('dealer_door_price', e);
+                                }, type: "number",
+                                className: "form-control",
+                                id: "dealer_door_price",
+                                "aria-describedby": "emailHelp", placeholder: "Ex. 16000",
+                                value: this.props.postDetails.dealer_door_price })
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "form-row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col-sm-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "div",
+                            { className: "form-group" },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "label",
+                                { htmlFor: "other_notes" },
+                                "Other Notes"
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", { onChange: function onChange(e) {
+                                    return _this2.props.onChange('other_notes', e);
+                                }, rows: "5", type: "text",
+                                className: "form-control",
+                                id: "other_notes",
+                                "aria-describedby": "emailHelp", placeholder: "Other Notes",
+                                value: this.props.postDetails.other_notes })
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "next-step" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { className: "btn btn-blue", onClick: this.props.previousStep },
+                        "Previous Step"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { className: "btn btn-blue", onClick: this.props.nextStep },
+                        "Next Step"
+                    )
+                )
+            );
+        }
+    }]);
+
+    return EditPaymentInfo;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (EditPaymentInfo);
+
+/***/ }),
+/* 229 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios_index__ = __webpack_require__(5);
@@ -70678,671 +71645,16 @@ var PostDetails = function (_Component) {
 /* harmony default export */ __webpack_exports__["a"] = (PostDetails);
 
 /***/ }),
-/* 225 */
+/* 230 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 226 */,
-/* 227 */,
-/* 228 */,
-/* 229 */,
-/* 230 */,
 /* 231 */,
-/* 232 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-var EditBasicInfo = function (_Component) {
-    _inherits(EditBasicInfo, _Component);
-
-    function EditBasicInfo() {
-        _classCallCheck(this, EditBasicInfo);
-
-        return _possibleConstructorReturn(this, (EditBasicInfo.__proto__ || Object.getPrototypeOf(EditBasicInfo)).apply(this, arguments));
-    }
-
-    _createClass(EditBasicInfo, [{
-        key: 'render',
-        value: function render() {
-            var _this2 = this;
-
-            var styles = {
-                marginTop: '100px'
-            };
-
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: 'container' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'h5',
-                    { className: 'section-info' },
-                    '* Please provide basic car details for your post. Title and Description are required. Please fill out as much info as possible to help sellers get a better idea of what kind of car you are looking to purchase.'
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'form-row' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: 'col-md-6 col-sm-12' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'form-group' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'label',
-                                { htmlFor: 'title' },
-                                '* Title'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { required: true, onChange: function onChange(e) {
-                                    return _this2.props.onChange('title', e);
-                                }, type: 'text',
-                                className: 'form-control',
-                                id: 'title',
-                                'aria-describedby': 'emailHelp', placeholder: 'Ex. Looking for AWD vehicle...',
-                                value: this.props.postDetails.title })
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'form-group' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'label',
-                                { htmlFor: 'description' },
-                                '* Description'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('textarea', { required: true, onChange: function onChange(e) {
-                                    return _this2.props.onChange('description', e);
-                                }, rows: '10', type: 'text',
-                                className: 'form-control',
-                                id: 'description',
-                                placeholder: 'Enter a description about the type of vehicle you are looking to purchase.',
-                                value: this.props.postDetails.description })
-                        )
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: 'col-md-6 col-sm-12' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'form-group' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'label',
-                                { htmlFor: 'mileage' },
-                                'Mileage'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'select',
-                                { onChange: function onChange(e) {
-                                        return _this2.props.onChange('mileage', e);
-                                    }, type: 'text',
-                                    className: 'form-control',
-                                    id: 'mileage',
-                                    placeholder: 'Mileage',
-                                    value: this.props.postDetails.mileage },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'option',
-                                    { defaultValue: true, disabled: true, value: '' },
-                                    'Select Desired Mileage'
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'option',
-                                    { value: '0 to 9,000' },
-                                    '0 to 9,999 Miles'
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'option',
-                                    { value: '10,000 to 24,000' },
-                                    '10,000 to 24,000 Miles'
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'option',
-                                    { value: '25,000 to 49,999' },
-                                    '25,000 to 49,999 Miles'
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'option',
-                                    { value: '50,000 to 74,999' },
-                                    '50,000 to 74,999 Miles'
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'option',
-                                    { value: '75,000 to 99,000' },
-                                    '75,000 to 99,000 Miles'
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'option',
-                                    { value: '100,000 or More' },
-                                    '100,000 Mile or More'
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'option',
-                                    { value: 'No Preference' },
-                                    'No Preference'
-                                )
-                            )
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'form-group' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'label',
-                                { htmlFor: 'budget' },
-                                'Budget'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
-                                    return _this2.props.onChange('budget', e);
-                                }, type: 'number',
-                                className: 'form-control',
-                                id: 'budget',
-                                placeholder: 'Ex. 15000',
-                                value: this.props.postDetails.budget })
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'form-group' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'label',
-                                { htmlFor: 'location' },
-                                'Location'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: function onChange(e) {
-                                    return _this2.props.onChange('location', e);
-                                }, type: 'text',
-                                className: 'form-control',
-                                id: 'location',
-                                placeholder: 'Ex. Orem Ut',
-                                value: this.props.postDetails.location })
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'form-group' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'label',
-                                { htmlFor: 'timeframe' },
-                                'Timeframe'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'select',
-                                { onChange: function onChange(e) {
-                                        return _this2.props.onChange('timeframe', e);
-                                    }, type: 'text',
-                                    className: 'form-control',
-                                    id: 'timeframe',
-                                    placeholder: 'Timeframe',
-                                    value: this.props.postDetails.timeframe },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'option',
-                                    { defaultValue: true, disabled: true, value: '' },
-                                    'Select Desired Purchase Timeframe'
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'option',
-                                    { value: '1 Week' },
-                                    '1 Week'
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'option',
-                                    { value: '2-3 Weeks' },
-                                    '2-3 Weeks'
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'option',
-                                    { value: '1 Month' },
-                                    '1 Month'
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'option',
-                                    { value: '2-3 Months' },
-                                    '2-3 Months'
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'option',
-                                    { value: '3 Months or More' },
-                                    '3 Months or More'
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'option',
-                                    { value: 'No Preference' },
-                                    'No Preference'
-                                )
-                            )
-                        )
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'next-step' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'a',
-                        { className: 'btn btn-blue invisible', onClick: this.props.nextStep },
-                        'Previous Step'
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'a',
-                        { className: 'btn btn-blue ', onClick: this.props.nextStep },
-                        'Next Step'
-                    )
-                )
-            );
-        }
-    }]);
-
-    return EditBasicInfo;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
-
-/* harmony default export */ __webpack_exports__["a"] = (EditBasicInfo);
-
-/***/ }),
-/* 233 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-var EditVehicleInfo = function (_Component) {
-    _inherits(EditVehicleInfo, _Component);
-
-    function EditVehicleInfo() {
-        _classCallCheck(this, EditVehicleInfo);
-
-        return _possibleConstructorReturn(this, (EditVehicleInfo.__proto__ || Object.getPrototypeOf(EditVehicleInfo)).apply(this, arguments));
-    }
-
-    _createClass(EditVehicleInfo, [{
-        key: "render",
-        value: function render() {
-            var _this2 = this;
-
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "container" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "h5",
-                    { className: "section-info" },
-                    "* Please provide vehicle information for the next car you are looking to purchase. You may be as specific or general as you would like. In the Vehicle Overview section please enter a brief description of the specifics of the vehicle you are looking to purchase."
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "form-row" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "div",
-                        { className: "col-md-12" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "div",
-                            { className: "form-group" },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "label",
-                                { htmlFor: "vehicle_overview" },
-                                "Vehicle Overview"
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", { onChange: function onChange(e) {
-                                    return _this2.props.onChange('vehicle_overview', e);
-                                }, rows: "5", type: "text", className: "form-control",
-                                id: "vehicle_overview",
-                                "aria-describedby": "emailHelp", placeholder: "Vehicle Overview",
-                                value: this.props.newPost.vehicle_overview })
-                        )
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "form-row" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "div",
-                        { className: "col-md-6 col-sm-12" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "div",
-                            { className: "form-group" },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "label",
-                                { htmlFor: "vehicle_type" },
-                                "Vehicle Type"
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "select",
-                                { onChange: function onChange(e) {
-                                        return _this2.props.onChange('vehicle_type', e);
-                                    }, type: "text", className: "form-control",
-                                    id: "vehicle_type",
-                                    placeholder: "Vehicle Title Type",
-                                    value: this.props.newPost.vehicle_type },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "", defaultValue: true, disabled: true },
-                                    "Select Vehicle Type"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "Car" },
-                                    "Car"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "Truck" },
-                                    "Truck"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "SUV" },
-                                    "SUV"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "Van" },
-                                    "Van"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "Minivan" },
-                                    "Minivan"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "Hatchback" },
-                                    "Hatchback"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "Coup" },
-                                    "Coup"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "Convertible" },
-                                    "Convertible"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "No Preference" },
-                                    "No Preference"
-                                )
-                            )
-                        )
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "div",
-                        { className: "col-md-6 col-sm-12" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "div",
-                            { className: "form-group" },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "label",
-                                { htmlFor: "vehicle_make" },
-                                "Vehicle Make"
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
-                                    return _this2.props.onChange('vehicle_make', e);
-                                }, type: "text", className: "form-control",
-                                id: "vehicle_make",
-                                placeholder: "Ex. Mazda ",
-                                value: this.props.newPost.vehicle_make })
-                        )
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "form-row" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "div",
-                        { className: "col-md-4 col-sm-12" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "div",
-                            { className: "form-group" },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "label",
-                                { htmlFor: "vehicle_model" },
-                                "Vehicle Model"
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
-                                    return _this2.props.onChange('vehicle_model', e);
-                                }, type: "text", className: "form-control",
-                                id: "vehicle_model",
-                                placeholder: "Ex. Mazda CX-5",
-                                value: this.props.newPost.vehicle_model })
-                        )
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "div",
-                        { className: "col-md-4 col-sm-12" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "div",
-                            { className: "form-group" },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "label",
-                                { htmlFor: "vehicle_year" },
-                                "Vehicle Year"
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "select",
-                                { onChange: function onChange(e) {
-                                        return _this2.props.onChange('vehicle_year', e);
-                                    }, type: "text", className: "form-control",
-                                    id: "vehicle_year",
-                                    placeholder: "Vehicle Title Type",
-                                    value: this.props.newPost.vehicle_year },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "", defaultValue: true, disabled: true },
-                                    "Select Vehicle Year Range"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "2018 or Newer" },
-                                    "2018 or Newer"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "2014 to 2017" },
-                                    "2014 to 2017"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "2010 to 2013" },
-                                    "2010 to 2013"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "2006 to 2009" },
-                                    "2006 to 2009"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "2002 to 2005" },
-                                    "2002 to 2005"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "1998 to 2001" },
-                                    "1998 to 2001"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "1997 or Older" },
-                                    "1997 or Older"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "No Preference" },
-                                    "No Preference"
-                                )
-                            )
-                        )
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "div",
-                        { className: "col-md-4 col-sm-12" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "div",
-                            { className: "form-group" },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "label",
-                                { htmlFor: "vehicle_title_type" },
-                                "Vehicle Title Type"
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "select",
-                                { onChange: function onChange(e) {
-                                        return _this2.props.onChange('vehicle_title_type', e);
-                                    }, type: "text", className: "form-control",
-                                    id: "vehicle_title_type",
-                                    placeholder: "Vehicle Title Type",
-                                    value: this.props.newPost.vehicle_title_type },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "", defaultValue: true, disabled: true },
-                                    "Select Vehicle Title Type"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "Clean Title" },
-                                    "Clean Title"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "Branded Title" },
-                                    "Branded Title"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "Salvage Title" },
-                                    "Salvage Title"
-                                )
-                            )
-                        )
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "next-step" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "a",
-                        { className: "btn btn-blue", onClick: this.props.previousStep },
-                        "Previous Step"
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "a",
-                        { className: "btn btn-blue", onClick: this.props.nextStep },
-                        "Next Step"
-                    )
-                )
-            );
-        }
-    }]);
-
-    return EditVehicleInfo;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
-
-/* harmony default export */ __webpack_exports__["a"] = (EditVehicleInfo);
-
-/***/ }),
-/* 234 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-var VehicleInfo = function (_Component) {
-    _inherits(VehicleInfo, _Component);
-
-    function VehicleInfo() {
-        _classCallCheck(this, VehicleInfo);
-
-        return _possibleConstructorReturn(this, (VehicleInfo.__proto__ || Object.getPrototypeOf(VehicleInfo)).apply(this, arguments));
-    }
-
-    _createClass(VehicleInfo, [{
-        key: "render",
-        value: function render() {
-            var _this2 = this;
-
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "container" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "h5",
-                    { className: "section-info" },
-                    "* Please provide details of the types of features you are looking for in your next vehicle purchase. You can be as specific you want as well as indicate any features that are a must have etc."
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "form-row" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "div",
-                        { className: "col-md-12" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "div",
-                            { className: "form-group" },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "label",
-                                { htmlFor: "features" },
-                                "Features"
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", { onChange: function onChange(e) {
-                                    return _this2.props.onChange('features', e);
-                                }, rows: "10", type: "text",
-                                className: "form-control",
-                                id: "features",
-                                "aria-describedby": "emailHelp", placeholder: "Enter a description of desired features",
-                                value: this.props.newPost.features })
-                        )
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "next-step" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "a",
-                        { className: "btn btn-blue", onClick: this.props.previousStep },
-                        "Previous Step"
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "a",
-                        { className: "btn btn-blue", onClick: this.props.nextStep },
-                        "Next Step"
-                    )
-                )
-            );
-        }
-    }]);
-
-    return VehicleInfo;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
-
-/* harmony default export */ __webpack_exports__["a"] = (VehicleInfo);
-
-/***/ }),
+/* 232 */,
+/* 233 */,
+/* 234 */,
 /* 235 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -71359,68 +71671,167 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var EditImage = function (_Component) {
-    _inherits(EditImage, _Component);
+var EditComplete = function (_Component) {
+    _inherits(EditComplete, _Component);
 
-    function EditImage() {
-        _classCallCheck(this, EditImage);
+    function EditComplete() {
+        _classCallCheck(this, EditComplete);
 
-        return _possibleConstructorReturn(this, (EditImage.__proto__ || Object.getPrototypeOf(EditImage)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (EditComplete.__proto__ || Object.getPrototypeOf(EditComplete)).apply(this, arguments));
     }
 
-    _createClass(EditImage, [{
+    _createClass(EditComplete, [{
         key: "render",
         value: function render() {
-            var _this2 = this;
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
                 { className: "container" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "h5",
-                    { className: "section-info" },
-                    "* Post image is meant to be used as an idea board for the type of car you are looking to buy. Head to google and find an image of the type of color you want. You can be really specific like getting a picture of a Mazda 6 or just a general photo of a sedan. Please copy the image url and enter in the box below. If you did it correctly you should see a preview of your image before continuing."
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "div",
-                    { className: "form-row" },
+                    { className: "py-3 text-center" },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "div",
-                        { className: "col-md-12" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "div",
-                            { className: "form-group" },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "label",
-                                { htmlFor: "image_url" },
-                                "Image Url"
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
-                                    return _this2.props.onChange('image_url', e);
-                                }, rows: "5", type: "text",
-                                className: "form-control",
-                                id: "image_url",
-                                "aria-describedby": "emailHelp", placeholder: "Image Url",
-                                value: this.props.newPost.image_url !== '' ? this.props.newPost.image_url : '/img/default-image.jpg' })
-                        )
+                        "h3",
+                        null,
+                        "One Last Step..."
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "p",
+                        { className: "complete-text" },
+                        "Please make sure all info on the previous steps are filled out how you would like. If you need to change anything you will have access through your dashboard and buy page to edit or delete your post."
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { className: "btn btn-blue create-post-btn", onClick: this.props.updatePostDetails },
+                        "Update Post"
                     )
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "h4",
+                    { className: "text-center card-preview-heading" },
+                    "Post Card Preview"
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "div",
-                    { className: "form-row" },
+                    { className: "row buypost-container" },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
-                        { className: "col-md-12" },
+                        { className: "col-sm-12 buypost animated fadeIn" },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             "div",
-                            { className: "form-group" },
+                            { className: "card preview-post" },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "label",
-                                { className: "d-block", htmlFor: "" },
-                                "Image Preview"
+                                "div",
+                                { className: "img" },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "img-fluid",
+                                    src: this.props.postDetails.image_url !== '' ? this.props.postDetails.image_url : '/img/default-image.jpg',
+                                    alt: "" })
                             ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "img-fluid w-100",
-                                src: this.props.newPost.image_url !== '' ? this.props.newPost.image_url : '/img/default-image.jpg' })
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "div",
+                                { className: "right" },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "div",
+                                    { className: "header" },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        "h5",
+                                        null,
+                                        this.props.postDetails.title !== '' ? this.props.postDetails.title : 'No Title',
+                                        " "
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        "p",
+                                        null,
+                                        this.props.postDetails.description !== '' ? this.props.postDetails.description : 'No Description'
+                                    )
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "div",
+                                    { className: "overview" },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        "div",
+                                        { className: "overview-container" },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            "div",
+                                            { className: "left-overview" },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                "div",
+                                                { className: "budget" },
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    "p",
+                                                    null,
+                                                    "Budget: ",
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        "span",
+                                                        null,
+                                                        this.props.postDetails.budget !== '' ? '$' + this.props.postDetails.budget : 'Not Specified'
+                                                    )
+                                                )
+                                            ),
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                "div",
+                                                { className: "location" },
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    "p",
+                                                    null,
+                                                    "Location: ",
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        "span",
+                                                        null,
+                                                        this.props.postDetails.location !== '' ? this.props.postDetails.location : 'No Location'
+                                                    )
+                                                )
+                                            )
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            "div",
+                                            { className: "right-overview" },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                "div",
+                                                { className: "budget" },
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    "p",
+                                                    null,
+                                                    "Mileage: ",
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        "span",
+                                                        null,
+                                                        this.props.postDetails.mileage !== '' ? this.props.postDetails.mileage : 'No Mileage'
+                                                    )
+                                                )
+                                            ),
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                "div",
+                                                { className: "location" },
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    "p",
+                                                    null,
+                                                    "Timetable: ",
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        "span",
+                                                        null,
+                                                        this.props.postDetails.timeframe !== '' ? this.props.postDetails.timeframe : 'No Timeframe'
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "div",
+                                    { className: "btn-container" },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        "a",
+                                        { className: "button circle blue small", disabled: true },
+                                        "View"
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        "a",
+                                        { className: "button circle white small", disabled: true },
+                                        "Edit"
+                                    )
+                                )
+                            )
                         )
                     )
                 ),
@@ -71434,7 +71845,7 @@ var EditImage = function (_Component) {
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "a",
-                        { className: "btn btn-blue", onClick: this.props.nextStep },
+                        { className: "btn btn-blue invisible", onClick: this.props.nextStep },
                         "Next Step"
                     )
                 )
@@ -71442,10 +71853,10 @@ var EditImage = function (_Component) {
         }
     }]);
 
-    return EditImage;
+    return EditComplete;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
-/* harmony default export */ __webpack_exports__["a"] = (EditImage);
+/* harmony default export */ __webpack_exports__["a"] = (EditComplete);
 
 /***/ }),
 /* 236 */
@@ -71464,207 +71875,100 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var EditPaymentInfo = function (_Component) {
-    _inherits(EditPaymentInfo, _Component);
+var MessagesHero = function (_Component) {
+    _inherits(MessagesHero, _Component);
 
-    function EditPaymentInfo() {
-        _classCallCheck(this, EditPaymentInfo);
+    function MessagesHero(props) {
+        _classCallCheck(this, MessagesHero);
 
-        return _possibleConstructorReturn(this, (EditPaymentInfo.__proto__ || Object.getPrototypeOf(EditPaymentInfo)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (MessagesHero.__proto__ || Object.getPrototypeOf(MessagesHero)).call(this, props));
     }
 
-    _createClass(EditPaymentInfo, [{
+    _createClass(MessagesHero, [{
         key: "render",
         value: function render() {
-            var _this2 = this;
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
-                { className: "container" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "h5",
-                    { className: "section-info" },
-                    "* Payment info will not require any credit card or banking information. This section is to find out how you plan to purchase the car. Are you paying cash or getting a loan? Prefer buying privately or through a dealership? Please provide as accurate information as you can."
-                ),
+                { className: "jumbotron jumbotron-fluid animated fadeIn", id: "MessagesHero" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "div",
-                    { className: "form-row" },
+                    { className: "container" },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
-                        { className: "col-md-6 col-sm-12" },
+                        { className: "buying-container" },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "div",
-                            { className: "form-group" },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "label",
-                                { htmlFor: "payment_type" },
-                                "Payment Type"
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "select",
-                                { onChange: function onChange(e) {
-                                        return _this2.props.onChange('payment_type', e);
-                                    }, type: "text", className: "form-control",
-                                    id: "payment_type",
-                                    "aria-describedby": "emailHelp", placeholder: "Payment Type",
-                                    value: this.props.newPost.payment_type },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "", disabled: true, defaultValue: true },
-                                    "Please select desired payment type"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "Cash" },
-                                    "Cash"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "Auto Loan" },
-                                    "Auto Loan"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "No Preference" },
-                                    "No Preference"
-                                )
-                            )
-                        )
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "div",
-                        { className: "col-md-6 col-sm-12" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "div",
-                            { className: "form-group" },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "label",
-                                { htmlFor: "seller_preference" },
-                                "Seller Preference"
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "select",
-                                { onChange: function onChange(e) {
-                                        return _this2.props.onChange('seller_preference', e);
-                                    }, type: "text",
-                                    className: "form-control",
-                                    id: "seller_preference",
-                                    "aria-describedby": "emailHelp", placeholder: "Seller Preference",
-                                    value: this.props.newPost.seller_preference },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "", disabled: true, defaultValue: true },
-                                    "Please Select Desired Seller Preference"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "Dealership" },
-                                    "Dealership"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "Privately" },
-                                    "Privately"
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "option",
-                                    { value: "No Preference" },
-                                    "No Preference"
-                                )
-                            )
-                        )
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "form-row" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "div",
-                        { className: "col-md-6 col-sm-12" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "div",
-                            { className: "form-group" },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "label",
-                                { htmlFor: "loan_payment_method" },
-                                "If Loan, Desired Monthly Payment?"
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
-                                    return _this2.props.onChange('loan_payment_method', e);
-                                }, type: "number",
-                                className: "form-control",
-                                id: "loan_payment_method",
-                                "aria-describedby": "emailHelp", placeholder: "Ex. 200",
-                                value: this.props.newPost.loan_payment_method })
-                        )
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "div",
-                        { className: "col-md-6 col-sm-12" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "div",
-                            { className: "form-group" },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "label",
-                                { htmlFor: "dealer_door_price" },
-                                "Dealer Door Out the Door Price"
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { onChange: function onChange(e) {
-                                    return _this2.props.onChange('dealer_door_price', e);
-                                }, type: "number",
-                                className: "form-control",
-                                id: "dealer_door_price",
-                                "aria-describedby": "emailHelp", placeholder: "Ex. 16000",
-                                value: this.props.newPost.dealer_door_price })
-                        )
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "form-row" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "div",
-                        { className: "col-sm-12" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "div",
-                            { className: "form-group" },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "label",
-                                { htmlFor: "other_notes" },
-                                "Other Notes"
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", { onChange: function onChange(e) {
-                                    return _this2.props.onChange('other_notes', e);
-                                }, rows: "5", type: "text",
-                                className: "form-control",
-                                id: "other_notes",
-                                "aria-describedby": "emailHelp", placeholder: "Other Notes",
-                                value: this.props.newPost.other_notes })
-                        )
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "next-step" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "a",
-                        { className: "btn btn-blue", onClick: this.props.previousStep },
-                        "Previous Step"
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "a",
-                        { className: "btn btn-blue", onClick: this.props.nextStep },
-                        "Next Step"
+                            "h3",
+                            { className: "text-center" },
+                            "Messages"
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("hr", { className: "green-underline" })
                     )
                 )
             );
         }
     }]);
 
-    return EditPaymentInfo;
+    return MessagesHero;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
-/* harmony default export */ __webpack_exports__["a"] = (EditPaymentInfo);
+/* harmony default export */ __webpack_exports__["a"] = (MessagesHero);
+
+/***/ }),
+/* 237 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var MessagesHero = function (_Component) {
+    _inherits(MessagesHero, _Component);
+
+    function MessagesHero(props) {
+        _classCallCheck(this, MessagesHero);
+
+        return _possibleConstructorReturn(this, (MessagesHero.__proto__ || Object.getPrototypeOf(MessagesHero)).call(this, props));
+    }
+
+    _createClass(MessagesHero, [{
+        key: "render",
+        value: function render() {
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "jumbotron jumbotron-fluid animated fadeIn", id: "SellHero" },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "container" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "buying-container" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "h3",
+                            { className: "text-center" },
+                            "Selling"
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("hr", { className: "green-underline" })
+                    )
+                )
+            );
+        }
+    }]);
+
+    return MessagesHero;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (MessagesHero);
 
 /***/ })
 /******/ ]);

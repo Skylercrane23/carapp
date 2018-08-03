@@ -21,7 +21,7 @@ export default class EditVehicleInfo extends Component {
                             <textarea onChange={(e) => this.props.onChange('vehicle_overview', e)} rows="5" type="text" className="form-control"
                                       id="vehicle_overview"
                                       aria-describedby="emailHelp" placeholder="Vehicle Overview"
-                                      value={this.props.newPost.vehicle_overview}/>
+                                      value={this.props.postDetails.vehicle_overview}/>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@ export default class EditVehicleInfo extends Component {
                             <select onChange={(e) => this.props.onChange('vehicle_type', e)} type="text" className="form-control"
                                     id="vehicle_type"
                                     placeholder="Vehicle Title Type"
-                                    value={this.props.newPost.vehicle_type}>
+                                    value={this.props.postDetails.vehicle_type}>
                                 <option value="" defaultValue disabled>Select Vehicle Type</option>
                                 <option value="Car">Car</option>
                                 <option value="Truck">Truck</option>
@@ -53,7 +53,7 @@ export default class EditVehicleInfo extends Component {
                             <input onChange={(e) => this.props.onChange('vehicle_make', e)} type="text" className="form-control"
                                    id="vehicle_make"
                                    placeholder="Ex. Mazda "
-                                   value={this.props.newPost.vehicle_make}/>
+                                   value={this.props.postDetails.vehicle_make}/>
                         </div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@ export default class EditVehicleInfo extends Component {
                             <input onChange={(e) => this.props.onChange('vehicle_model', e)} type="text" className="form-control"
                                    id="vehicle_model"
                                    placeholder="Ex. Mazda CX-5"
-                                   value={this.props.newPost.vehicle_model}/>
+                                   value={this.props.postDetails.vehicle_model}/>
                         </div>
                     </div>
                     <div className="col-md-4 col-sm-12">
@@ -75,7 +75,7 @@ export default class EditVehicleInfo extends Component {
                             <select onChange={(e) => this.props.onChange('vehicle_year', e)} type="text" className="form-control"
                                     id="vehicle_year"
                                     placeholder="Vehicle Title Type"
-                                    value={this.props.newPost.vehicle_year}>
+                                    value={this.props.postDetails.vehicle_year}>
                                 <option value="" defaultValue disabled>Select Vehicle Year Range</option>
                                 <option value="2018 or Newer">2018 or Newer</option>
                                 <option value="2014 to 2017">2014 to 2017</option>
@@ -94,7 +94,7 @@ export default class EditVehicleInfo extends Component {
                             <select onChange={(e) => this.props.onChange('vehicle_title_type', e)} type="text" className="form-control"
                                     id="vehicle_title_type"
                                     placeholder="Vehicle Title Type"
-                                    value={this.props.newPost.vehicle_title_type}>
+                                    value={this.props.postDetails.vehicle_title_type}>
                                 <option value="" defaultValue disabled>Select Vehicle Title Type</option>
                                 <option value="Clean Title" >Clean Title</option>
                                 <option value="Branded Title">Branded Title</option>

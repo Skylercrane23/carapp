@@ -136,7 +136,7 @@ export default class CreatePost extends Component {
             <div id="CreatePost">
 
                 <div className="container card">
-                    <a className="cancel-button" onClick={this.cancel}><i className="fas fa-times"></i></a>
+                    <a className="cancel-button" onClick={this.cancel}>Cancel <i className="fas fa-times ml-2"></i></a>
 
                     <h4 className="text-center">Create Post</h4>
                     <div className="progress-header">

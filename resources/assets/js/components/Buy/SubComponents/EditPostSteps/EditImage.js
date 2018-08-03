@@ -23,7 +23,7 @@ export default class EditImage extends Component {
                                    className="form-control"
                                    id="image_url"
                                    aria-describedby="emailHelp" placeholder="Image Url"
-                                   value={this.props.newPost.image_url !== '' ? this.props.newPost.image_url : '/img/default-image.jpg'}/>
+                                   value={this.props.postDetails.image_url !== '' ? this.props.postDetails.image_url : '/img/default-image.jpg'}/>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@ export default class EditImage extends Component {
                         <div className="form-group">
                             <label className="d-block" htmlFor="">Image Preview</label>
                             <img className="img-fluid w-100"
-                                 src={this.props.newPost.image_url !== '' ? this.props.newPost.image_url : '/img/default-image.jpg'}/>
+                                 src={this.props.postDetails.image_url !== '' ? this.props.postDetails.image_url : '/img/default-image.jpg'}/>
                         </div>
                     </div>
                 </div>

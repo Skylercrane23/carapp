@@ -19,9 +19,11 @@ class PostsTableSeeder extends Seeder
 
         for ($i = 0; $i < 15; $i++) {
 
-            $timeFrameArray = ['Within 1 Week', 'Within 1 Month', '1 - 3 Months', '3 - 6 Months', '6 Months or More' ];
+            $timeFrameArray = ['1 Week', '2-3 Weeks', '1 Month', '2-3 Months', '3 Months or More', 'No Preference' ];
+            $mileageArray = ['0 to 9K', '10K to 24K', '25K to 49K', '50K to 74K', '75K to 99K', '100K or More', 'No Preference' ];
             $user_id = $faker->randomElement($users);
             $timeframe= $faker->randomElement($timeFrameArray);
+            $mileage= $faker->randomElement($mileageArray);
             $imageArray = [
                 'https://source.unsplash.com/500x500/?cars',
                 'https://source.unsplash.com/500x500/?car',
@@ -51,7 +53,7 @@ class PostsTableSeeder extends Seeder
                 'title' => $faker->words($nb = 3, $asText = true),
                 'description' => $faker->sentence($nbWords = 6, $variableNbWords = true),
                 'budget' => $faker->numberBetween(0,50000),
-                'mileage' => $faker->words($nb = 3, $asText = true),
+                'mileage' => $mileage,
                 'location' => $faker->city,
                 'timeframe' => $timeframe,
                 // VEHICLE INFO

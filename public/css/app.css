@@ -11556,8 +11556,20 @@ button.transparent-blue:hover {
   color: red;
   right: 25px;
   top: 10px;
-  font-size: 24px;
   cursor: pointer;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#CreatePost .card .cancel-button i,
+#MyPostDetails .card .cancel-button i {
+  margin-left: 10px;
+  font-size: 18px;
 }
 
 #CreatePost .card .delete-button,
@@ -11801,6 +11813,100 @@ button.transparent-blue:hover {
 
 #PostDetails .bottom-section .other-notes {
   margin-top: 25px;
+}
+
+/* BROWSE HERO COMPONENT STYLES
+=============================*/
+
+#MessagesHero {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.75)), to(rgba(255, 255, 255, 0.75))), url("/img/messaging-bg.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("/img/messaging-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 350px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#MessagesHero .buying-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+#MessagesHero .buying-container h3,
+#MessagesHero .buying-container h5 {
+  color: #292929;
+}
+
+/* BROWSE HERO COMPONENT STYLES
+=============================*/
+
+#SellHero {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.75)), to(rgba(255, 255, 255, 0.75))), url("/img/sell-bg.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("/img/sell-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 350px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#SellHero .buying-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+#SellHero .buying-container h3,
+#SellHero .buying-container h5 {
+  color: #292929;
 }
 
 /* LANDING PAGE STYLES

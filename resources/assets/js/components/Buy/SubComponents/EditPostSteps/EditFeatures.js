@@ -21,7 +21,7 @@ export default class VehicleInfo extends Component {
                                       className="form-control"
                                       id="features"
                                       aria-describedby="emailHelp" placeholder="Enter a description of desired features"
-                                      value={this.props.newPost.features}/>
+                                      value={this.props.postDetails.features}/>
                         </div>
                     </div>
                 </div>

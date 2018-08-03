@@ -19,33 +19,35 @@ export default class MyPosts extends Component {
                                         <h5>{post.title} </h5>
                                         <p>{post.description} </p>
                                     </div>
-                                    <div className="overview">
-                                        <div className="overview-container">
-                                            <div className="left-overview">
-                                                <div className="budget">
-                                                    <p>Budget: <span className="w-bold">${post.budget}</span></p>
+                                    <div className="d-flex flex-column justify-content-between" style={{height: 110 + 'px'}}>
+                                        <div className="overview">
+                                            <div className="overview-container">
+                                                <div className="left-overview">
+                                                    <div className="budget">
+                                                        <p>Budget: <span className="w-bold">${post.budget}</span></p>
+                                                    </div>
+                                                    <div className="location">
+                                                        <p>Location: <span className="w-bold">{post.location}</span></p>
+                                                    </div>
                                                 </div>
-                                                <div className="location">
-                                                    <p>Location: <span className="w-bold">{post.location}</span></p>
-                                                </div>
-                                            </div>
-                                            <div className="right-overview">
-                                                <div className="budget">
-                                                    <p>Mileage: <span className="w-bold">{post.mileage}</span></p>
-                                                </div>
-                                                <div className="location">
-                                                    <p>Timeframe: <span className="w-bold">{post.timeframe}</span></p>
+                                                <div className="right-overview">
+                                                    <div className="budget">
+                                                        <p>Mileage: <span className="w-bold">{post.mileage}</span></p>
+                                                    </div>
+                                                    <div className="location">
+                                                        <p>Timeframe: <span className="w-bold">{post.timeframe}</span></p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="btn-container">
-                                        <a className="button circle blue small"
-                                             href={'/home/post-details/' + post.id}>View
-                                        </a>
-                                        <a className="button circle white small"
-                                             href={'/home/my-post-details/' + post.id}>Edit
-                                        </a>
+                                        <div className="btn-container">
+                                            <a className="button circle blue small"
+                                               href={'/home/post-details/' + post.id}>View
+                                            </a>
+                                            <a className="button circle white small"
+                                               href={'/home/my-post-details/' + post.id}>Edit
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                         </div>

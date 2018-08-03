@@ -12,41 +12,47 @@ export default class MyBuyPosts extends Component {
                     <div className="col-md-6 col-sm-12 buypost animated fadeIn" key={post.id}>
                         <div className="card">
                             <div className="img">
-                                <img className="img-fluid" src={post.image_url !== null ? post.image_url : '/img/default-image.jpg'} alt=""/>
+                                <img className="img-fluid"
+                                     src={post.image_url !== null ? post.image_url : '/img/default-image.jpg'} alt=""/>
                             </div>
                             <div className="right">
                                 <div className="header">
                                     <h5>{post.title} </h5>
                                     <p>{post.description}</p>
                                 </div>
-                                <div className="overview">
-                                    {/*<small className="w-bold">overview</small>*/}
-                                    <div className="overview-container">
-                                        <div className="left-overview">
-                                            <div className="budget">
-                                                <p>Budget: <span className="w-bold">{post.budget !== null ? '$' + post.budget : ' '}</span></p>
+                                <div className="d-flex flex-column justify-content-between"
+                                     style={{height: 110 + 'px'}}>
+                                    <div className="overview">
+                                        {/*<small className="w-bold">overview</small>*/}
+                                        <div className="overview-container">
+                                            <div className="left-overview">
+                                                <div className="budget">
+                                                    <p>Budget: <span
+                                                        className="w-bold">{post.budget !== null ? '$' + post.budget : ' '}</span>
+                                                    </p>
+                                                </div>
+                                                <div className="location">
+                                                    <p>Location: <span className="w-bold">{post.location}</span></p>
+                                                </div>
                                             </div>
-                                            <div className="location">
-                                                <p>Location: <span className="w-bold">{post.location}</span></p>
-                                            </div>
-                                        </div>
-                                        <div className="right-overview">
-                                            <div className="budget">
-                                                <p>Mileage: <span className="w-bold">{post.mileage}</span></p>
-                                            </div>
-                                            <div className="location">
-                                                <p>Timetable: <span className="w-bold">{post.timeframe}</span></p>
+                                            <div className="right-overview">
+                                                <div className="budget">
+                                                    <p>Mileage: <span className="w-bold">{post.mileage}</span></p>
+                                                </div>
+                                                <div className="location">
+                                                    <p>Timetable: <span className="w-bold">{post.timeframe}</span></p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="btn-container">
-                                    <a className="button circle blue small"
-                                       href={'/home/post-details/' + post.id}>View
-                                    </a>
-                                    <a className="button circle white small"
-                                       href={'/home/my-post-details/' + post.id}>Edit
-                                    </a>
+                                    <div className="btn-container">
+                                        <a className="button circle blue small"
+                                           href={'/home/post-details/' + post.id}>View
+                                        </a>
+                                        <a className="button circle white small"
+                                           href={'/home/my-post-details/' + post.id}>Edit
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -21,8 +21,14 @@
             color: red;
             right: 25px;
             top: 10px;
-            font-size: 24px;
             cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            i {
+                margin-left: 10px;
+                font-size: 18px;
+            }
         }
         .delete-button {
             color: red;
